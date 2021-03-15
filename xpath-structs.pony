@@ -63,7 +63,7 @@ struct Xmlxpathparsercontext
 struct Xmlnodeset
   var pnodeNr: I32 = I32(0) // offset: 0
   var pnodeMax: I32 = I32(0) // offset: 32
-  var pnodeTab: Pointer[NullablePointer[Xmlnode]] = Pointer[NullablePointer[Xmlnode]] // offset: 64
+  var pnodeTab: NullablePointer[NullablePointer[Xmlnode]] = NullablePointer[NullablePointer[Xmlnode]].none() // offset: 64
 
 
 struct Xmlxpathobject
@@ -71,7 +71,7 @@ struct Xmlxpathobject
   var pnodesetval: NullablePointer[Xmlnodeset] = NullablePointer[Xmlnodeset].none() // offset: 64
   var pboolval: I32 = I32(0) // offset: 128
   var pfloatval: F64 = F64(0) // offset: 192
-  var pstringval: Pointer[U8] = Pointer[U8] // offset: 256
+  var pstringval: Pointer[U8] tag = Pointer[U8] // offset: 256
   var puser: Pointer[U8] = Pointer[U8] // offset: 320
   var pindex: I32 = I32(0) // offset: 384
   var puser2: Pointer[U8] = Pointer[U8] // offset: 448

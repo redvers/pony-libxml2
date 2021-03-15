@@ -96,7 +96,7 @@ struct Xmldtd
 struct Xmlattr
   var p_private: Pointer[U8] = Pointer[U8] // offset: 0
   var ptype: I32 = I32(0) // offset: 64
-  var pname: Pointer[U8] = Pointer[U8] // offset: 128
+  var pname: Pointer[U8] tag = Pointer[U8] // offset: 128
   var pchildren: NullablePointer[Xmlnode] = NullablePointer[Xmlnode].none() // offset: 192
   var plast: NullablePointer[Xmlnode] = NullablePointer[Xmlnode].none() // offset: 256
   var pparent: NullablePointer[Xmlnode] = NullablePointer[Xmlnode].none() // offset: 320
@@ -128,7 +128,7 @@ struct Xmlref
 struct Xmlnode
   var p_private: Pointer[U8] = Pointer[U8] // offset: 0
   var ptype: I32 = I32(0) // offset: 64
-  var pname: Pointer[U8] = Pointer[U8] // offset: 128
+  var pname: Pointer[U8] tag = Pointer[U8] // offset: 128
   var pchildren: NullablePointer[Xmlnode] = NullablePointer[Xmlnode].none() // offset: 192
   var plast: NullablePointer[Xmlnode] = NullablePointer[Xmlnode].none() // offset: 256
   var pparent: NullablePointer[Xmlnode] = NullablePointer[Xmlnode].none() // offset: 320
@@ -136,7 +136,7 @@ struct Xmlnode
   var pprev: NullablePointer[Xmlnode] = NullablePointer[Xmlnode].none() // offset: 448
   var pdoc: NullablePointer[Xmldoc] = NullablePointer[Xmldoc].none() // offset: 512
   var pns: NullablePointer[Xmlns] = NullablePointer[Xmlns].none() // offset: 576
-  var pcontent: Pointer[U8] = Pointer[U8] // offset: 640
+  var pcontent: Pointer[U8] tag = Pointer[U8] // offset: 640
   var pproperties: NullablePointer[Xmlattr] = NullablePointer[Xmlattr].none() // offset: 704
   var pnsDef: NullablePointer[Xmlns] = NullablePointer[Xmlns].none() // offset: 768
   var ppsvi: Pointer[U8] = Pointer[U8] // offset: 832

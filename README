@@ -17,3 +17,5 @@
 ./cast_x_m_l_pony -x examples/libxml2/libxml2.xml -f f24 -s -g | tee ../pony-libxml2/xmlerror-structs.pony
 ./cast_x_m_l_pony -x examples/libxml2/libxml2.xml -f f54 -s -g | tee ../pony-libxml2/xpath-structs.pony
 ./cast_x_m_l_pony -x examples/libxml2/libxml2.xml -f f54 -u -g | tee ../pony-libxml2/xpath.pony
+./cast_x_m_l_pony -x examples/libxml2/libxml2.xml -f f16 -u -g | tee ../pony-libxml2/parser.pony
+./cast_x_m_l_pony -x examples/libxml2/libxml2.xml -f f15 -u -g | tee ../pony-libxml2/tree.pony
