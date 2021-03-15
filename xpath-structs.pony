@@ -13,7 +13,7 @@ struct Xmlxpathcontext
   var pnb_axis: I32 = I32(0) // offset: 512
   var pmax_axis: I32 = I32(0) // offset: 544
   var paxis: NullablePointer[Xmlxpathaxis] = NullablePointer[Xmlxpathaxis].none() // offset: 576
-  var pnamespaces: NullablePointer[NullablePointer[Xmlns]] = NullablePointer[NullablePointer[Xmlns]].none() // offset: 640
+  var pnamespaces: Pointer[NullablePointer[Xmlns]] = Pointer[NullablePointer[Xmlns]] // offset: 640
   var pnsNr: I32 = I32(0) // offset: 704
   var puser: Pointer[U8] = Pointer[U8] // offset: 768
   var pcontextSize: I32 = I32(0) // offset: 832
@@ -29,7 +29,7 @@ struct Xmlxpathcontext
   var pfunctionURI: Pointer[U8] tag = Pointer[U8] // offset: 1408
   var pfuncLookupFunc: Pointer[FUNCTIONPOINTER] = Pointer[FUNCTIONPOINTER] // offset: 1472
   var pfuncLookupData: Pointer[U8] = Pointer[U8] // offset: 1536
-  var ptmpNsList: NullablePointer[NullablePointer[Xmlns]] = NullablePointer[NullablePointer[Xmlns]].none() // offset: 1600
+  var ptmpNsList: Pointer[NullablePointer[Xmlns]] = Pointer[NullablePointer[Xmlns]] // offset: 1600
   var ptmpNsNr: I32 = I32(0) // offset: 1664
   var puserData: Pointer[U8] = Pointer[U8] // offset: 1728
   var perror: Pointer[FUNCTIONPOINTER] = Pointer[FUNCTIONPOINTER] // offset: 1792
@@ -53,7 +53,7 @@ struct Xmlxpathparsercontext
   var pvalue: NullablePointer[Xmlxpathobject] = NullablePointer[Xmlxpathobject].none() // offset: 256
   var pvalueNr: I32 = I32(0) // offset: 320
   var pvalueMax: I32 = I32(0) // offset: 352
-  var pvalueTab: NullablePointer[NullablePointer[Xmlxpathobject]] = NullablePointer[NullablePointer[Xmlxpathobject]].none() // offset: 384
+  var pvalueTab: Pointer[NullablePointer[Xmlxpathobject]] = Pointer[NullablePointer[Xmlxpathobject]] // offset: 384
   var pcomp: NullablePointer[Xmlxpathcompexpr] = NullablePointer[Xmlxpathcompexpr].none() // offset: 448
   var pxptr: I32 = I32(0) // offset: 512
   var pancestor: NullablePointer[Xmlnode] = NullablePointer[Xmlnode].none() // offset: 576
@@ -63,7 +63,7 @@ struct Xmlxpathparsercontext
 struct Xmlnodeset
   var pnodeNr: I32 = I32(0) // offset: 0
   var pnodeMax: I32 = I32(0) // offset: 32
-  var pnodeTab: NullablePointer[NullablePointer[Xmlnode]] = NullablePointer[NullablePointer[Xmlnode]].none() // offset: 64
+  var pnodeTab: Pointer[NullablePointer[Xmlnode]] = Pointer[NullablePointer[Xmlnode]] // offset: 64
 
 
 struct Xmlxpathobject

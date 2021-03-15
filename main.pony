@@ -30,21 +30,19 @@ actor Main
     env.out.print("pnodeNr:  " + nodecount.string())
     env.out.print("pnodeMax: " + nodemax.string())
 
-//    var nodearray: Array[NullablePointer[Xmlnode]] = Array[NullablePointer[Xmlnode]].from_cpointer(xmlnodeset.pnodeTab, nodecount.usize())
+    var nodearray: Array[NullablePointer[Xmlnode]] = Array[NullablePointer[Xmlnode]].from_cpointer(xmlnodeset.pnodeTab, nodecount.usize())
 
-//    for element in nodearray.values() do
-//      let xmlnode: Xmlnode = element.apply()?
-//      let pnamec: Pointer[U8] = element.apply()?.pname
-//      let pname: String iso = String.from_cstring(pnamec).clone()
-////      env.out.print(consume pname)
+    for element in nodearray.values() do
+      let xmlnode: Xmlnode = element.apply()?
+      let pnamec: Pointer[U8] val = @strdup[Pointer[U8] val](element.apply()?.pname)
+      let pname: String iso = recover iso String.copy_cstring(pnamec) end
+      env.out.print(consume pname)
 
 //      let pp: Pointer[U8] = @xmlGetProp[Pointer[U8]](element, "name".cstring())
 //      let ppp: String iso = String.from_cstring(pp).clone()
 //      env.out.print(consume ppp)
 
-
-
-//    end
+    end
     end
 /*
 

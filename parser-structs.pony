@@ -29,11 +29,11 @@ struct Xmlparserctxt
   var pinput: NullablePointer[Xmlparserinput] = NullablePointer[Xmlparserinput].none() // offset: 448
   var pinputNr: I32 = I32(0) // offset: 512
   var pinputMax: I32 = I32(0) // offset: 544
-  var pinputTab: NullablePointer[NullablePointer[Xmlparserinput]] = NullablePointer[NullablePointer[Xmlparserinput]].none() // offset: 576
+  var pinputTab: Pointer[NullablePointer[Xmlparserinput]] = Pointer[NullablePointer[Xmlparserinput]] // offset: 576
   var pnode: NullablePointer[Xmlnode] = NullablePointer[Xmlnode].none() // offset: 640
   var pnodeNr: I32 = I32(0) // offset: 704
   var pnodeMax: I32 = I32(0) // offset: 736
-  var pnodeTab: NullablePointer[NullablePointer[Xmlnode]] = NullablePointer[NullablePointer[Xmlnode]].none() // offset: 768
+  var pnodeTab: Pointer[NullablePointer[Xmlnode]] = Pointer[NullablePointer[Xmlnode]] // offset: 768
   var precord_info: I32 = I32(0) // offset: 832
   var pnode_seq: Xmlparsernodeinfoseq = Xmlparsernodeinfoseq // offset: 896
   var perrNo: I32 = I32(0) // offset: 1088
