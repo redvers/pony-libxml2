@@ -37,15 +37,20 @@ actor Main
       end
     end
 
+type XmldocPTR is NullablePointer[Xmldoc]
+type XmlxpathcontextPTR is NullablePointer[Xmlxpathcontext]
+type XmlxpathobjectPTR is NullablePointer[Xmlxpathobject]
+type XmlnodePTR is NullablePointer[Xmlnode]
+
 primitive LibXML2
-  fun xmlParseFile(filename: String): NullablePointer[Xmldoc] => @xmlParseFile[NullablePointer[Xmldoc]](filename.cstring())
-  fun xmlXPathNewContext(docptr: NullablePointer[Xmldoc]): NullablePointer[Xmlxpathcontext] => @xmlXPathNewContext[NullablePointer[Xmlxpathcontext]](docptr)
-  fun xmlXPathEvalExpression(xpath: String, ctxptr: NullablePointer[Xmlxpathcontext]): NullablePointer[Xmlxpathobject] => @xmlXPathEvalExpression(xpath.cstring(), ctxptr)
-  fun xmlGetProp(nodeptr: NullablePointer[Xmlnode], key: String): String iso^ =>
+  fun xmlParseFile(filename: String): XmldocPTR => @xmlParseFile[XmldocPTR](filename.cstring())
+  fun xmlXPathNewContext(docptr: XmldocPTR): XmlxpathcontextPTR => @xmlXPathNewContext[XmlxpathcontextPTR](docptr)
+  fun xmlXPathEvalExpression(xpath: String, ctxptr: XmlxpathcontextPTR): XmlxpathobjectPTR => @xmlXPathEvalExpression(xpath.cstring(), ctxptr)
+  fun xmlGetProp(nodeptr: XmlnodePTR, key: String): String iso^ =>
     let pp: Pointer[U8] = @xmlGetProp[Pointer[U8]](nodeptr, key.cstring())
     let ppp: String iso = String.from_cstring(pp).clone()
     consume ppp
-  fun xmlGetNodePath(nodeptr: NullablePointer[Xmlnode]): String =>
+  fun xmlGetNodePath(nodeptr: XmlnodePTR): String =>
     let pp: Pointer[U8] = @xmlGetNodePath[Pointer[U8]](nodeptr)
     let ppp: String iso = String.from_cstring(pp).clone()
     consume ppp
