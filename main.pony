@@ -12,12 +12,12 @@ actor Main
     env.out.print("oof")
     try
       @xmlInitParser[None]()
-      let docptr: NullablePointer[Xmldoc] = LibXML2.xmlParseFile("pcre2.xml")
-      let ctxptr: NullablePointer[Xmlxpathcontext] = LibXML2.xmlXPathNewContext(docptr)
-      let xpathexptr: NullablePointer[Xmlxpathobject] = LibXML2.xmlXPathEvalExpression("//Function", ctxptr)
+      let docptr: XmldocPTR = LibXML2.xmlParseFile("pcre2.xml")
+      let ctxptr: XmlxpathcontextPTR = LibXML2.xmlXPathNewContext(docptr)
+      let xpathexptr: XmlxpathobjectPTR = LibXML2.xmlXPathEvalExpression("//Function", ctxptr)
 
       let xpathexp: Xmlxpathobject = xpathexptr.apply()?
-      let xmlnodesetptr: NullablePointer[Xmlnodeset] = xpathexp.pnodesetval
+      let xmlnodesetptr: XmlnodesetPTR = xpathexp.pnodesetval
       if (xmlnodesetptr.is_none()) then env.out.print("Apparently bad xmlnodesetptr") end // Works!
 
       let xmlnodeset: Xmlnodeset = xmlnodesetptr.apply()?
@@ -26,7 +26,7 @@ actor Main
       env.out.print("pnodeNr:  " + nodecount.string())
       env.out.print("pnodeMax: " + nodemax.string())
 
-      var nodearray: Array[NullablePointer[Xmlnode]] = Array[NullablePointer[Xmlnode]].from_cpointer(xmlnodeset.pnodeTab, nodecount.usize())
+      var nodearray: Array[XmlnodePTR] = Array[XmlnodePTR].from_cpointer(xmlnodeset.pnodeTab, nodecount.usize())
 
       for element in nodearray.values() do
         let xmlnode: Xmlnode = element.apply()?
@@ -38,6 +38,7 @@ actor Main
     end
 
 type XmldocPTR is NullablePointer[Xmldoc]
+type XmlnodesetPTR is NullablePointer[Xmlnodeset]
 type XmlxpathcontextPTR is NullablePointer[Xmlxpathcontext]
 type XmlxpathobjectPTR is NullablePointer[Xmlxpathobject]
 type XmlnodePTR is NullablePointer[Xmlnode]
