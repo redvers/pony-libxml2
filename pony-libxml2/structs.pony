@@ -1,3 +1,7 @@
+primitive FUNCTIONPOINTER
+struct VaListTag
+struct IoFile
+
 struct Xmlparserinputbuffer
   var pcontext: Pointer[U8] = Pointer[U8] // offset: 0
   var preadcallback: Pointer[FUNCTIONPOINTER] = Pointer[FUNCTIONPOINTER] // offset: 64
