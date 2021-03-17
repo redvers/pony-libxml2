@@ -1,3 +1,0 @@
-struct Xmlautomata
-
-struct Xmlautomatastate

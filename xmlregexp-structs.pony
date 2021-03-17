@@ -1,3 +1,0 @@
-struct Xmlregexp
-
-struct Xmlregexecctxt

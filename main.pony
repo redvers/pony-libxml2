@@ -2,6 +2,7 @@ use "lib:xml2"
 use "debug"
 
 primitive FUNCTIONPOINTER
+struct VaListTag
 struct IoFile
 //    var recovered: Pointer[U8] val = @strdup[Pointer[U8] val](cstring)
 //    var str: String iso = recover iso String.copy_cstring(recovered) end
