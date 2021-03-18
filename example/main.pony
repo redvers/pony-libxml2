@@ -6,15 +6,17 @@ actor Main
   new create(env: Env) =>
     env.out.print("oof")
     try
-      @xmlInitParser[None]()
-      let docptr: XmldocPTR = LibXML2.xmlParseFile("pcre2.xml")
+//      @xmlInitParser[None]()
+      let docptr: XmldocPTR = LibXML2.xmlParseFile("pony-libxml2/libxml2.xml")
+      if (docptr.is_none()) then env.out.print("Apparently bad xmlnodesetptr"); error end // Works!
       let ctxptr: XmlxpathcontextPTR = LibXML2.xmlXPathNewContext(docptr)
-      let xpathexptr: XmlxpathobjectPTR = LibXML2.xmlXPathEvalExpression("//Function[@name='pcre2_pattern_convert_8']", ctxptr)
-      if (xpathexptr.is_none()) then env.out.print("Apparently bad xmlnodesetptr") end // Works!
+      if (ctxptr.is_none()) then env.out.print("Apparently bad xmlnodesetptr"); error end // Works!
+      let xpathexptr: XmlxpathobjectPTR = LibXML2.xmlXPathEvalExpression("//Function", ctxptr)
+      if (xpathexptr.is_none()) then env.out.print("Apparently bad xmlnodesetptr"); error end // Works!
 
       let xpathexp: Xmlxpathobject = xpathexptr.apply()?
       let xmlnodesetptr: XmlnodesetPTR = xpathexp.pnodesetval
-      if (xmlnodesetptr.is_none()) then env.out.print("Apparently bad xmlnodesetptr") end // Works!
+      if (xmlnodesetptr.is_none()) then env.out.print("Apparently bad xmlnodesetptr"); error end // Works!
 
       let xmlnodeset: Xmlnodeset = xmlnodesetptr.apply()?
       var nodecount: I32 val = xmlnodeset.pnodeNr
