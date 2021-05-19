@@ -7,6 +7,7 @@ class Xml2pathobject
   var ptr: Xmlxpathobject
   var nodeset': XmlnodesetPTR
   var nodeset: Xmlnodeset
+  var nodearray': Array[NullablePointer[Xmlnode]]
   var nodearray: Array[Xml2node] = Array[Xml2node]
 
   new fromPTR(ptrx: XmlxpathobjectPTR)? =>
@@ -20,7 +21,7 @@ class Xml2pathobject
       else
         nodeset' = ptr.pnodesetval
         nodeset = nodeset'.apply()?
-        let nodearray': Array[NullablePointer[Xmlnode]] = Array[NullablePointer[Xmlnode]].from_cpointer(nodeset.pnodeTab, nodeset.pnodeNr.usize())
+        nodearray' = Array[NullablePointer[Xmlnode]].from_cpointer(nodeset.pnodeTab, nodeset.pnodeNr.usize())
 
         for f in nodearray'.values() do
           nodearray.push(Xml2node.fromPTR(f)?)
