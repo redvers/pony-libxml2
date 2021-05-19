@@ -1,6 +1,6 @@
 primitive FUNCTIONPOINTER
-struct VaListTag
 struct IoFile
+struct VaListTag
 
 struct Xmlparserinputbuffer
   var pcontext: Pointer[U8] = Pointer[U8] // offset: 0
@@ -174,7 +174,7 @@ struct Xmlnode
 struct Xmldoc
   var p_private: Pointer[U8] = Pointer[U8] // offset: 0
   var ptype: I32 = I32(0) // offset: 64
-  var pname: Pointer[U8] tag = Pointer[U8] // offset: 128
+  var pname: Pointer[U8] = Pointer[U8] // offset: 128  // remove tag
   var pchildren: NullablePointer[Xmlnode] = NullablePointer[Xmlnode].none() // offset: 192
   var plast: NullablePointer[Xmlnode] = NullablePointer[Xmlnode].none() // offset: 256
   var pparent: NullablePointer[Xmlnode] = NullablePointer[Xmlnode].none() // offset: 320
@@ -186,11 +186,11 @@ struct Xmldoc
   var pintSubset: NullablePointer[Xmldtd] = NullablePointer[Xmldtd].none() // offset: 640
   var pextSubset: NullablePointer[Xmldtd] = NullablePointer[Xmldtd].none() // offset: 704
   var poldNs: NullablePointer[Xmlns] = NullablePointer[Xmlns].none() // offset: 768
-  var pversion: Pointer[U8] tag = Pointer[U8] // offset: 832
-  var pencoding: Pointer[U8] tag = Pointer[U8] // offset: 896
+  var pversion: Pointer[U8] = Pointer[U8] // offset: 832  // remove tag
+  var pencoding: Pointer[U8] = Pointer[U8] // offset: 896  // remove tag
   var pids: Pointer[U8] = Pointer[U8] // offset: 960
   var prefs: Pointer[U8] = Pointer[U8] // offset: 1024
-  var pURL: Pointer[U8] tag = Pointer[U8] // offset: 1088
+  var pURL: Pointer[U8] = Pointer[U8] // offset: 1088  // remove tag
   var pcharset: I32 = I32(0) // offset: 1152
   var pdict: NullablePointer[Xmldict] = NullablePointer[Xmldict].none() // offset: 1216
   var ppsvi: Pointer[U8] = Pointer[U8] // offset: 1280
@@ -623,7 +623,7 @@ struct Xmlxpathobject
   var pnodesetval: NullablePointer[Xmlnodeset] = NullablePointer[Xmlnodeset].none() // offset: 64
   var pboolval: I32 = I32(0) // offset: 128
   var pfloatval: F64 = F64(0) // offset: 192
-  var pstringval: Pointer[U8] tag = Pointer[U8] // offset: 256
+  var pstringval: Pointer[U8] = Pointer[U8] // offset: 256
   var puser: Pointer[U8] = Pointer[U8] // offset: 320
   var pindex: I32 = I32(0) // offset: 384
   var puser2: Pointer[U8] = Pointer[U8] // offset: 448

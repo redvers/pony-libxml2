@@ -1,3 +1,4 @@
+use "lib:xml2"
 primitive LibXML2
   fun xmlCheckVersion(pversion: I32): None =>
     var tmpvar: None = @xmlCheckVersion[None](pversion)
