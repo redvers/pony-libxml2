@@ -1,10 +1,11 @@
 type XmlxpathobjectPTR is NullablePointer[Xmlxpathobject]
 type XmlnodePTR is NullablePointer[Xmlnode]
+type XmlnodesetPTR is NullablePointer[Xmlnodeset]
 
 class Xml2pathobject
   var ptr': XmlxpathobjectPTR
   var ptr: Xmlxpathobject
-  var nodeset': NullablePointer[Xmlnodeset]
+  var nodeset': XmlnodesetPTR
   var nodeset: Xmlnodeset
   var nodearray: Array[Xml2node] = Array[Xml2node]
 
