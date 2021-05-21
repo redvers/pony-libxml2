@@ -13,6 +13,8 @@ actor Main is TestList
 
   fun tag tests(test: PonyTest) =>
     test(TestXPath)
+    test(TestXPathNS)
+    test(TestWalker)
 
 
 

@@ -32,6 +32,14 @@ class Xml2pathobject
   fun len(): USize =>
     nodearray.size()
 
+  fun values(): ArrayValues[Xml2node, this->Array[Xml2node]]^ =>
+    ArrayValues[Xml2node, this->Array[Xml2node]](nodearray)
+
+  fun ref apply(index: USize): Xml2node ref ? =>
+    nodearray.apply(index)?
+
+//  nodearray: Array[Xml2node] = Array[Xml2node]
+
   fun ref dispose() =>
     @xmlXPathFreeNodeSet[None](nodeset')
 
