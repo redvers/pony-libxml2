@@ -12,6 +12,7 @@ class Xml2textreader
       ptr = ptr'.apply()?
     end
 
+
 //  fun xmlTextReaderRead(preader: NullablePointer[Xmltextreader]): I32 =>
   fun ref read(): I32 =>
     LibXML2.xmlTextReaderRead(ptr')
@@ -28,6 +29,10 @@ class Xml2textreader
   fun ref name(): String =>
     LibXML2.xmlTextReaderName(ptr')
 
+//  fun xmlTextReaderValue(preader: NullablePointer[Xmltextreader]): String =>
+  fun ref value(): String =>
+    LibXML2.xmlTextReaderValue(ptr')
+
 //  fun xmlTextReaderIsEmptyElement(preader: NullablePointer[Xmltextreader]): I32 =>
   fun ref isEmptyElement(): I32 =>
     LibXML2.xmlTextReaderIsEmptyElement(ptr')
@@ -36,11 +41,13 @@ class Xml2textreader
   fun ref newWalker(xmldoc: Xml2Doc): I32 =>
     LibXML2.xmlReaderNewWalker(ptr', xmldoc.ptr')
 
+//  fun xmlTextReaderSetParserProp(preader: NullablePointer[Xmltextreader], pprop: I32, pvalue: I32): I32 =>
+  fun ref setParserProp(pprop: I32, pvalue: I32): I32 =>
+    LibXML2.xmlTextReaderSetParserProp(ptr', pprop, pvalue)
 
 
 
 
-//  fun xmlNewTextReader(pinput: NullablePointer[Xmlparserinputbuffer], pURI: String): NullablePointer[Xmltextreader] =>
 //  fun xmlNewTextReaderFilename(pURI: String): NullablePointer[Xmltextreader] =>
 //  fun xmlFreeTextReader(preader: NullablePointer[Xmltextreader]): None =>
 //  fun xmlTextReaderSetup(preader: NullablePointer[Xmltextreader], pinput: NullablePointer[Xmlparserinputbuffer], pURL: String, pencoding: String, poptions: I32): I32 =>
@@ -68,7 +75,6 @@ class Xml2textreader
 //  fun xmlTextReaderNamespaceUri(preader: NullablePointer[Xmltextreader]): String =>
 //  fun xmlTextReaderPrefix(preader: NullablePointer[Xmltextreader]): String =>
 //  fun xmlTextReaderXmlLang(preader: NullablePointer[Xmltextreader]): String =>
-//  fun xmlTextReaderValue(preader: NullablePointer[Xmltextreader]): String =>
 //  fun xmlTextReaderClose(preader: NullablePointer[Xmltextreader]): I32 =>
 //  fun xmlTextReaderGetAttributeNo(preader: NullablePointer[Xmltextreader], pno: I32): String =>
 //  fun xmlTextReaderGetAttribute(preader: NullablePointer[Xmltextreader], pname: String): String =>
@@ -83,7 +89,6 @@ class Xml2textreader
 //  fun xmlTextReaderMoveToElement(preader: NullablePointer[Xmltextreader]): I32 =>
 //  fun xmlTextReaderNormalization(preader: NullablePointer[Xmltextreader]): I32 =>
 //  fun xmlTextReaderConstEncoding(preader: NullablePointer[Xmltextreader]): String =>
-//  fun xmlTextReaderSetParserProp(preader: NullablePointer[Xmltextreader], pprop: I32, pvalue: I32): I32 =>
 //  fun xmlTextReaderGetParserProp(preader: NullablePointer[Xmltextreader], pprop: I32): I32 =>
 //  fun xmlTextReaderCurrentNode(preader: NullablePointer[Xmltextreader]): NullablePointer[Xmlnode] =>
 //  fun xmlTextReaderGetParserLineNumber(preader: NullablePointer[Xmltextreader]): I32 =>
