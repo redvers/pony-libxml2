@@ -24,21 +24,27 @@ The module currently has two APIs exposed:
 
 If you can get all your work done in the pony-API I recommend using that. If you're missing functions / functionality please open an issue and I'll try and get it added (or submit a PR!).  Right now it covers all my use-cases but I would like to extend it and knowing which functions other people want to use would be really useful for me.
 
-If you're stuck, you can fall-back to the C API from the Pony API by using the C Pointer stored in the Pony Object.
+If you're stuck, you can fall-back to the C API from the Pony API by using the C Pointer stored in the ptr' field of the Pony Object.
 
-For example, if you need to call an as-yet unimplemented function which takes an ```xmlNodePtr``` as an argument, you can use ```xmlnod.ptr'``` as your argument.
-
-If you need to go from the C API to Pony, if implemented you do something akin to:
+For example, if you need to call an as-yet unimplemented function which takes an xmlDocPtr as an argument, you can extract it like this:
 
 ```
-let s: NullablePointer[Xmlnode] = ... LibXML2.(some API call)
+let xmldoc: Xml2Doc = Xml2Doc.xmlParseFile("somefile.xml")?
+let xmldocptr: NullablePointer[Xmldoc] = xmldoc.ptr'
+```
+
+
+If you need to go from the C API back to the Pony API, if implemented you can reverse it as follows:
+
+```
+let s: NullablePointer[Xmlnode] = LibXML2.(some API call)
 let xmlnode: Xml2node = Xml2node.fromPTR(s)
 ```
 
 
 ### How do I start?
 
-Take a look at the _tests directory at all of the pony files. Those tests provide examples.
+Take a look at the \_tests directory at all of the pony files. Those tests provide examples.
 
 Documentation will follow.
 
