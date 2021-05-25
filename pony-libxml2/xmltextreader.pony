@@ -45,7 +45,15 @@ class Xml2textreader
   fun ref setParserProp(pprop: I32, pvalue: I32): I32 =>
     LibXML2.xmlTextReaderSetParserProp(ptr', pprop, pvalue)
 
+//  fun xmlTextReaderExpand(preader: NullablePointer[Xmltextreader]): NullablePointer[Xmlnode] =>
+  fun ref expand(): Xml2node ? =>
+    let ptrx: XmlnodePTR = LibXML2.xmlTextReaderExpand(ptr')
+    Xml2node.fromPTR(ptrx)?
 
+//  fun xmlTextReaderCurrentDoc(preader: NullablePointer[Xmltextreader]): NullablePointer[Xmldoc] =>
+//  fun ref currentDoc(): Xml2Doc ? =>
+//    let ptrx: XmldocPTR = LibXML2.xmlTextReaderCurrentDoc(ptr')
+//    Xml2Doc.fromPTR(ptrx)?
 
 
 //  fun xmlNewTextReaderFilename(pURI: String): NullablePointer[Xmltextreader] =>
@@ -95,8 +103,6 @@ class Xml2textreader
 //  fun xmlTextReaderGetParserColumnNumber(preader: NullablePointer[Xmltextreader]): I32 =>
 //  fun xmlTextReaderPreserve(preader: NullablePointer[Xmltextreader]): NullablePointer[Xmlnode] =>
 //  fun xmlTextReaderPreservePattern(preader: NullablePointer[Xmltextreader], ppattern: String, pnamespaces: Pointer[Pointer[U8] tag]): I32 =>
-//  fun xmlTextReaderCurrentDoc(preader: NullablePointer[Xmltextreader]): NullablePointer[Xmldoc] =>
-//  fun xmlTextReaderExpand(preader: NullablePointer[Xmltextreader]): NullablePointer[Xmlnode] =>
 //  fun xmlTextReaderNext(preader: NullablePointer[Xmltextreader]): I32 =>
 //  fun xmlTextReaderNextSibling(preader: NullablePointer[Xmltextreader]): I32 =>
 //  fun xmlTextReaderIsValid(preader: NullablePointer[Xmltextreader]): I32 =>

@@ -3,7 +3,7 @@ use "ponytest"
 use "debug"
 
 class iso TestReader3 is UnitTest
-  fun name(): String => "XPath Functions"
+  fun name(): String => "Reader3 Functions"
   fun apply(h: TestHelper) =>
     h.assert_true(true)
 

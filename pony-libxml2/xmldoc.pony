@@ -5,6 +5,15 @@ class Xml2Doc
   var ptr: Xmldoc
   var name: String val
 
+  new fromPTR(ptrx: XmldocPTR)? =>
+    ptr' = ptrx
+    if (ptr'.is_none()) then
+      error
+    else
+      ptr = ptr'.apply()?
+      name = ""
+    end
+
   new xmlParseFile(pfilename: String)? =>
     ptr' = LibXML2.xmlParseFile(pfilename)
     if (ptr'.is_none()) then

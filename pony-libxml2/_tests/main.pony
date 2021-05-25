@@ -16,6 +16,8 @@ actor Main is TestList
     test(TestXPathNS)
     test(TestWalker)
     test(TestReader3)
+    test(TestReader4)
+    test(TestReader5)
 //    test(TestValidRNG) requires callbacks
 
 
