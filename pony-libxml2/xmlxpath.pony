@@ -29,7 +29,7 @@ class Xml2pathobject
       end
     end
 
-  fun len(): USize =>
+  fun size(): USize =>
     nodearray.size()
 
   fun values(): ArrayValues[Xml2node, this->Array[Xml2node]]^ =>

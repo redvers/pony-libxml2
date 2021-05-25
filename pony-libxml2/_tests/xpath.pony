@@ -25,7 +25,7 @@ class iso TestXPath is UnitTest
       h.assert_eq[I32](res.ptr.pboolval, I32(0))
 
 //    if len(res) != 2:
-      h.assert_eq[USize](res.len(), USize(2))
+      h.assert_eq[USize](res.size(), USize(2))
       h.assert_eq[USize](res.nodearray.size(), USize(2))
 
 //    if res[0].name != "doc" or res[1].name != "foo":
