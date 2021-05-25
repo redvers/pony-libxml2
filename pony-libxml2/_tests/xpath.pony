@@ -49,4 +49,6 @@ class iso TestXPath is UnitTest
       //    doc.freeDoc()
       //    ctxt.xpathFreeContext()
 
-  end
+    else
+      Debug.out("XPath functions has FAILED")
+    end

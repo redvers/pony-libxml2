@@ -28,7 +28,7 @@ class iso TestReader5 is UnitTest
 
 
     else
-      Debug.out("I failed somewhere in TestReader5")
+      Debug.out("TestReader5 has FAILED")
     end
 
 //

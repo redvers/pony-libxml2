@@ -36,4 +36,6 @@ class iso TestReader4 is UnitTest
       h.assert_eq[String](reader.value(), "")
       h.assert_eq[I32](reader.isEmptyElement(), I32(0))
 
+    else
+      Debug.out("Reader4 has FAILED")
     end

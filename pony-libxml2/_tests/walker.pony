@@ -75,8 +75,8 @@ class TestWalker is UnitTest
       h.assert_eq[String](processNode(reader), "0 15 foo 0")
       h.assert_eq[I32](reader.read(), I32(0))
 
-
-
+    else
+      Debug.out("TextWalker functions have FAILED")
     end
 
   fun processNode(reader: Xml2textreader): String =>

@@ -72,4 +72,6 @@ class iso TestReader3 is UnitTest
 
       h.assert_eq[I32](reader.read(), I32(0))
 
+    else
+      Debug.out("Reader3 has FAILED")
     end

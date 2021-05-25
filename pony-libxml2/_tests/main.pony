@@ -18,6 +18,7 @@ actor Main is TestList
     test(TestReader3)
     test(TestReader4)
     test(TestReader5)
+    test(TestAttribs)
 //    test(TestValidRNG) requires callbacks
 
 

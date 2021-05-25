@@ -43,23 +43,3 @@ class Xml2pathobject
   fun ref dispose() =>
     @xmlXPathFreeNodeSet[None](nodeset')
 
-
-class Xml2node
-  var ptr': XmlnodePTR
-  var ptr: Xmlnode
-
-  new fromPTR(ptrx: XmlnodePTR)? =>
-    if (ptrx.is_none()) then
-      error
-    else
-      ptr' = ptrx
-      ptr = ptr'.apply()?
-    end
-
-  fun ref name(): String val =>
-    String.from_cstring(ptr.pname).clone()
-
-
-  fun ref dispose() =>
-    @xmlFreeNode[None](ptr')
-
