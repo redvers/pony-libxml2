@@ -14,7 +14,7 @@ class Xml2Doc
       name = ""
     end
 
-  new xmlParseFile(pfilename: String)? =>
+  new parseFile(pfilename: String)? =>
     ptr' = LibXML2.xmlParseFile(pfilename)
     if (ptr'.is_none()) then
       error
@@ -23,7 +23,7 @@ class Xml2Doc
       name = pfilename
     end
 
-  new xmlParseDoc(pcur: String)? =>
+  new parseDoc(pcur: String)? =>
     ptr' = LibXML2.xmlParseDoc(pcur)
     if (ptr'.is_none()) then
       error
@@ -32,7 +32,7 @@ class Xml2Doc
       name = ""
     end
 
-  fun ref xmlReaderWalker(): Xml2textreader ? =>
+  fun ref readerWalker(): Xml2textreader ? =>
     Xml2textreader.fromPTR(LibXML2.xmlReaderWalker(ptr'))?
 
 //use @xmlDocGetRootElement[NullablePointer[Xmlnode]](anon0: NullablePointer[Xmldoc])

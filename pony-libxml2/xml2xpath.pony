@@ -38,8 +38,6 @@ class Xml2pathobject
   fun ref apply(index: USize): Xml2node ref ? =>
     nodearray.apply(index)?
 
-//  nodearray: Array[Xml2node] = Array[Xml2node]
-
   fun ref dispose() =>
     @xmlXPathFreeNodeSet[None](nodeset')
 

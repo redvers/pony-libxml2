@@ -8,7 +8,7 @@ class iso TestAttribs is UnitTest
     h.assert_true(true)
 
     try
-      var xmldoc: Xml2Doc = Xml2Doc.xmlParseDoc(
+      var xmldoc: Xml2Doc = Xml2Doc.parseDoc(
       """
         <?xml version="1.0" encoding="iso-8859-1"?>
         <!DOCTYPE test [

@@ -14,8 +14,8 @@ class TestWalker is UnitTest
     </foo>
     """
     try
-      var xmldoc: Xml2Doc = Xml2Doc.xmlParseDoc(docstr)?
-      var reader: Xml2textreader = xmldoc.xmlReaderWalker()?
+      var xmldoc: Xml2Doc = Xml2Doc.parseDoc(docstr)?
+      var reader: Xml2textreader = xmldoc.readerWalker()?
 
       h.assert_eq[I32](reader.read(), I32(1))
       h.assert_eq[String](processNode(reader), "0 1 foo 0")
@@ -48,7 +48,7 @@ class TestWalker is UnitTest
       </foo>
       """
 
-      xmldoc = Xml2Doc.xmlParseDoc(docstr)?
+      xmldoc = Xml2Doc.parseDoc(docstr)?
       h.assert_eq[I32](reader.newWalker(xmldoc), I32(0))
 
       h.assert_eq[I32](reader.read(), I32(1))
