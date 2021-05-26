@@ -50,10 +50,45 @@ class Xml2textreader
     let ptrx: XmlnodePTR = LibXML2.xmlTextReaderExpand(ptr')
     Xml2node.fromPTR(ptrx)?
 
-//  fun xmlTextReaderCurrentDoc(preader: NullablePointer[Xmltextreader]): NullablePointer[Xmldoc] =>
-//  fun ref currentDoc(): Xml2Doc ? =>
-//    let ptrx: XmldocPTR = LibXML2.xmlTextReaderCurrentDoc(ptr')
-//    Xml2Doc.fromPTR(ptrx)?
+//  fun xmlTextReaderCurrentDoc(preader: NullablePointer[Xmltextreader]): NullablePointer[Xmldoc]
+  fun ref currentDoc(): Xml2Doc ? =>
+    let ptrx: XmldocPTR = LibXML2.xmlTextReaderCurrentDoc(ptr')
+    Xml2Doc.fromPTR(ptrx)?
+
+
+
+
+//   fun xmlTextReaderBaseUri(preader: NullablePointer[Xmltextreader]): String =>
+//   fun xmlTextReaderConstBaseUri(preader: NullablePointer[Xmltextreader]): String =>
+//   fun xmlTextReaderConstEncoding(preader: NullablePointer[Xmltextreader]): String =>
+//   fun xmlTextReaderConstLocalName(preader: NullablePointer[Xmltextreader]): String =>
+//   fun xmlTextReaderConstName(preader: NullablePointer[Xmltextreader]): String =>
+//   fun xmlTextReaderConstNamespaceUri(preader: NullablePointer[Xmltextreader]): String =>
+//   fun xmlTextReaderConstPrefix(preader: NullablePointer[Xmltextreader]): String =>
+//   fun xmlTextReaderConstString(preader: NullablePointer[Xmltextreader], pstr: String): String =>
+//   fun xmlTextReaderConstValue(preader: NullablePointer[Xmltextreader]): String =>
+//   fun xmlTextReaderConstXmlLang(preader: NullablePointer[Xmltextreader]): String =>
+//   fun xmlTextReaderConstXmlVersion(preader: NullablePointer[Xmltextreader]): String =>
+//   fun xmlTextReaderGetAttributeNo(preader: NullablePointer[Xmltextreader], pno: I32): String =>
+//   fun xmlTextReaderGetAttributeNs(preader: NullablePointer[Xmltextreader], plocalName: String, pnamespaceURI: String): String =>
+//   fun xmlTextReaderGetAttribute(preader: NullablePointer[Xmltextreader], pname: String): String =>
+//   fun xmlTextReaderLocalName(preader: NullablePointer[Xmltextreader]): String =>
+//   fun xmlTextReaderLocatorBaseURI(plocator: Pointer[U8]): String =>
+//   fun xmlTextReaderLookupNamespace(preader: NullablePointer[Xmltextreader], pprefix: String): String =>
+//   fun xmlTextReaderName(preader: NullablePointer[Xmltextreader]): String =>
+//   fun xmlTextReaderNamespaceUri(preader: NullablePointer[Xmltextreader]): String =>
+//   fun xmlTextReaderPrefix(preader: NullablePointer[Xmltextreader]): String =>
+//   fun xmlTextReaderReadInnerXml(preader: NullablePointer[Xmltextreader]): String =>
+//   fun xmlTextReaderReadOuterXml(preader: NullablePointer[Xmltextreader]): String =>
+//   fun xmlTextReaderReadString(preader: NullablePointer[Xmltextreader]): String =>
+//   fun xmlTextReaderValue(preader: NullablePointer[Xmltextreader]): String =>
+//   fun xmlTextReaderXmlLang(preader: NullablePointer[Xmltextreader]): String =>
+
+
+
+
+
+
 
 
 //  fun xmlNewTextReaderFilename(pURI: String): NullablePointer[Xmltextreader] =>

@@ -15,6 +15,10 @@ class iso TestXPathNS is UnitTest
 
       h.assert_eq[String](res(USize(0))?.name(), "http://www.w3.org/XML/1998/namespace")
       h.assert_eq[String](res(USize(1))?.name(), "urn:whatevar")
+      h.assert_eq[String](res(USize(0))?.castNodeToString(), "http://www.w3.org/XML/1998/namespace")
+      h.assert_eq[String](res.castToString(), "http://www.w3.org/XML/1998/namespace")
+      h.assert_eq[String](res.castNodeSetToString(), "http://www.w3.org/XML/1998/namespace")
+
     else
       Debug.out("XPathNS has FAILED")
     end

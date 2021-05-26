@@ -22,6 +22,9 @@ class iso TestAttribs is UnitTest
       var elem: Xml2node = xmldoc.getRootElement()?
       var xmlattr: Xml2attr = elem.hasNsProp("attr", "http://abc.org")?
 
+      h.assert_eq[I64](elem.getLineNo(), I64(0))
+      h.assert_eq[String](elem.getNodePath(), "/test")
+
 
     else
       Debug.out("TestAttribs has FAILED")

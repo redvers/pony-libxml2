@@ -41,3 +41,11 @@ class Xml2pathobject
   fun ref dispose() =>
     @xmlXPathFreeNodeSet[None](nodeset')
 
+//  fun xmlXPathCastNodeSetToString(pns: NullablePointer[Xmlnodeset]): String =>
+  fun ref castNodeSetToString(): String =>
+    LibXML2.xmlXPathCastNodeSetToString(nodeset')
+
+//  xmlXPathCastToString[Pointer[U8]](anon0: NullablePointer[Xmlxpathobject])
+  fun ref castToString(): String =>
+    LibXML2.xmlXPathCastToString(ptr')
+
