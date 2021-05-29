@@ -38,8 +38,8 @@ class Xml2textreader
     LibXML2.xmlTextReaderIsEmptyElement(ptr')
 
 //  fun xmlReaderNewWalker(preader: NullablePointer[Xmltextreader], pdoc: NullablePointer[Xmldoc]): I32 =>
-  fun ref newWalker(xmldoc: Xml2Doc): I32 =>
-    LibXML2.xmlReaderNewWalker(ptr', xmldoc.ptr')
+//  fun ref newWalker(xmldoc: Xml2Doc): I32 =>
+//    LibXML2.xmlReaderNewWalker(ptr', xmldoc.ptr')
 
 //  fun xmlTextReaderSetParserProp(preader: NullablePointer[Xmltextreader], pprop: I32, pvalue: I32): I32 =>
   fun ref setParserProp(pprop: I32, pvalue: I32): I32 =>
@@ -51,9 +51,9 @@ class Xml2textreader
     Xml2node.fromPTR(ptrx)?
 
 //  fun xmlTextReaderCurrentDoc(preader: NullablePointer[Xmltextreader]): NullablePointer[Xmldoc]
-  fun ref currentDoc(): Xml2Doc ? =>
-    let ptrx: XmldocPTR = LibXML2.xmlTextReaderCurrentDoc(ptr')
-    Xml2Doc.fromPTR(ptrx)?
+//  fun ref currentDoc(): Xml2Doc ? =>
+//    let ptrx: XmldocPTR = LibXML2.xmlTextReaderCurrentDoc(ptr')
+//    Xml2Doc.fromPTR(ptrx)?
 
 
 

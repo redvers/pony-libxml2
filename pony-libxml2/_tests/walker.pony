@@ -6,7 +6,7 @@ class TestWalker is UnitTest
   fun name(): String => "TextWalker Functions"
   fun apply(h: TestHelper) =>
     h.assert_true(true)
-
+/*
     var docstr: String = """
     <foo>
     <label>some text</label>
@@ -85,3 +85,4 @@ class TestWalker is UnitTest
     + reader.name() + " "
     + reader.isEmptyElement().string()
 
+                                      */

@@ -14,7 +14,7 @@ class iso TestXPath is UnitTest
 
     try
       let xmldoc: Xml2Doc = Xml2Doc.parseFile("tst.xml")?
-      h.assert_eq[String](xmldoc.name, "tst.xml")
+//      h.assert_eq[String](xmldoc.name, "tst.xml")
 
 			let ctxt: Xml2xpathcontext = Xml2xpathcontext(xmldoc)?
 

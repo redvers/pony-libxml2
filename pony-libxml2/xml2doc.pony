@@ -1,49 +1,49 @@
 type XmldocPTR is NullablePointer[Xmldoc]
 
 class Xml2Doc
-  var ptr': NullablePointer[Xmldoc]
-  var ptr: Xmldoc
-  var name: String val
+  var ptr': NullablePointer[Xmldoc] val
 
-  new fromPTR(ptrx: XmldocPTR)? =>
-    ptr' = ptrx
-    if (ptr'.is_none()) then
+  new fromPTR(ptrx: XmldocPTR val)? =>
+    if (ptrx.is_none()) then
       error
     else
-      ptr = ptr'.apply()?
-      name = ""
+      ptr' = ptrx
     end
 
-  new parseFile(pfilename: String)? =>
-    ptr' = LibXML2.xmlParseFile(pfilename)
-    if (ptr'.is_none()) then
+  new parseFile(pfilename: String val)? =>
+    let ptrx: NullablePointer[Xmldoc] val = recover LibXML2.xmlParseFile(pfilename) end
+    if (ptrx.is_none()) then
       error
     else
-      ptr = ptr'.apply()?
-      name = pfilename
+      ptr' = ptrx
     end
 
-  new parseDoc(pcur: String)? =>
-    ptr' = LibXML2.xmlParseDoc(pcur)
-    if (ptr'.is_none()) then
+  new parseDoc(pcur: String val)? =>
+    let ptrx: NullablePointer[Xmldoc] val = recover LibXML2.xmlParseDoc(pcur) end
+    if (ptrx.is_none()) then
       error
     else
-      ptr = ptr'.apply()?
-      name = ""
+      ptr' = ptrx
     end
 
-  fun ref readerWalker(): Xml2textreader ? =>
-    Xml2textreader.fromPTR(LibXML2.xmlReaderWalker(ptr'))?
+//  fun ref readerWalker(): Xml2textreader ? =>
+//    Xml2textreader.fromPTR(LibXML2.xmlReaderWalker(ptr'))?
 
 //use @xmlDocGetRootElement[NullablePointer[Xmlnode]](anon0: NullablePointer[Xmldoc])
-  fun ref getRootElement(): Xml2node ? =>
-    let ptrx: XmlnodePTR = LibXML2.xmlDocGetRootElement(ptr')
-    Xml2node.fromPTR(ptrx)?
+//  fun ref getRootElement(): Xml2node ? =>
+//    let ptrx: XmlnodePTR = LibXML2.xmlDocGetRootElement(ptr')
+//    Xml2node.fromPTR(ptrx)?
 
-
-
-  fun ref dispose() =>
+  fun ref final() =>
     @xmlFreeDoc[None](ptr')
+    ptr' = recover val NullablePointer[Xmldoc].none() end
+
+  fun _final() =>
+    if (ptr'.is_none()) then
+      return None
+    else
+      @xmlFreeDoc[None](ptr')
+    end
 
 //use @xmlDocCopyNode[NullablePointer[Xmlnode]](anon0: NullablePointer[Xmlnode], anon1: NullablePointer[Xmldoc], anon2: I32)
 //use @xmlDocCopyNodeList[NullablePointer[Xmlnode]](anon0: NullablePointer[Xmldoc], anon1: NullablePointer[Xmlnode])

@@ -18,6 +18,7 @@ class iso TestAttribs is UnitTest
         ]>
         <test />
       """)?
+/*
 
       var elem: Xml2node = xmldoc.getRootElement()?
       var xmlattr: Xml2attr = elem.hasNsProp("attr", "http://abc.org")?
@@ -44,3 +45,4 @@ class iso TestAttribs is UnitTest
 //    else:
 //        print("Memory leak %d bytes" % (libxml2.debugMemory(1)))
 //        libxml2.dumpMemory()
+*/

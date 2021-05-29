@@ -500,15 +500,15 @@ primitive LibXML2
     var tmpvar: I32 = @xmlBufferLength[I32](pbuf)
     tmpvar
 
-  fun xmlCreateIntSubset(pdoc: NullablePointer[Xmldoc], pname: String, pExternalID: String, pSystemID: String): NullablePointer[Xmldtd] =>
+  fun xmlCreateIntSubset(pdoc: NullablePointer[Xmldoc] tag, pname: String, pExternalID: String, pSystemID: String): NullablePointer[Xmldtd] =>
     var tmpvar: NullablePointer[Xmldtd] = @xmlCreateIntSubset[NullablePointer[Xmldtd]](pdoc, pname.cstring(), pExternalID.cstring(), pSystemID.cstring())
     tmpvar
 
-  fun xmlNewDtd(pdoc: NullablePointer[Xmldoc], pname: String, pExternalID: String, pSystemID: String): NullablePointer[Xmldtd] =>
+  fun xmlNewDtd(pdoc: NullablePointer[Xmldoc] tag, pname: String, pExternalID: String, pSystemID: String): NullablePointer[Xmldtd] =>
     var tmpvar: NullablePointer[Xmldtd] = @xmlNewDtd[NullablePointer[Xmldtd]](pdoc, pname.cstring(), pExternalID.cstring(), pSystemID.cstring())
     tmpvar
 
-  fun xmlGetIntSubset(pdoc: NullablePointer[Xmldoc]): NullablePointer[Xmldtd] =>
+  fun xmlGetIntSubset(pdoc: NullablePointer[Xmldoc] tag): NullablePointer[Xmldtd] =>
     var tmpvar: NullablePointer[Xmldtd] = @xmlGetIntSubset[NullablePointer[Xmldtd]](pdoc)
     tmpvar
 
@@ -516,7 +516,7 @@ primitive LibXML2
     var tmpvar: None = @xmlFreeDtd[None](pcur)
     tmpvar
 
-  fun xmlNewGlobalNs(pdoc: NullablePointer[Xmldoc], phref: String, pprefix: String): NullablePointer[Xmlns] =>
+  fun xmlNewGlobalNs(pdoc: NullablePointer[Xmldoc] tag, phref: String, pprefix: String): NullablePointer[Xmlns] =>
     var tmpvar: NullablePointer[Xmlns] = @xmlNewGlobalNs[NullablePointer[Xmlns]](pdoc, phref.cstring(), pprefix.cstring())
     tmpvar
 
@@ -536,11 +536,11 @@ primitive LibXML2
     var tmpvar: NullablePointer[Xmldoc] = @xmlNewDoc[NullablePointer[Xmldoc]](pversion.cstring())
     tmpvar
 
-  fun xmlFreeDoc(pcur: NullablePointer[Xmldoc]): None =>
+  fun xmlFreeDoc(pcur: NullablePointer[Xmldoc] tag): None =>
     var tmpvar: None = @xmlFreeDoc[None](pcur)
     tmpvar
 
-  fun xmlNewDocProp(pdoc: NullablePointer[Xmldoc], pname: String, pvalue: String): NullablePointer[Xmlattr] =>
+  fun xmlNewDocProp(pdoc: NullablePointer[Xmldoc] tag, pname: String, pvalue: String): NullablePointer[Xmlattr] =>
     var tmpvar: NullablePointer[Xmlattr] = @xmlNewDocProp[NullablePointer[Xmlattr]](pdoc, pname.cstring(), pvalue.cstring())
     tmpvar
 
@@ -576,15 +576,15 @@ primitive LibXML2
     var tmpvar: NullablePointer[Xmldtd] = @xmlCopyDtd[NullablePointer[Xmldtd]](pdtd)
     tmpvar
 
-  fun xmlCopyDoc(pdoc: NullablePointer[Xmldoc], precursive: I32): NullablePointer[Xmldoc] =>
+  fun xmlCopyDoc(pdoc: NullablePointer[Xmldoc] tag, precursive: I32): NullablePointer[Xmldoc] =>
     var tmpvar: NullablePointer[Xmldoc] = @xmlCopyDoc[NullablePointer[Xmldoc]](pdoc, precursive)
     tmpvar
 
-  fun xmlNewDocNode(pdoc: NullablePointer[Xmldoc], pns: NullablePointer[Xmlns], pname: String, pcontent: String): NullablePointer[Xmlnode] =>
+  fun xmlNewDocNode(pdoc: NullablePointer[Xmldoc] tag, pns: NullablePointer[Xmlns], pname: String, pcontent: String): NullablePointer[Xmlnode] =>
     var tmpvar: NullablePointer[Xmlnode] = @xmlNewDocNode[NullablePointer[Xmlnode]](pdoc, pns, pname.cstring(), pcontent.cstring())
     tmpvar
 
-  fun xmlNewDocNodeEatName(pdoc: NullablePointer[Xmldoc], pns: NullablePointer[Xmlns], pname: String, pcontent: String): NullablePointer[Xmlnode] =>
+  fun xmlNewDocNodeEatName(pdoc: NullablePointer[Xmldoc] tag, pns: NullablePointer[Xmlns], pname: String, pcontent: String): NullablePointer[Xmlnode] =>
     var tmpvar: NullablePointer[Xmlnode] = @xmlNewDocNodeEatName[NullablePointer[Xmlnode]](pdoc, pns, pname.cstring(), pcontent.cstring())
     tmpvar
 
@@ -600,7 +600,7 @@ primitive LibXML2
     var tmpvar: NullablePointer[Xmlnode] = @xmlNewChild[NullablePointer[Xmlnode]](pparent, pns, pname.cstring(), pcontent.cstring())
     tmpvar
 
-  fun xmlNewDocText(pdoc: NullablePointer[Xmldoc], pcontent: String): NullablePointer[Xmlnode] =>
+  fun xmlNewDocText(pdoc: NullablePointer[Xmldoc] tag, pcontent: String): NullablePointer[Xmlnode] =>
     var tmpvar: NullablePointer[Xmlnode] = @xmlNewDocText[NullablePointer[Xmlnode]](pdoc, pcontent.cstring())
     tmpvar
 
@@ -608,7 +608,7 @@ primitive LibXML2
     var tmpvar: NullablePointer[Xmlnode] = @xmlNewText[NullablePointer[Xmlnode]](pcontent.cstring())
     tmpvar
 
-  fun xmlNewDocPI(pdoc: NullablePointer[Xmldoc], pname: String, pcontent: String): NullablePointer[Xmlnode] =>
+  fun xmlNewDocPI(pdoc: NullablePointer[Xmldoc] tag, pname: String, pcontent: String): NullablePointer[Xmlnode] =>
     var tmpvar: NullablePointer[Xmlnode] = @xmlNewDocPI[NullablePointer[Xmlnode]](pdoc, pname.cstring(), pcontent.cstring())
     tmpvar
 
@@ -616,7 +616,7 @@ primitive LibXML2
     var tmpvar: NullablePointer[Xmlnode] = @xmlNewPI[NullablePointer[Xmlnode]](pname.cstring(), pcontent.cstring())
     tmpvar
 
-  fun xmlNewDocTextLen(pdoc: NullablePointer[Xmldoc], pcontent: String, plen: I32): NullablePointer[Xmlnode] =>
+  fun xmlNewDocTextLen(pdoc: NullablePointer[Xmldoc] tag, pcontent: String, plen: I32): NullablePointer[Xmlnode] =>
     var tmpvar: NullablePointer[Xmlnode] = @xmlNewDocTextLen[NullablePointer[Xmlnode]](pdoc, pcontent.cstring(), plen)
     tmpvar
 
@@ -624,7 +624,7 @@ primitive LibXML2
     var tmpvar: NullablePointer[Xmlnode] = @xmlNewTextLen[NullablePointer[Xmlnode]](pcontent.cstring(), plen)
     tmpvar
 
-  fun xmlNewDocComment(pdoc: NullablePointer[Xmldoc], pcontent: String): NullablePointer[Xmlnode] =>
+  fun xmlNewDocComment(pdoc: NullablePointer[Xmldoc] tag, pcontent: String): NullablePointer[Xmlnode] =>
     var tmpvar: NullablePointer[Xmlnode] = @xmlNewDocComment[NullablePointer[Xmlnode]](pdoc, pcontent.cstring())
     tmpvar
 
@@ -632,15 +632,15 @@ primitive LibXML2
     var tmpvar: NullablePointer[Xmlnode] = @xmlNewComment[NullablePointer[Xmlnode]](pcontent.cstring())
     tmpvar
 
-  fun xmlNewCDataBlock(pdoc: NullablePointer[Xmldoc], pcontent: String, plen: I32): NullablePointer[Xmlnode] =>
+  fun xmlNewCDataBlock(pdoc: NullablePointer[Xmldoc] tag, pcontent: String, plen: I32): NullablePointer[Xmlnode] =>
     var tmpvar: NullablePointer[Xmlnode] = @xmlNewCDataBlock[NullablePointer[Xmlnode]](pdoc, pcontent.cstring(), plen)
     tmpvar
 
-  fun xmlNewCharRef(pdoc: NullablePointer[Xmldoc], pname: String): NullablePointer[Xmlnode] =>
+  fun xmlNewCharRef(pdoc: NullablePointer[Xmldoc] tag, pname: String): NullablePointer[Xmlnode] =>
     var tmpvar: NullablePointer[Xmlnode] = @xmlNewCharRef[NullablePointer[Xmlnode]](pdoc, pname.cstring())
     tmpvar
 
-  fun xmlNewReference(pdoc: NullablePointer[Xmldoc], pname: String): NullablePointer[Xmlnode] =>
+  fun xmlNewReference(pdoc: NullablePointer[Xmldoc] tag, pname: String): NullablePointer[Xmlnode] =>
     var tmpvar: NullablePointer[Xmlnode] = @xmlNewReference[NullablePointer[Xmlnode]](pdoc, pname.cstring())
     tmpvar
 
@@ -648,11 +648,11 @@ primitive LibXML2
     var tmpvar: NullablePointer[Xmlnode] = @xmlCopyNode[NullablePointer[Xmlnode]](pnode, precursive)
     tmpvar
 
-  fun xmlDocCopyNode(pnode: NullablePointer[Xmlnode], pdoc: NullablePointer[Xmldoc], precursive: I32): NullablePointer[Xmlnode] =>
+  fun xmlDocCopyNode(pnode: NullablePointer[Xmlnode], pdoc: NullablePointer[Xmldoc] tag, precursive: I32): NullablePointer[Xmlnode] =>
     var tmpvar: NullablePointer[Xmlnode] = @xmlDocCopyNode[NullablePointer[Xmlnode]](pnode, pdoc, precursive)
     tmpvar
 
-  fun xmlDocCopyNodeList(pdoc: NullablePointer[Xmldoc], pnode: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =>
+  fun xmlDocCopyNodeList(pdoc: NullablePointer[Xmldoc] tag, pnode: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =>
     var tmpvar: NullablePointer[Xmlnode] = @xmlDocCopyNodeList[NullablePointer[Xmlnode]](pdoc, pnode)
     tmpvar
 
@@ -664,11 +664,11 @@ primitive LibXML2
     var tmpvar: NullablePointer[Xmlnode] = @xmlNewTextChild[NullablePointer[Xmlnode]](pparent, pns, pname.cstring(), pcontent.cstring())
     tmpvar
 
-  fun xmlNewDocRawNode(pdoc: NullablePointer[Xmldoc], pns: NullablePointer[Xmlns], pname: String, pcontent: String): NullablePointer[Xmlnode] =>
+  fun xmlNewDocRawNode(pdoc: NullablePointer[Xmldoc] tag, pns: NullablePointer[Xmlns], pname: String, pcontent: String): NullablePointer[Xmlnode] =>
     var tmpvar: NullablePointer[Xmlnode] = @xmlNewDocRawNode[NullablePointer[Xmlnode]](pdoc, pns, pname.cstring(), pcontent.cstring())
     tmpvar
 
-  fun xmlNewDocFragment(pdoc: NullablePointer[Xmldoc]): NullablePointer[Xmlnode] =>
+  fun xmlNewDocFragment(pdoc: NullablePointer[Xmldoc] tag): NullablePointer[Xmlnode] =>
     var tmpvar: NullablePointer[Xmlnode] = @xmlNewDocFragment[NullablePointer[Xmlnode]](pdoc)
     tmpvar
 
@@ -682,7 +682,7 @@ primitive LibXML2
     consume p
 
 
-  fun xmlDocGetRootElement(pdoc: NullablePointer[Xmldoc]): NullablePointer[Xmlnode] =>
+  fun xmlDocGetRootElement(pdoc: NullablePointer[Xmldoc] tag): NullablePointer[Xmlnode] =>
     var tmpvar: NullablePointer[Xmlnode] = @xmlDocGetRootElement[NullablePointer[Xmlnode]](pdoc)
     tmpvar
 
@@ -698,7 +698,7 @@ primitive LibXML2
     var tmpvar: I32 = @xmlIsBlankNode[I32](pnode)
     tmpvar
 
-  fun xmlDocSetRootElement(pdoc: NullablePointer[Xmldoc], proot: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =>
+  fun xmlDocSetRootElement(pdoc: NullablePointer[Xmldoc] tag, proot: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =>
     var tmpvar: NullablePointer[Xmlnode] = @xmlDocSetRootElement[NullablePointer[Xmlnode]](pdoc, proot)
     tmpvar
 
@@ -750,23 +750,23 @@ primitive LibXML2
     var tmpvar: None = @xmlFreeNode[None](pcur)
     tmpvar
 
-  fun xmlSetTreeDoc(ptree: NullablePointer[Xmlnode], pdoc: NullablePointer[Xmldoc]): None =>
+  fun xmlSetTreeDoc(ptree: NullablePointer[Xmlnode], pdoc: NullablePointer[Xmldoc] tag): None =>
     var tmpvar: None = @xmlSetTreeDoc[None](ptree, pdoc)
     tmpvar
 
-  fun xmlSetListDoc(plist: NullablePointer[Xmlnode], pdoc: NullablePointer[Xmldoc]): None =>
+  fun xmlSetListDoc(plist: NullablePointer[Xmlnode], pdoc: NullablePointer[Xmldoc] tag): None =>
     var tmpvar: None = @xmlSetListDoc[None](plist, pdoc)
     tmpvar
 
-  fun xmlSearchNs(pdoc: NullablePointer[Xmldoc], pnode: NullablePointer[Xmlnode], pnameSpace: String): NullablePointer[Xmlns] =>
+  fun xmlSearchNs(pdoc: NullablePointer[Xmldoc] tag, pnode: NullablePointer[Xmlnode], pnameSpace: String): NullablePointer[Xmlns] =>
     var tmpvar: NullablePointer[Xmlns] = @xmlSearchNs[NullablePointer[Xmlns]](pdoc, pnode, pnameSpace.cstring())
     tmpvar
 
-  fun xmlSearchNsByHref(pdoc: NullablePointer[Xmldoc], pnode: NullablePointer[Xmlnode], phref: String): NullablePointer[Xmlns] =>
+  fun xmlSearchNsByHref(pdoc: NullablePointer[Xmldoc] tag, pnode: NullablePointer[Xmlnode], phref: String): NullablePointer[Xmlns] =>
     var tmpvar: NullablePointer[Xmlns] = @xmlSearchNsByHref[NullablePointer[Xmlns]](pdoc, pnode, phref.cstring())
     tmpvar
 
-  fun xmlGetNsList(pdoc: NullablePointer[Xmldoc], pnode: NullablePointer[Xmlnode]): Pointer[NullablePointer[Xmlns]] =>
+  fun xmlGetNsList(pdoc: NullablePointer[Xmldoc] tag, pnode: NullablePointer[Xmlnode]): Pointer[NullablePointer[Xmlns]] =>
     var tmpvar: Pointer[NullablePointer[Xmlns]] = @xmlGetNsList[Pointer[NullablePointer[Xmlns]]](pdoc, pnode)
     tmpvar
 
@@ -816,21 +816,21 @@ primitive LibXML2
     consume p
 
 
-  fun xmlStringGetNodeList(pdoc: NullablePointer[Xmldoc], pvalue: String): NullablePointer[Xmlnode] =>
+  fun xmlStringGetNodeList(pdoc: NullablePointer[Xmldoc] tag, pvalue: String): NullablePointer[Xmlnode] =>
     var tmpvar: NullablePointer[Xmlnode] = @xmlStringGetNodeList[NullablePointer[Xmlnode]](pdoc, pvalue.cstring())
     tmpvar
 
-  fun xmlStringLenGetNodeList(pdoc: NullablePointer[Xmldoc], pvalue: String, plen: I32): NullablePointer[Xmlnode] =>
+  fun xmlStringLenGetNodeList(pdoc: NullablePointer[Xmldoc] tag, pvalue: String, plen: I32): NullablePointer[Xmlnode] =>
     var tmpvar: NullablePointer[Xmlnode] = @xmlStringLenGetNodeList[NullablePointer[Xmlnode]](pdoc, pvalue.cstring(), plen)
     tmpvar
 
-  fun xmlNodeListGetString(pdoc: NullablePointer[Xmldoc], plist: NullablePointer[Xmlnode], pinLine: I32): String =>
+  fun xmlNodeListGetString(pdoc: NullablePointer[Xmldoc] tag, plist: NullablePointer[Xmlnode], pinLine: I32): String =>
     var tmpvar: Pointer[U8] = @xmlNodeListGetString[Pointer[U8]](pdoc, plist, pinLine)
     let p: String iso = String.from_cstring(tmpvar).clone()
     consume p
 
 
-  fun xmlNodeListGetRawString(pdoc: NullablePointer[Xmldoc], plist: NullablePointer[Xmlnode], pinLine: I32): String =>
+  fun xmlNodeListGetRawString(pdoc: NullablePointer[Xmldoc] tag, plist: NullablePointer[Xmlnode], pinLine: I32): String =>
     var tmpvar: Pointer[U8] = @xmlNodeListGetRawString[Pointer[U8]](pdoc, plist, pinLine)
     let p: String iso = String.from_cstring(tmpvar).clone()
     consume p
@@ -884,7 +884,7 @@ primitive LibXML2
     var tmpvar: None = @xmlNodeSetSpacePreserve[None](pcur, pval)
     tmpvar
 
-  fun xmlNodeGetBase(pdoc: NullablePointer[Xmldoc], pcur: NullablePointer[Xmlnode]): String =>
+  fun xmlNodeGetBase(pdoc: NullablePointer[Xmldoc] tag, pcur: NullablePointer[Xmlnode]): String =>
     var tmpvar: Pointer[U8] = @xmlNodeGetBase[Pointer[U8]](pdoc, pcur)
     let p: String iso = String.from_cstring(tmpvar).clone()
     consume p
@@ -914,75 +914,75 @@ primitive LibXML2
     var tmpvar: None = @xmlBufferWriteQuotedString[None](pbuf, pstring.cstring())
     tmpvar
 
-  fun xmlAttrSerializeTxtContent(pbuf: NullablePointer[Xmlbuffer], pdoc: NullablePointer[Xmldoc], pattr: NullablePointer[Xmlattr], pstring: String): None =>
+  fun xmlAttrSerializeTxtContent(pbuf: NullablePointer[Xmlbuffer], pdoc: NullablePointer[Xmldoc] tag, pattr: NullablePointer[Xmlattr], pstring: String): None =>
     var tmpvar: None = @xmlAttrSerializeTxtContent[None](pbuf, pdoc, pattr, pstring.cstring())
     tmpvar
 
-  fun xmlReconciliateNs(pdoc: NullablePointer[Xmldoc], ptree: NullablePointer[Xmlnode]): I32 =>
+  fun xmlReconciliateNs(pdoc: NullablePointer[Xmldoc] tag, ptree: NullablePointer[Xmlnode]): I32 =>
     var tmpvar: I32 = @xmlReconciliateNs[I32](pdoc, ptree)
     tmpvar
 
-  fun xmlDocDumpFormatMemory(pcur: NullablePointer[Xmldoc], pmem: Pointer[Pointer[U8] tag], psize: Pointer[I32], pformat: I32): None =>
+  fun xmlDocDumpFormatMemory(pcur: NullablePointer[Xmldoc] tag, pmem: Pointer[Pointer[U8] tag], psize: Pointer[I32], pformat: I32): None =>
     var tmpvar: None = @xmlDocDumpFormatMemory[None](pcur, pmem, psize, pformat)
     tmpvar
 
-  fun xmlDocDumpMemory(pcur: NullablePointer[Xmldoc], pmem: Pointer[Pointer[U8] tag], psize: Pointer[I32]): None =>
+  fun xmlDocDumpMemory(pcur: NullablePointer[Xmldoc] tag, pmem: Pointer[Pointer[U8] tag], psize: Pointer[I32]): None =>
     var tmpvar: None = @xmlDocDumpMemory[None](pcur, pmem, psize)
     tmpvar
 
-  fun xmlDocDumpMemoryEnc(pout_doc: NullablePointer[Xmldoc], pdoc_txt_ptr: Pointer[Pointer[U8] tag], pdoc_txt_len: Pointer[I32], ptxt_encoding: String): None =>
+  fun xmlDocDumpMemoryEnc(pout_doc: NullablePointer[Xmldoc] tag, pdoc_txt_ptr: Pointer[Pointer[U8] tag], pdoc_txt_len: Pointer[I32], ptxt_encoding: String): None =>
     var tmpvar: None = @xmlDocDumpMemoryEnc[None](pout_doc, pdoc_txt_ptr, pdoc_txt_len, ptxt_encoding.cstring())
     tmpvar
 
-  fun xmlDocDumpFormatMemoryEnc(pout_doc: NullablePointer[Xmldoc], pdoc_txt_ptr: Pointer[Pointer[U8] tag], pdoc_txt_len: Pointer[I32], ptxt_encoding: String, pformat: I32): None =>
+  fun xmlDocDumpFormatMemoryEnc(pout_doc: NullablePointer[Xmldoc] tag, pdoc_txt_ptr: Pointer[Pointer[U8] tag], pdoc_txt_len: Pointer[I32], ptxt_encoding: String, pformat: I32): None =>
     var tmpvar: None = @xmlDocDumpFormatMemoryEnc[None](pout_doc, pdoc_txt_ptr, pdoc_txt_len, ptxt_encoding.cstring(), pformat)
     tmpvar
 
-  fun xmlDocFormatDump(pf: NullablePointer[IoFile], pcur: NullablePointer[Xmldoc], pformat: I32): I32 =>
+  fun xmlDocFormatDump(pf: NullablePointer[IoFile], pcur: NullablePointer[Xmldoc] tag, pformat: I32): I32 =>
     var tmpvar: I32 = @xmlDocFormatDump[I32](pf, pcur, pformat)
     tmpvar
 
-  fun xmlDocDump(pf: NullablePointer[IoFile], pcur: NullablePointer[Xmldoc]): I32 =>
+  fun xmlDocDump(pf: NullablePointer[IoFile], pcur: NullablePointer[Xmldoc] tag): I32 =>
     var tmpvar: I32 = @xmlDocDump[I32](pf, pcur)
     tmpvar
 
-  fun xmlElemDump(pf: NullablePointer[IoFile], pdoc: NullablePointer[Xmldoc], pcur: NullablePointer[Xmlnode]): None =>
+  fun xmlElemDump(pf: NullablePointer[IoFile], pdoc: NullablePointer[Xmldoc] tag, pcur: NullablePointer[Xmlnode]): None =>
     var tmpvar: None = @xmlElemDump[None](pf, pdoc, pcur)
     tmpvar
 
-  fun xmlSaveFile(pfilename: String, pcur: NullablePointer[Xmldoc]): I32 =>
+  fun xmlSaveFile(pfilename: String, pcur: NullablePointer[Xmldoc] tag): I32 =>
     var tmpvar: I32 = @xmlSaveFile[I32](pfilename.cstring(), pcur)
     tmpvar
 
-  fun xmlSaveFormatFile(pfilename: String, pcur: NullablePointer[Xmldoc], pformat: I32): I32 =>
+  fun xmlSaveFormatFile(pfilename: String, pcur: NullablePointer[Xmldoc] tag, pformat: I32): I32 =>
     var tmpvar: I32 = @xmlSaveFormatFile[I32](pfilename.cstring(), pcur, pformat)
     tmpvar
 
-  fun xmlBufNodeDump(pbuf: NullablePointer[Xmlbuf], pdoc: NullablePointer[Xmldoc], pcur: NullablePointer[Xmlnode], plevel: I32, pformat: I32): U64 =>
+  fun xmlBufNodeDump(pbuf: NullablePointer[Xmlbuf], pdoc: NullablePointer[Xmldoc] tag, pcur: NullablePointer[Xmlnode], plevel: I32, pformat: I32): U64 =>
     var tmpvar: U64 = @xmlBufNodeDump[U64](pbuf, pdoc, pcur, plevel, pformat)
     tmpvar
 
-  fun xmlNodeDump(pbuf: NullablePointer[Xmlbuffer], pdoc: NullablePointer[Xmldoc], pcur: NullablePointer[Xmlnode], plevel: I32, pformat: I32): I32 =>
+  fun xmlNodeDump(pbuf: NullablePointer[Xmlbuffer], pdoc: NullablePointer[Xmldoc] tag, pcur: NullablePointer[Xmlnode], plevel: I32, pformat: I32): I32 =>
     var tmpvar: I32 = @xmlNodeDump[I32](pbuf, pdoc, pcur, plevel, pformat)
     tmpvar
 
-  fun xmlSaveFileTo(pbuf: NullablePointer[Xmloutputbuffer], pcur: NullablePointer[Xmldoc], pencoding: String): I32 =>
+  fun xmlSaveFileTo(pbuf: NullablePointer[Xmloutputbuffer], pcur: NullablePointer[Xmldoc] tag, pencoding: String): I32 =>
     var tmpvar: I32 = @xmlSaveFileTo[I32](pbuf, pcur, pencoding.cstring())
     tmpvar
 
-  fun xmlSaveFormatFileTo(pbuf: NullablePointer[Xmloutputbuffer], pcur: NullablePointer[Xmldoc], pencoding: String, pformat: I32): I32 =>
+  fun xmlSaveFormatFileTo(pbuf: NullablePointer[Xmloutputbuffer], pcur: NullablePointer[Xmldoc] tag, pencoding: String, pformat: I32): I32 =>
     var tmpvar: I32 = @xmlSaveFormatFileTo[I32](pbuf, pcur, pencoding.cstring(), pformat)
     tmpvar
 
-  fun xmlNodeDumpOutput(pbuf: NullablePointer[Xmloutputbuffer], pdoc: NullablePointer[Xmldoc], pcur: NullablePointer[Xmlnode], plevel: I32, pformat: I32, pencoding: String): None =>
+  fun xmlNodeDumpOutput(pbuf: NullablePointer[Xmloutputbuffer], pdoc: NullablePointer[Xmldoc] tag, pcur: NullablePointer[Xmlnode], plevel: I32, pformat: I32, pencoding: String): None =>
     var tmpvar: None = @xmlNodeDumpOutput[None](pbuf, pdoc, pcur, plevel, pformat, pencoding.cstring())
     tmpvar
 
-  fun xmlSaveFormatFileEnc(pfilename: String, pcur: NullablePointer[Xmldoc], pencoding: String, pformat: I32): I32 =>
+  fun xmlSaveFormatFileEnc(pfilename: String, pcur: NullablePointer[Xmldoc] tag, pencoding: String, pformat: I32): I32 =>
     var tmpvar: I32 = @xmlSaveFormatFileEnc[I32](pfilename.cstring(), pcur, pencoding.cstring(), pformat)
     tmpvar
 
-  fun xmlSaveFileEnc(pfilename: String, pcur: NullablePointer[Xmldoc], pencoding: String): I32 =>
+  fun xmlSaveFileEnc(pfilename: String, pcur: NullablePointer[Xmldoc] tag, pencoding: String): I32 =>
     var tmpvar: I32 = @xmlSaveFileEnc[I32](pfilename.cstring(), pcur, pencoding.cstring())
     tmpvar
 
@@ -990,11 +990,11 @@ primitive LibXML2
     var tmpvar: I32 = @xmlIsXHTML[I32](psystemID.cstring(), ppublicID.cstring())
     tmpvar
 
-  fun xmlGetDocCompressMode(pdoc: NullablePointer[Xmldoc]): I32 =>
+  fun xmlGetDocCompressMode(pdoc: NullablePointer[Xmldoc] tag): I32 =>
     var tmpvar: I32 = @xmlGetDocCompressMode[I32](pdoc)
     tmpvar
 
-  fun xmlSetDocCompressMode(pdoc: NullablePointer[Xmldoc], pmode: I32): None =>
+  fun xmlSetDocCompressMode(pdoc: NullablePointer[Xmldoc] tag, pmode: I32): None =>
     var tmpvar: None = @xmlSetDocCompressMode[None](pdoc, pmode)
     tmpvar
 
@@ -1018,15 +1018,15 @@ primitive LibXML2
     var tmpvar: I32 = @xmlDOMWrapReconcileNamespaces[I32](pctxt, pelem, poptions)
     tmpvar
 
-  fun xmlDOMWrapAdoptNode(pctxt: NullablePointer[Xmldomwrapctxt], psourceDoc: NullablePointer[Xmldoc], pnode: NullablePointer[Xmlnode], pdestDoc: NullablePointer[Xmldoc], pdestParent: NullablePointer[Xmlnode], poptions: I32): I32 =>
+  fun xmlDOMWrapAdoptNode(pctxt: NullablePointer[Xmldomwrapctxt], psourceDoc: NullablePointer[Xmldoc] tag, pnode: NullablePointer[Xmlnode], pdestDoc: NullablePointer[Xmldoc] tag, pdestParent: NullablePointer[Xmlnode], poptions: I32): I32 =>
     var tmpvar: I32 = @xmlDOMWrapAdoptNode[I32](pctxt, psourceDoc, pnode, pdestDoc, pdestParent, poptions)
     tmpvar
 
-  fun xmlDOMWrapRemoveNode(pctxt: NullablePointer[Xmldomwrapctxt], pdoc: NullablePointer[Xmldoc], pnode: NullablePointer[Xmlnode], poptions: I32): I32 =>
+  fun xmlDOMWrapRemoveNode(pctxt: NullablePointer[Xmldomwrapctxt], pdoc: NullablePointer[Xmldoc] tag, pnode: NullablePointer[Xmlnode], poptions: I32): I32 =>
     var tmpvar: I32 = @xmlDOMWrapRemoveNode[I32](pctxt, pdoc, pnode, poptions)
     tmpvar
 
-  fun xmlDOMWrapCloneNode(pctxt: NullablePointer[Xmldomwrapctxt], psourceDoc: NullablePointer[Xmldoc], pnode: NullablePointer[Xmlnode], pclonedNode: Pointer[NullablePointer[Xmlnode]], pdestDoc: NullablePointer[Xmldoc], pdestParent: NullablePointer[Xmlnode], pdeep: I32, poptions: I32): I32 =>
+  fun xmlDOMWrapCloneNode(pctxt: NullablePointer[Xmldomwrapctxt], psourceDoc: NullablePointer[Xmldoc] tag, pnode: NullablePointer[Xmlnode], pclonedNode: Pointer[NullablePointer[Xmlnode]], pdestDoc: NullablePointer[Xmldoc] tag, pdestParent: NullablePointer[Xmlnode], pdeep: I32, poptions: I32): I32 =>
     var tmpvar: I32 = @xmlDOMWrapCloneNode[I32](pctxt, psourceDoc, pnode, pclonedNode, pdestDoc, pdestParent, pdeep, poptions)
     tmpvar
 
@@ -1166,7 +1166,7 @@ primitive LibXML2
     var tmpvar: NullablePointer[Xmldtd] = @xmlIOParseDTD[NullablePointer[Xmldtd]](psax, pinput, penc)
     tmpvar
 
-  fun xmlParseBalancedChunkMemory(pdoc: NullablePointer[Xmldoc], psax: NullablePointer[Xmlsaxhandler], puser_data: Pointer[U8], pdepth: I32, pstring: String, plst: Pointer[NullablePointer[Xmlnode]]): I32 =>
+  fun xmlParseBalancedChunkMemory(pdoc: NullablePointer[Xmldoc] tag, psax: NullablePointer[Xmlsaxhandler], puser_data: Pointer[U8], pdepth: I32, pstring: String, plst: Pointer[NullablePointer[Xmlnode]]): I32 =>
     var tmpvar: I32 = @xmlParseBalancedChunkMemory[I32](pdoc, psax, puser_data, pdepth, pstring.cstring(), plst)
     tmpvar
 
@@ -1174,11 +1174,11 @@ primitive LibXML2
     var tmpvar: I32 = @xmlParseInNodeContext[I32](pnode, pdata.cstring(), pdatalen, poptions, plst)
     tmpvar
 
-  fun xmlParseBalancedChunkMemoryRecover(pdoc: NullablePointer[Xmldoc], psax: NullablePointer[Xmlsaxhandler], puser_data: Pointer[U8], pdepth: I32, pstring: String, plst: Pointer[NullablePointer[Xmlnode]], precover: I32): I32 =>
+  fun xmlParseBalancedChunkMemoryRecover(pdoc: NullablePointer[Xmldoc] tag, psax: NullablePointer[Xmlsaxhandler], puser_data: Pointer[U8], pdepth: I32, pstring: String, plst: Pointer[NullablePointer[Xmlnode]], precover: I32): I32 =>
     var tmpvar: I32 = @xmlParseBalancedChunkMemoryRecover[I32](pdoc, psax, puser_data, pdepth, pstring.cstring(), plst, precover)
     tmpvar
 
-  fun xmlParseExternalEntity(pdoc: NullablePointer[Xmldoc], psax: NullablePointer[Xmlsaxhandler], puser_data: Pointer[U8], pdepth: I32, pURL: String, pID: String, plst: Pointer[NullablePointer[Xmlnode]]): I32 =>
+  fun xmlParseExternalEntity(pdoc: NullablePointer[Xmldoc] tag, psax: NullablePointer[Xmlsaxhandler], puser_data: Pointer[U8], pdepth: I32, pURL: String, pID: String, plst: Pointer[NullablePointer[Xmlnode]]): I32 =>
     var tmpvar: I32 = @xmlParseExternalEntity[I32](pdoc, psax, puser_data, pdepth, pURL.cstring(), pID.cstring(), plst)
     tmpvar
 
@@ -1334,15 +1334,15 @@ primitive LibXML2
     var tmpvar: None = @xmlInitializePredefinedEntities[None]()
     tmpvar
 
-  fun xmlNewEntity(pdoc: NullablePointer[Xmldoc], pname: String, ptype: I32, pExternalID: String, pSystemID: String, pcontent: String): NullablePointer[Xmlentity] =>
+  fun xmlNewEntity(pdoc: NullablePointer[Xmldoc] tag, pname: String, ptype: I32, pExternalID: String, pSystemID: String, pcontent: String): NullablePointer[Xmlentity] =>
     var tmpvar: NullablePointer[Xmlentity] = @xmlNewEntity[NullablePointer[Xmlentity]](pdoc, pname.cstring(), ptype, pExternalID.cstring(), pSystemID.cstring(), pcontent.cstring())
     tmpvar
 
-  fun xmlAddDocEntity(pdoc: NullablePointer[Xmldoc], pname: String, ptype: I32, pExternalID: String, pSystemID: String, pcontent: String): NullablePointer[Xmlentity] =>
+  fun xmlAddDocEntity(pdoc: NullablePointer[Xmldoc] tag, pname: String, ptype: I32, pExternalID: String, pSystemID: String, pcontent: String): NullablePointer[Xmlentity] =>
     var tmpvar: NullablePointer[Xmlentity] = @xmlAddDocEntity[NullablePointer[Xmlentity]](pdoc, pname.cstring(), ptype, pExternalID.cstring(), pSystemID.cstring(), pcontent.cstring())
     tmpvar
 
-  fun xmlAddDtdEntity(pdoc: NullablePointer[Xmldoc], pname: String, ptype: I32, pExternalID: String, pSystemID: String, pcontent: String): NullablePointer[Xmlentity] =>
+  fun xmlAddDtdEntity(pdoc: NullablePointer[Xmldoc] tag, pname: String, ptype: I32, pExternalID: String, pSystemID: String, pcontent: String): NullablePointer[Xmlentity] =>
     var tmpvar: NullablePointer[Xmlentity] = @xmlAddDtdEntity[NullablePointer[Xmlentity]](pdoc, pname.cstring(), ptype, pExternalID.cstring(), pSystemID.cstring(), pcontent.cstring())
     tmpvar
 
@@ -1350,31 +1350,31 @@ primitive LibXML2
     var tmpvar: NullablePointer[Xmlentity] = @xmlGetPredefinedEntity[NullablePointer[Xmlentity]](pname.cstring())
     tmpvar
 
-  fun xmlGetDocEntity(pdoc: NullablePointer[Xmldoc], pname: String): NullablePointer[Xmlentity] =>
+  fun xmlGetDocEntity(pdoc: NullablePointer[Xmldoc] tag, pname: String): NullablePointer[Xmlentity] =>
     var tmpvar: NullablePointer[Xmlentity] = @xmlGetDocEntity[NullablePointer[Xmlentity]](pdoc, pname.cstring())
     tmpvar
 
-  fun xmlGetDtdEntity(pdoc: NullablePointer[Xmldoc], pname: String): NullablePointer[Xmlentity] =>
+  fun xmlGetDtdEntity(pdoc: NullablePointer[Xmldoc] tag, pname: String): NullablePointer[Xmlentity] =>
     var tmpvar: NullablePointer[Xmlentity] = @xmlGetDtdEntity[NullablePointer[Xmlentity]](pdoc, pname.cstring())
     tmpvar
 
-  fun xmlGetParameterEntity(pdoc: NullablePointer[Xmldoc], pname: String): NullablePointer[Xmlentity] =>
+  fun xmlGetParameterEntity(pdoc: NullablePointer[Xmldoc] tag, pname: String): NullablePointer[Xmlentity] =>
     var tmpvar: NullablePointer[Xmlentity] = @xmlGetParameterEntity[NullablePointer[Xmlentity]](pdoc, pname.cstring())
     tmpvar
 
-  fun xmlEncodeEntities(pdoc: NullablePointer[Xmldoc], pinput: String): String =>
+  fun xmlEncodeEntities(pdoc: NullablePointer[Xmldoc] tag, pinput: String): String =>
     var tmpvar: Pointer[U8] = @xmlEncodeEntities[Pointer[U8]](pdoc, pinput.cstring())
     let p: String iso = String.from_cstring(tmpvar).clone()
     consume p
 
 
-  fun xmlEncodeEntitiesReentrant(pdoc: NullablePointer[Xmldoc], pinput: String): String =>
+  fun xmlEncodeEntitiesReentrant(pdoc: NullablePointer[Xmldoc] tag, pinput: String): String =>
     var tmpvar: Pointer[U8] = @xmlEncodeEntitiesReentrant[Pointer[U8]](pdoc, pinput.cstring())
     let p: String iso = String.from_cstring(tmpvar).clone()
     consume p
 
 
-  fun xmlEncodeSpecialChars(pdoc: NullablePointer[Xmldoc], pinput: String): String =>
+  fun xmlEncodeSpecialChars(pdoc: NullablePointer[Xmldoc] tag, pinput: String): String =>
     var tmpvar: Pointer[U8] = @xmlEncodeSpecialChars[Pointer[U8]](pdoc, pinput.cstring())
     let p: String iso = String.from_cstring(tmpvar).clone()
     consume p
@@ -2050,15 +2050,15 @@ primitive LibXML2
     var tmpvar: None = @xmlFreeElementContent[None](pcur)
     tmpvar
 
-  fun xmlNewDocElementContent(pdoc: NullablePointer[Xmldoc], pname: String, ptype: I32): NullablePointer[Xmlelementcontent] =>
+  fun xmlNewDocElementContent(pdoc: NullablePointer[Xmldoc] tag, pname: String, ptype: I32): NullablePointer[Xmlelementcontent] =>
     var tmpvar: NullablePointer[Xmlelementcontent] = @xmlNewDocElementContent[NullablePointer[Xmlelementcontent]](pdoc, pname.cstring(), ptype)
     tmpvar
 
-  fun xmlCopyDocElementContent(pdoc: NullablePointer[Xmldoc], pcontent: NullablePointer[Xmlelementcontent]): NullablePointer[Xmlelementcontent] =>
+  fun xmlCopyDocElementContent(pdoc: NullablePointer[Xmldoc] tag, pcontent: NullablePointer[Xmlelementcontent]): NullablePointer[Xmlelementcontent] =>
     var tmpvar: NullablePointer[Xmlelementcontent] = @xmlCopyDocElementContent[NullablePointer[Xmlelementcontent]](pdoc, pcontent)
     tmpvar
 
-  fun xmlFreeDocElementContent(pdoc: NullablePointer[Xmldoc], pcur: NullablePointer[Xmlelementcontent]): None =>
+  fun xmlFreeDocElementContent(pdoc: NullablePointer[Xmldoc] tag, pcur: NullablePointer[Xmlelementcontent]): None =>
     var tmpvar: None = @xmlFreeDocElementContent[None](pdoc, pcur)
     tmpvar
 
@@ -2122,7 +2122,7 @@ primitive LibXML2
     var tmpvar: None = @xmlDumpAttributeDecl[None](pbuf, pattr)
     tmpvar
 
-  fun xmlAddID(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc], pvalue: String, pattr: NullablePointer[Xmlattr]): NullablePointer[Xmlid] =>
+  fun xmlAddID(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc] tag, pvalue: String, pattr: NullablePointer[Xmlattr]): NullablePointer[Xmlid] =>
     var tmpvar: NullablePointer[Xmlid] = @xmlAddID[NullablePointer[Xmlid]](pctxt, pdoc, pvalue.cstring(), pattr)
     tmpvar
 
@@ -2130,19 +2130,19 @@ primitive LibXML2
     var tmpvar: None = @xmlFreeIDTable[None](ptable)
     tmpvar
 
-  fun xmlGetID(pdoc: NullablePointer[Xmldoc], pID: String): NullablePointer[Xmlattr] =>
+  fun xmlGetID(pdoc: NullablePointer[Xmldoc] tag, pID: String): NullablePointer[Xmlattr] =>
     var tmpvar: NullablePointer[Xmlattr] = @xmlGetID[NullablePointer[Xmlattr]](pdoc, pID.cstring())
     tmpvar
 
-  fun xmlIsID(pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode], pattr: NullablePointer[Xmlattr]): I32 =>
+  fun xmlIsID(pdoc: NullablePointer[Xmldoc] tag, pelem: NullablePointer[Xmlnode], pattr: NullablePointer[Xmlattr]): I32 =>
     var tmpvar: I32 = @xmlIsID[I32](pdoc, pelem, pattr)
     tmpvar
 
-  fun xmlRemoveID(pdoc: NullablePointer[Xmldoc], pattr: NullablePointer[Xmlattr]): I32 =>
+  fun xmlRemoveID(pdoc: NullablePointer[Xmldoc] tag, pattr: NullablePointer[Xmlattr]): I32 =>
     var tmpvar: I32 = @xmlRemoveID[I32](pdoc, pattr)
     tmpvar
 
-  fun xmlAddRef(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc], pvalue: String, pattr: NullablePointer[Xmlattr]): NullablePointer[Xmlref] =>
+  fun xmlAddRef(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc] tag, pvalue: String, pattr: NullablePointer[Xmlattr]): NullablePointer[Xmlref] =>
     var tmpvar: NullablePointer[Xmlref] = @xmlAddRef[NullablePointer[Xmlref]](pctxt, pdoc, pvalue.cstring(), pattr)
     tmpvar
 
@@ -2150,15 +2150,15 @@ primitive LibXML2
     var tmpvar: None = @xmlFreeRefTable[None](ptable)
     tmpvar
 
-  fun xmlIsRef(pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode], pattr: NullablePointer[Xmlattr]): I32 =>
+  fun xmlIsRef(pdoc: NullablePointer[Xmldoc] tag, pelem: NullablePointer[Xmlnode], pattr: NullablePointer[Xmlattr]): I32 =>
     var tmpvar: I32 = @xmlIsRef[I32](pdoc, pelem, pattr)
     tmpvar
 
-  fun xmlRemoveRef(pdoc: NullablePointer[Xmldoc], pattr: NullablePointer[Xmlattr]): I32 =>
+  fun xmlRemoveRef(pdoc: NullablePointer[Xmldoc] tag, pattr: NullablePointer[Xmlattr]): I32 =>
     var tmpvar: I32 = @xmlRemoveRef[I32](pdoc, pattr)
     tmpvar
 
-  fun xmlGetRefs(pdoc: NullablePointer[Xmldoc], pID: String): NullablePointer[Xmllist] =>
+  fun xmlGetRefs(pdoc: NullablePointer[Xmldoc] tag, pID: String): NullablePointer[Xmllist] =>
     var tmpvar: NullablePointer[Xmllist] = @xmlGetRefs[NullablePointer[Xmllist]](pdoc, pID.cstring())
     tmpvar
 
@@ -2170,27 +2170,27 @@ primitive LibXML2
     var tmpvar: None = @xmlFreeValidCtxt[None](p)
     tmpvar
 
-  fun xmlValidateRoot(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc]): I32 =>
+  fun xmlValidateRoot(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc] tag): I32 =>
     var tmpvar: I32 = @xmlValidateRoot[I32](pctxt, pdoc)
     tmpvar
 
-  fun xmlValidateElementDecl(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlelement]): I32 =>
+  fun xmlValidateElementDecl(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc] tag, pelem: NullablePointer[Xmlelement]): I32 =>
     var tmpvar: I32 = @xmlValidateElementDecl[I32](pctxt, pdoc, pelem)
     tmpvar
 
-  fun xmlValidNormalizeAttributeValue(pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode], pname: String, pvalue: String): String =>
+  fun xmlValidNormalizeAttributeValue(pdoc: NullablePointer[Xmldoc] tag, pelem: NullablePointer[Xmlnode], pname: String, pvalue: String): String =>
     var tmpvar: Pointer[U8] = @xmlValidNormalizeAttributeValue[Pointer[U8]](pdoc, pelem, pname.cstring(), pvalue.cstring())
     let p: String iso = String.from_cstring(tmpvar).clone()
     consume p
 
 
-  fun xmlValidCtxtNormalizeAttributeValue(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode], pname: String, pvalue: String): String =>
+  fun xmlValidCtxtNormalizeAttributeValue(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc] tag, pelem: NullablePointer[Xmlnode], pname: String, pvalue: String): String =>
     var tmpvar: Pointer[U8] = @xmlValidCtxtNormalizeAttributeValue[Pointer[U8]](pctxt, pdoc, pelem, pname.cstring(), pvalue.cstring())
     let p: String iso = String.from_cstring(tmpvar).clone()
     consume p
 
 
-  fun xmlValidateAttributeDecl(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc], pattr: NullablePointer[Xmlattribute]): I32 =>
+  fun xmlValidateAttributeDecl(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc] tag, pattr: NullablePointer[Xmlattribute]): I32 =>
     var tmpvar: I32 = @xmlValidateAttributeDecl[I32](pctxt, pdoc, pattr)
     tmpvar
 
@@ -2198,47 +2198,47 @@ primitive LibXML2
     var tmpvar: I32 = @xmlValidateAttributeValue[I32](ptype, pvalue.cstring())
     tmpvar
 
-  fun xmlValidateNotationDecl(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc], pnota: NullablePointer[Xmlnotation]): I32 =>
+  fun xmlValidateNotationDecl(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc] tag, pnota: NullablePointer[Xmlnotation]): I32 =>
     var tmpvar: I32 = @xmlValidateNotationDecl[I32](pctxt, pdoc, pnota)
     tmpvar
 
-  fun xmlValidateDtd(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc], pdtd: NullablePointer[Xmldtd]): I32 =>
+  fun xmlValidateDtd(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc] tag, pdtd: NullablePointer[Xmldtd]): I32 =>
     var tmpvar: I32 = @xmlValidateDtd[I32](pctxt, pdoc, pdtd)
     tmpvar
 
-  fun xmlValidateDtdFinal(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc]): I32 =>
+  fun xmlValidateDtdFinal(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc] tag): I32 =>
     var tmpvar: I32 = @xmlValidateDtdFinal[I32](pctxt, pdoc)
     tmpvar
 
-  fun xmlValidateDocument(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc]): I32 =>
+  fun xmlValidateDocument(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc] tag): I32 =>
     var tmpvar: I32 = @xmlValidateDocument[I32](pctxt, pdoc)
     tmpvar
 
-  fun xmlValidateElement(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode]): I32 =>
+  fun xmlValidateElement(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc] tag, pelem: NullablePointer[Xmlnode]): I32 =>
     var tmpvar: I32 = @xmlValidateElement[I32](pctxt, pdoc, pelem)
     tmpvar
 
-  fun xmlValidateOneElement(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode]): I32 =>
+  fun xmlValidateOneElement(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc] tag, pelem: NullablePointer[Xmlnode]): I32 =>
     var tmpvar: I32 = @xmlValidateOneElement[I32](pctxt, pdoc, pelem)
     tmpvar
 
-  fun xmlValidateOneAttribute(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode], pattr: NullablePointer[Xmlattr], pvalue: String): I32 =>
+  fun xmlValidateOneAttribute(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc] tag, pelem: NullablePointer[Xmlnode], pattr: NullablePointer[Xmlattr], pvalue: String): I32 =>
     var tmpvar: I32 = @xmlValidateOneAttribute[I32](pctxt, pdoc, pelem, pattr, pvalue.cstring())
     tmpvar
 
-  fun xmlValidateOneNamespace(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode], pprefix: String, pns: NullablePointer[Xmlns], pvalue: String): I32 =>
+  fun xmlValidateOneNamespace(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc] tag, pelem: NullablePointer[Xmlnode], pprefix: String, pns: NullablePointer[Xmlns], pvalue: String): I32 =>
     var tmpvar: I32 = @xmlValidateOneNamespace[I32](pctxt, pdoc, pelem, pprefix.cstring(), pns, pvalue.cstring())
     tmpvar
 
-  fun xmlValidateDocumentFinal(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc]): I32 =>
+  fun xmlValidateDocumentFinal(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc] tag): I32 =>
     var tmpvar: I32 = @xmlValidateDocumentFinal[I32](pctxt, pdoc)
     tmpvar
 
-  fun xmlValidateNotationUse(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc], pnotationName: String): I32 =>
+  fun xmlValidateNotationUse(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc] tag, pnotationName: String): I32 =>
     var tmpvar: I32 = @xmlValidateNotationUse[I32](pctxt, pdoc, pnotationName.cstring())
     tmpvar
 
-  fun xmlIsMixedElement(pdoc: NullablePointer[Xmldoc], pname: String): I32 =>
+  fun xmlIsMixedElement(pdoc: NullablePointer[Xmldoc] tag, pname: String): I32 =>
     var tmpvar: I32 = @xmlIsMixedElement[I32](pdoc, pname.cstring())
     tmpvar
 
@@ -2290,7 +2290,7 @@ primitive LibXML2
     var tmpvar: I32 = @xmlValidBuildContentModel[I32](pctxt, pelem)
     tmpvar
 
-  fun xmlValidatePushElement(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode], pqname: String): I32 =>
+  fun xmlValidatePushElement(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc] tag, pelem: NullablePointer[Xmlnode], pqname: String): I32 =>
     var tmpvar: I32 = @xmlValidatePushElement[I32](pctxt, pdoc, pelem, pqname.cstring())
     tmpvar
 
@@ -2298,7 +2298,7 @@ primitive LibXML2
     var tmpvar: I32 = @xmlValidatePushCData[I32](pctxt, pdata.cstring(), plen)
     tmpvar
 
-  fun xmlValidatePopElement(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode], pqname: String): I32 =>
+  fun xmlValidatePopElement(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc] tag, pelem: NullablePointer[Xmlnode], pqname: String): I32 =>
     var tmpvar: I32 = @xmlValidatePopElement[I32](pctxt, pdoc, pelem, pqname.cstring())
     tmpvar
 
@@ -2398,7 +2398,7 @@ primitive LibXML2
     var tmpvar: None = @xlinkSetDefaultHandler[None](phandler)
     tmpvar
 
-  fun xlinkIsLink(pdoc: NullablePointer[Xmldoc], pnode: NullablePointer[Xmlnode]): I32 =>
+  fun xlinkIsLink(pdoc: NullablePointer[Xmldoc] tag, pnode: NullablePointer[Xmlnode]): I32 =>
     var tmpvar: I32 = @xlinkIsLink[I32](pdoc, pnode)
     tmpvar
 
@@ -2972,7 +2972,7 @@ primitive LibXML2
     var tmpvar: NullablePointer[Xmlxpathobject] = @xmlXPathConvertString[NullablePointer[Xmlxpathobject]](pval)
     tmpvar
 
-  fun xmlXPathNewContext(pdoc: NullablePointer[Xmldoc]): NullablePointer[Xmlxpathcontext] =>
+  fun xmlXPathNewContext(pdoc: NullablePointer[Xmldoc] tag): NullablePointer[Xmlxpathcontext] =>
     var tmpvar: NullablePointer[Xmlxpathcontext] = @xmlXPathNewContext[NullablePointer[Xmlxpathcontext]](pdoc)
     tmpvar
 
@@ -2984,7 +2984,7 @@ primitive LibXML2
     var tmpvar: I32 = @xmlXPathContextSetCache[I32](pctxt, pactive, pvalue, poptions)
     tmpvar
 
-  fun xmlXPathOrderDocElems(pdoc: NullablePointer[Xmldoc]): I64 =>
+  fun xmlXPathOrderDocElems(pdoc: NullablePointer[Xmldoc] tag): I64 =>
     var tmpvar: I64 = @xmlXPathOrderDocElems[I64](pdoc)
     tmpvar
 
@@ -3064,11 +3064,11 @@ primitive LibXML2
     var tmpvar: None = @xmlDebugDumpNodeList[None](poutput, pnode, pdepth)
     tmpvar
 
-  fun xmlDebugDumpDocumentHead(poutput: NullablePointer[IoFile], pdoc: NullablePointer[Xmldoc]): None =>
+  fun xmlDebugDumpDocumentHead(poutput: NullablePointer[IoFile], pdoc: NullablePointer[Xmldoc] tag): None =>
     var tmpvar: None = @xmlDebugDumpDocumentHead[None](poutput, pdoc)
     tmpvar
 
-  fun xmlDebugDumpDocument(poutput: NullablePointer[IoFile], pdoc: NullablePointer[Xmldoc]): None =>
+  fun xmlDebugDumpDocument(poutput: NullablePointer[IoFile], pdoc: NullablePointer[Xmldoc] tag): None =>
     var tmpvar: None = @xmlDebugDumpDocument[None](poutput, pdoc)
     tmpvar
 
@@ -3076,11 +3076,11 @@ primitive LibXML2
     var tmpvar: None = @xmlDebugDumpDTD[None](poutput, pdtd)
     tmpvar
 
-  fun xmlDebugDumpEntities(poutput: NullablePointer[IoFile], pdoc: NullablePointer[Xmldoc]): None =>
+  fun xmlDebugDumpEntities(poutput: NullablePointer[IoFile], pdoc: NullablePointer[Xmldoc] tag): None =>
     var tmpvar: None = @xmlDebugDumpEntities[None](poutput, pdoc)
     tmpvar
 
-  fun xmlDebugCheckDocument(poutput: NullablePointer[IoFile], pdoc: NullablePointer[Xmldoc]): I32 =>
+  fun xmlDebugCheckDocument(poutput: NullablePointer[IoFile], pdoc: NullablePointer[Xmldoc] tag): I32 =>
     var tmpvar: I32 = @xmlDebugCheckDocument[I32](poutput, pdoc)
     tmpvar
 
@@ -3150,7 +3150,7 @@ primitive LibXML2
     var tmpvar: I32 = @xmlShellPwd[I32](pctxt, pbuffer.cstring(), pnode, pnode2)
     tmpvar
 
-  fun xmlShell(pdoc: NullablePointer[Xmldoc], pfilename: String, pinput: Pointer[FUNCTIONPOINTER], poutput: NullablePointer[IoFile]): None =>
+  fun xmlShell(pdoc: NullablePointer[Xmldoc] tag, pfilename: String, pinput: Pointer[FUNCTIONPOINTER], poutput: NullablePointer[IoFile]): None =>
     var tmpvar: None = @xmlShell[None](pdoc, pfilename.cstring(), pinput, poutput)
     tmpvar
 
@@ -3166,11 +3166,11 @@ primitive LibXML2
     var tmpvar: NullablePointer[Htmlentitydesc] = @htmlEntityValueLookup[NullablePointer[Htmlentitydesc]](pvalue)
     tmpvar
 
-  fun htmlIsAutoClosed(pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode]): I32 =>
+  fun htmlIsAutoClosed(pdoc: NullablePointer[Xmldoc] tag, pelem: NullablePointer[Xmlnode]): I32 =>
     var tmpvar: I32 = @htmlIsAutoClosed[I32](pdoc, pelem)
     tmpvar
 
-  fun htmlAutoCloseTag(pdoc: NullablePointer[Xmldoc], pname: String, pelem: NullablePointer[Xmlnode]): I32 =>
+  fun htmlAutoCloseTag(pdoc: NullablePointer[Xmldoc] tag, pname: String, pelem: NullablePointer[Xmlnode]): I32 =>
     var tmpvar: I32 = @htmlAutoCloseTag[I32](pdoc, pname.cstring(), pelem)
     tmpvar
 
@@ -3298,65 +3298,65 @@ primitive LibXML2
     var tmpvar: NullablePointer[Xmldoc] = @htmlNewDocNoDtD[NullablePointer[Xmldoc]](pURI.cstring(), pExternalID.cstring())
     tmpvar
 
-  fun htmlGetMetaEncoding(pdoc: NullablePointer[Xmldoc]): String =>
+  fun htmlGetMetaEncoding(pdoc: NullablePointer[Xmldoc] tag): String =>
     var tmpvar: Pointer[U8] = @htmlGetMetaEncoding[Pointer[U8]](pdoc)
     let p: String iso = String.from_cstring(tmpvar).clone()
     consume p
 
 
-  fun htmlSetMetaEncoding(pdoc: NullablePointer[Xmldoc], pencoding: String): I32 =>
+  fun htmlSetMetaEncoding(pdoc: NullablePointer[Xmldoc] tag, pencoding: String): I32 =>
     var tmpvar: I32 = @htmlSetMetaEncoding[I32](pdoc, pencoding.cstring())
     tmpvar
 
-  fun htmlDocDumpMemory(pcur: NullablePointer[Xmldoc], pmem: Pointer[Pointer[U8] tag], psize: Pointer[I32]): None =>
+  fun htmlDocDumpMemory(pcur: NullablePointer[Xmldoc] tag, pmem: Pointer[Pointer[U8] tag], psize: Pointer[I32]): None =>
     var tmpvar: None = @htmlDocDumpMemory[None](pcur, pmem, psize)
     tmpvar
 
-  fun htmlDocDumpMemoryFormat(pcur: NullablePointer[Xmldoc], pmem: Pointer[Pointer[U8] tag], psize: Pointer[I32], pformat: I32): None =>
+  fun htmlDocDumpMemoryFormat(pcur: NullablePointer[Xmldoc] tag, pmem: Pointer[Pointer[U8] tag], psize: Pointer[I32], pformat: I32): None =>
     var tmpvar: None = @htmlDocDumpMemoryFormat[None](pcur, pmem, psize, pformat)
     tmpvar
 
-  fun htmlDocDump(pf: NullablePointer[IoFile], pcur: NullablePointer[Xmldoc]): I32 =>
+  fun htmlDocDump(pf: NullablePointer[IoFile], pcur: NullablePointer[Xmldoc] tag): I32 =>
     var tmpvar: I32 = @htmlDocDump[I32](pf, pcur)
     tmpvar
 
-  fun htmlSaveFile(pfilename: String, pcur: NullablePointer[Xmldoc]): I32 =>
+  fun htmlSaveFile(pfilename: String, pcur: NullablePointer[Xmldoc] tag): I32 =>
     var tmpvar: I32 = @htmlSaveFile[I32](pfilename.cstring(), pcur)
     tmpvar
 
-  fun htmlNodeDump(pbuf: NullablePointer[Xmlbuffer], pdoc: NullablePointer[Xmldoc], pcur: NullablePointer[Xmlnode]): I32 =>
+  fun htmlNodeDump(pbuf: NullablePointer[Xmlbuffer], pdoc: NullablePointer[Xmldoc] tag, pcur: NullablePointer[Xmlnode]): I32 =>
     var tmpvar: I32 = @htmlNodeDump[I32](pbuf, pdoc, pcur)
     tmpvar
 
-  fun htmlNodeDumpFile(pout: NullablePointer[IoFile], pdoc: NullablePointer[Xmldoc], pcur: NullablePointer[Xmlnode]): None =>
+  fun htmlNodeDumpFile(pout: NullablePointer[IoFile], pdoc: NullablePointer[Xmldoc] tag, pcur: NullablePointer[Xmlnode]): None =>
     var tmpvar: None = @htmlNodeDumpFile[None](pout, pdoc, pcur)
     tmpvar
 
-  fun htmlNodeDumpFileFormat(pout: NullablePointer[IoFile], pdoc: NullablePointer[Xmldoc], pcur: NullablePointer[Xmlnode], pencoding: String, pformat: I32): I32 =>
+  fun htmlNodeDumpFileFormat(pout: NullablePointer[IoFile], pdoc: NullablePointer[Xmldoc] tag, pcur: NullablePointer[Xmlnode], pencoding: String, pformat: I32): I32 =>
     var tmpvar: I32 = @htmlNodeDumpFileFormat[I32](pout, pdoc, pcur, pencoding.cstring(), pformat)
     tmpvar
 
-  fun htmlSaveFileEnc(pfilename: String, pcur: NullablePointer[Xmldoc], pencoding: String): I32 =>
+  fun htmlSaveFileEnc(pfilename: String, pcur: NullablePointer[Xmldoc] tag, pencoding: String): I32 =>
     var tmpvar: I32 = @htmlSaveFileEnc[I32](pfilename.cstring(), pcur, pencoding.cstring())
     tmpvar
 
-  fun htmlSaveFileFormat(pfilename: String, pcur: NullablePointer[Xmldoc], pencoding: String, pformat: I32): I32 =>
+  fun htmlSaveFileFormat(pfilename: String, pcur: NullablePointer[Xmldoc] tag, pencoding: String, pformat: I32): I32 =>
     var tmpvar: I32 = @htmlSaveFileFormat[I32](pfilename.cstring(), pcur, pencoding.cstring(), pformat)
     tmpvar
 
-  fun htmlNodeDumpFormatOutput(pbuf: NullablePointer[Xmloutputbuffer], pdoc: NullablePointer[Xmldoc], pcur: NullablePointer[Xmlnode], pencoding: String, pformat: I32): None =>
+  fun htmlNodeDumpFormatOutput(pbuf: NullablePointer[Xmloutputbuffer], pdoc: NullablePointer[Xmldoc] tag, pcur: NullablePointer[Xmlnode], pencoding: String, pformat: I32): None =>
     var tmpvar: None = @htmlNodeDumpFormatOutput[None](pbuf, pdoc, pcur, pencoding.cstring(), pformat)
     tmpvar
 
-  fun htmlDocContentDumpOutput(pbuf: NullablePointer[Xmloutputbuffer], pcur: NullablePointer[Xmldoc], pencoding: String): None =>
+  fun htmlDocContentDumpOutput(pbuf: NullablePointer[Xmloutputbuffer], pcur: NullablePointer[Xmldoc] tag, pencoding: String): None =>
     var tmpvar: None = @htmlDocContentDumpOutput[None](pbuf, pcur, pencoding.cstring())
     tmpvar
 
-  fun htmlDocContentDumpFormatOutput(pbuf: NullablePointer[Xmloutputbuffer], pcur: NullablePointer[Xmldoc], pencoding: String, pformat: I32): None =>
+  fun htmlDocContentDumpFormatOutput(pbuf: NullablePointer[Xmloutputbuffer], pcur: NullablePointer[Xmldoc] tag, pencoding: String, pformat: I32): None =>
     var tmpvar: None = @htmlDocContentDumpFormatOutput[None](pbuf, pcur, pencoding.cstring(), pformat)
     tmpvar
 
-  fun htmlNodeDumpOutput(pbuf: NullablePointer[Xmloutputbuffer], pdoc: NullablePointer[Xmldoc], pcur: NullablePointer[Xmlnode], pencoding: String): None =>
+  fun htmlNodeDumpOutput(pbuf: NullablePointer[Xmloutputbuffer], pdoc: NullablePointer[Xmldoc] tag, pcur: NullablePointer[Xmlnode], pencoding: String): None =>
     var tmpvar: None = @htmlNodeDumpOutput[None](pbuf, pdoc, pcur, pencoding.cstring())
     tmpvar
 
@@ -4022,7 +4022,7 @@ primitive LibXML2
     var tmpvar: NullablePointer[Xmlrelaxngparserctxt] = @xmlRelaxNGNewMemParserCtxt[NullablePointer[Xmlrelaxngparserctxt]](pbuffer.cstring(), psize)
     tmpvar
 
-  fun xmlRelaxNGNewDocParserCtxt(pdoc: NullablePointer[Xmldoc]): NullablePointer[Xmlrelaxngparserctxt] =>
+  fun xmlRelaxNGNewDocParserCtxt(pdoc: NullablePointer[Xmldoc] tag): NullablePointer[Xmlrelaxngparserctxt] =>
     var tmpvar: NullablePointer[Xmlrelaxngparserctxt] = @xmlRelaxNGNewDocParserCtxt[NullablePointer[Xmlrelaxngparserctxt]](pdoc)
     tmpvar
 
@@ -4082,11 +4082,11 @@ primitive LibXML2
     var tmpvar: None = @xmlRelaxNGFreeValidCtxt[None](pctxt)
     tmpvar
 
-  fun xmlRelaxNGValidateDoc(pctxt: NullablePointer[Xmlrelaxngvalidctxt], pdoc: NullablePointer[Xmldoc]): I32 =>
+  fun xmlRelaxNGValidateDoc(pctxt: NullablePointer[Xmlrelaxngvalidctxt], pdoc: NullablePointer[Xmldoc] tag): I32 =>
     var tmpvar: I32 = @xmlRelaxNGValidateDoc[I32](pctxt, pdoc)
     tmpvar
 
-  fun xmlRelaxNGValidatePushElement(pctxt: NullablePointer[Xmlrelaxngvalidctxt], pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode]): I32 =>
+  fun xmlRelaxNGValidatePushElement(pctxt: NullablePointer[Xmlrelaxngvalidctxt], pdoc: NullablePointer[Xmldoc] tag, pelem: NullablePointer[Xmlnode]): I32 =>
     var tmpvar: I32 = @xmlRelaxNGValidatePushElement[I32](pctxt, pdoc, pelem)
     tmpvar
 
@@ -4094,11 +4094,11 @@ primitive LibXML2
     var tmpvar: I32 = @xmlRelaxNGValidatePushCData[I32](pctxt, pdata.cstring(), plen)
     tmpvar
 
-  fun xmlRelaxNGValidatePopElement(pctxt: NullablePointer[Xmlrelaxngvalidctxt], pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode]): I32 =>
+  fun xmlRelaxNGValidatePopElement(pctxt: NullablePointer[Xmlrelaxngvalidctxt], pdoc: NullablePointer[Xmldoc] tag, pelem: NullablePointer[Xmlnode]): I32 =>
     var tmpvar: I32 = @xmlRelaxNGValidatePopElement[I32](pctxt, pdoc, pelem)
     tmpvar
 
-  fun xmlRelaxNGValidateFullElement(pctxt: NullablePointer[Xmlrelaxngvalidctxt], pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode]): I32 =>
+  fun xmlRelaxNGValidateFullElement(pctxt: NullablePointer[Xmlrelaxngvalidctxt], pdoc: NullablePointer[Xmldoc] tag, pelem: NullablePointer[Xmlnode]): I32 =>
     var tmpvar: I32 = @xmlRelaxNGValidateFullElement[I32](pctxt, pdoc, pelem)
     tmpvar
 
@@ -4270,7 +4270,7 @@ primitive LibXML2
     var tmpvar: NullablePointer[Xmlschematronparserctxt] = @xmlSchematronNewMemParserCtxt[NullablePointer[Xmlschematronparserctxt]](pbuffer.cstring(), psize)
     tmpvar
 
-  fun xmlSchematronNewDocParserCtxt(pdoc: NullablePointer[Xmldoc]): NullablePointer[Xmlschematronparserctxt] =>
+  fun xmlSchematronNewDocParserCtxt(pdoc: NullablePointer[Xmldoc] tag): NullablePointer[Xmlschematronparserctxt] =>
     var tmpvar: NullablePointer[Xmlschematronparserctxt] = @xmlSchematronNewDocParserCtxt[NullablePointer[Xmlschematronparserctxt]](pdoc)
     tmpvar
 
@@ -4298,7 +4298,7 @@ primitive LibXML2
     var tmpvar: None = @xmlSchematronFreeValidCtxt[None](pctxt)
     tmpvar
 
-  fun xmlSchematronValidateDoc(pctxt: NullablePointer[Xmlschematronvalidctxt], pinstance: NullablePointer[Xmldoc]): I32 =>
+  fun xmlSchematronValidateDoc(pctxt: NullablePointer[Xmlschematronvalidctxt], pinstance: NullablePointer[Xmldoc] tag): I32 =>
     var tmpvar: I32 = @xmlSchematronValidateDoc[I32](pctxt, pinstance)
     tmpvar
 
@@ -4378,15 +4378,15 @@ primitive LibXML2
     consume p
 
 
-  fun xmlXIncludeProcess(pdoc: NullablePointer[Xmldoc]): I32 =>
+  fun xmlXIncludeProcess(pdoc: NullablePointer[Xmldoc] tag): I32 =>
     var tmpvar: I32 = @xmlXIncludeProcess[I32](pdoc)
     tmpvar
 
-  fun xmlXIncludeProcessFlags(pdoc: NullablePointer[Xmldoc], pflags: I32): I32 =>
+  fun xmlXIncludeProcessFlags(pdoc: NullablePointer[Xmldoc] tag, pflags: I32): I32 =>
     var tmpvar: I32 = @xmlXIncludeProcessFlags[I32](pdoc, pflags)
     tmpvar
 
-  fun xmlXIncludeProcessFlagsData(pdoc: NullablePointer[Xmldoc], pflags: I32, pdata: Pointer[U8]): I32 =>
+  fun xmlXIncludeProcessFlagsData(pdoc: NullablePointer[Xmldoc] tag, pflags: I32, pdata: Pointer[U8]): I32 =>
     var tmpvar: I32 = @xmlXIncludeProcessFlagsData[I32](pdoc, pflags, pdata)
     tmpvar
 
@@ -4402,7 +4402,7 @@ primitive LibXML2
     var tmpvar: I32 = @xmlXIncludeProcessTreeFlags[I32](ptree, pflags)
     tmpvar
 
-  fun xmlXIncludeNewContext(pdoc: NullablePointer[Xmldoc]): NullablePointer[Xmlxincludectxt] =>
+  fun xmlXIncludeNewContext(pdoc: NullablePointer[Xmldoc] tag): NullablePointer[Xmlxincludectxt] =>
     var tmpvar: NullablePointer[Xmlxincludectxt] = @xmlXIncludeNewContext[NullablePointer[Xmlxincludectxt]](pdoc)
     tmpvar
 
@@ -4442,7 +4442,7 @@ primitive LibXML2
     var tmpvar: NullablePointer[Xmlschemaparserctxt] = @xmlSchemaNewMemParserCtxt[NullablePointer[Xmlschemaparserctxt]](pbuffer.cstring(), psize)
     tmpvar
 
-  fun xmlSchemaNewDocParserCtxt(pdoc: NullablePointer[Xmldoc]): NullablePointer[Xmlschemaparserctxt] =>
+  fun xmlSchemaNewDocParserCtxt(pdoc: NullablePointer[Xmldoc] tag): NullablePointer[Xmlschemaparserctxt] =>
     var tmpvar: NullablePointer[Xmlschemaparserctxt] = @xmlSchemaNewDocParserCtxt[NullablePointer[Xmlschemaparserctxt]](pdoc)
     tmpvar
 
@@ -4510,7 +4510,7 @@ primitive LibXML2
     var tmpvar: None = @xmlSchemaFreeValidCtxt[None](pctxt)
     tmpvar
 
-  fun xmlSchemaValidateDoc(pctxt: NullablePointer[Xmlschemavalidctxt], pinstance: NullablePointer[Xmldoc]): I32 =>
+  fun xmlSchemaValidateDoc(pctxt: NullablePointer[Xmlschemavalidctxt], pinstance: NullablePointer[Xmldoc] tag): I32 =>
     var tmpvar: I32 = @xmlSchemaValidateDoc[I32](pctxt, pinstance)
     tmpvar
 
@@ -4866,7 +4866,7 @@ primitive LibXML2
     var tmpvar: I64 = @xmlTextReaderByteConsumed[I64](preader)
     tmpvar
 
-  fun xmlReaderWalker(pdoc: NullablePointer[Xmldoc]): NullablePointer[Xmltextreader] =>
+  fun xmlReaderWalker(pdoc: NullablePointer[Xmldoc] tag): NullablePointer[Xmltextreader] =>
     var tmpvar: NullablePointer[Xmltextreader] = @xmlReaderWalker[NullablePointer[Xmltextreader]](pdoc)
     tmpvar
 
@@ -4890,7 +4890,7 @@ primitive LibXML2
     var tmpvar: NullablePointer[Xmltextreader] = @xmlReaderForIO[NullablePointer[Xmltextreader]](pioread, pioclose, pioctx, pURL.cstring(), pencoding.cstring(), poptions)
     tmpvar
 
-  fun xmlReaderNewWalker(preader: NullablePointer[Xmltextreader], pdoc: NullablePointer[Xmldoc]): I32 =>
+  fun xmlReaderNewWalker(preader: NullablePointer[Xmltextreader], pdoc: NullablePointer[Xmldoc] tag): I32 =>
     var tmpvar: I32 = @xmlReaderNewWalker[I32](preader, pdoc)
     tmpvar
 
@@ -4952,7 +4952,7 @@ primitive LibXML2
     var tmpvar: NullablePointer[Xmlsavectxt] = @xmlSaveToIO[NullablePointer[Xmlsavectxt]](piowrite, pioclose, pioctx, pencoding.cstring(), poptions)
     tmpvar
 
-  fun xmlSaveDoc(pctxt: NullablePointer[Xmlsavectxt], pdoc: NullablePointer[Xmldoc]): I64 =>
+  fun xmlSaveDoc(pctxt: NullablePointer[Xmlsavectxt], pdoc: NullablePointer[Xmldoc] tag): I64 =>
     var tmpvar: I64 = @xmlSaveDoc[I64](pctxt, pdoc)
     tmpvar
 
@@ -5798,11 +5798,11 @@ primitive LibXML2
     var tmpvar: NullablePointer[Xmltextwriter] = @xmlNewTextWriterPushParser[NullablePointer[Xmltextwriter]](pctxt, pcompression)
     tmpvar
 
-  fun xmlNewTextWriterDoc(pdoc: Pointer[NullablePointer[Xmldoc]], pcompression: I32): NullablePointer[Xmltextwriter] =>
+  fun xmlNewTextWriterDoc(pdoc: Pointer[NullablePointer[Xmldoc] tag], pcompression: I32): NullablePointer[Xmltextwriter] =>
     var tmpvar: NullablePointer[Xmltextwriter] = @xmlNewTextWriterDoc[NullablePointer[Xmltextwriter]](pdoc, pcompression)
     tmpvar
 
-  fun xmlNewTextWriterTree(pdoc: NullablePointer[Xmldoc], pnode: NullablePointer[Xmlnode], pcompression: I32): NullablePointer[Xmltextwriter] =>
+  fun xmlNewTextWriterTree(pdoc: NullablePointer[Xmldoc] tag, pnode: NullablePointer[Xmlnode], pcompression: I32): NullablePointer[Xmltextwriter] =>
     var tmpvar: NullablePointer[Xmltextwriter] = @xmlNewTextWriterTree[NullablePointer[Xmltextwriter]](pdoc, pnode, pcompression)
     tmpvar
 
@@ -6644,7 +6644,7 @@ primitive LibXML2
     var tmpvar: None = @xmlXPtrLocationSetRemove[None](pcur, pval)
     tmpvar
 
-  fun xmlXPtrNewContext(pdoc: NullablePointer[Xmldoc], phere: NullablePointer[Xmlnode], porigin: NullablePointer[Xmlnode]): NullablePointer[Xmlxpathcontext] =>
+  fun xmlXPtrNewContext(pdoc: NullablePointer[Xmldoc] tag, phere: NullablePointer[Xmlnode], porigin: NullablePointer[Xmlnode]): NullablePointer[Xmlxpathcontext] =>
     var tmpvar: NullablePointer[Xmlxpathcontext] = @xmlXPtrNewContext[NullablePointer[Xmlxpathcontext]](pdoc, phere, porigin)
     tmpvar
 
