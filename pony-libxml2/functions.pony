@@ -2976,11 +2976,11 @@ primitive LibXML2
     var tmpvar: NullablePointer[Xmlxpathcontext] = @xmlXPathNewContext[NullablePointer[Xmlxpathcontext]](pdoc)
     tmpvar
 
-  fun xmlXPathFreeContext(pctxt: NullablePointer[Xmlxpathcontext]): None =>
+  fun xmlXPathFreeContext(pctxt: NullablePointer[Xmlxpathcontext] tag): None =>
     var tmpvar: None = @xmlXPathFreeContext[None](pctxt)
     tmpvar
 
-  fun xmlXPathContextSetCache(pctxt: NullablePointer[Xmlxpathcontext], pactive: I32, pvalue: I32, poptions: I32): I32 =>
+  fun xmlXPathContextSetCache(pctxt: NullablePointer[Xmlxpathcontext] tag, pactive: I32, pvalue: I32, poptions: I32): I32 =>
     var tmpvar: I32 = @xmlXPathContextSetCache[I32](pctxt, pactive, pvalue, poptions)
     tmpvar
 
@@ -2988,23 +2988,23 @@ primitive LibXML2
     var tmpvar: I64 = @xmlXPathOrderDocElems[I64](pdoc)
     tmpvar
 
-  fun xmlXPathSetContextNode(pnode: NullablePointer[Xmlnode], pctx: NullablePointer[Xmlxpathcontext]): I32 =>
+  fun xmlXPathSetContextNode(pnode: NullablePointer[Xmlnode], pctx: NullablePointer[Xmlxpathcontext] tag): I32 =>
     var tmpvar: I32 = @xmlXPathSetContextNode[I32](pnode, pctx)
     tmpvar
 
-  fun xmlXPathNodeEval(pnode: NullablePointer[Xmlnode], pstr: String, pctx: NullablePointer[Xmlxpathcontext]): NullablePointer[Xmlxpathobject] =>
+  fun xmlXPathNodeEval(pnode: NullablePointer[Xmlnode], pstr: String, pctx: NullablePointer[Xmlxpathcontext] tag): NullablePointer[Xmlxpathobject] =>
     var tmpvar: NullablePointer[Xmlxpathobject] = @xmlXPathNodeEval[NullablePointer[Xmlxpathobject]](pnode, pstr.cstring(), pctx)
     tmpvar
 
-  fun xmlXPathEval(pstr: String, pctx: NullablePointer[Xmlxpathcontext]): NullablePointer[Xmlxpathobject] =>
+  fun xmlXPathEval(pstr: String, pctx: NullablePointer[Xmlxpathcontext] tag): NullablePointer[Xmlxpathobject] =>
     var tmpvar: NullablePointer[Xmlxpathobject] = @xmlXPathEval[NullablePointer[Xmlxpathobject]](pstr.cstring(), pctx)
     tmpvar
 
-  fun xmlXPathEvalExpression(pstr: String, pctxt: NullablePointer[Xmlxpathcontext]): NullablePointer[Xmlxpathobject] =>
+  fun xmlXPathEvalExpression(pstr: String, pctxt: NullablePointer[Xmlxpathcontext] tag): NullablePointer[Xmlxpathobject] =>
     var tmpvar: NullablePointer[Xmlxpathobject] = @xmlXPathEvalExpression[NullablePointer[Xmlxpathobject]](pstr.cstring(), pctxt)
     tmpvar
 
-  fun xmlXPathEvalPredicate(pctxt: NullablePointer[Xmlxpathcontext], pres: NullablePointer[Xmlxpathobject]): I32 =>
+  fun xmlXPathEvalPredicate(pctxt: NullablePointer[Xmlxpathcontext] tag, pres: NullablePointer[Xmlxpathobject]): I32 =>
     var tmpvar: I32 = @xmlXPathEvalPredicate[I32](pctxt, pres)
     tmpvar
 
@@ -3012,15 +3012,15 @@ primitive LibXML2
     var tmpvar: NullablePointer[Xmlxpathcompexpr] = @xmlXPathCompile[NullablePointer[Xmlxpathcompexpr]](pstr.cstring())
     tmpvar
 
-  fun xmlXPathCtxtCompile(pctxt: NullablePointer[Xmlxpathcontext], pstr: String): NullablePointer[Xmlxpathcompexpr] =>
+  fun xmlXPathCtxtCompile(pctxt: NullablePointer[Xmlxpathcontext] tag, pstr: String): NullablePointer[Xmlxpathcompexpr] =>
     var tmpvar: NullablePointer[Xmlxpathcompexpr] = @xmlXPathCtxtCompile[NullablePointer[Xmlxpathcompexpr]](pctxt, pstr.cstring())
     tmpvar
 
-  fun xmlXPathCompiledEval(pcomp: NullablePointer[Xmlxpathcompexpr], pctx: NullablePointer[Xmlxpathcontext]): NullablePointer[Xmlxpathobject] =>
+  fun xmlXPathCompiledEval(pcomp: NullablePointer[Xmlxpathcompexpr], pctx: NullablePointer[Xmlxpathcontext] tag): NullablePointer[Xmlxpathobject] =>
     var tmpvar: NullablePointer[Xmlxpathobject] = @xmlXPathCompiledEval[NullablePointer[Xmlxpathobject]](pcomp, pctx)
     tmpvar
 
-  fun xmlXPathCompiledEvalToBoolean(pcomp: NullablePointer[Xmlxpathcompexpr], pctxt: NullablePointer[Xmlxpathcontext]): I32 =>
+  fun xmlXPathCompiledEvalToBoolean(pcomp: NullablePointer[Xmlxpathcompexpr], pctxt: NullablePointer[Xmlxpathcontext] tag): I32 =>
     var tmpvar: I32 = @xmlXPathCompiledEvalToBoolean[I32](pcomp, pctxt)
     tmpvar
 
@@ -6126,11 +6126,11 @@ primitive LibXML2
     consume p
 
 
-  fun xmlXPathRegisterVariableLookup(pctxt: NullablePointer[Xmlxpathcontext], pf: Pointer[FUNCTIONPOINTER], pdata: Pointer[U8]): None =>
+  fun xmlXPathRegisterVariableLookup(pctxt: NullablePointer[Xmlxpathcontext] tag, pf: Pointer[FUNCTIONPOINTER], pdata: Pointer[U8]): None =>
     var tmpvar: None = @xmlXPathRegisterVariableLookup[None](pctxt, pf, pdata)
     tmpvar
 
-  fun xmlXPathRegisterFuncLookup(pctxt: NullablePointer[Xmlxpathcontext], pf: Pointer[FUNCTIONPOINTER], pfuncCtxt: Pointer[U8]): None =>
+  fun xmlXPathRegisterFuncLookup(pctxt: NullablePointer[Xmlxpathcontext] tag, pf: Pointer[FUNCTIONPOINTER], pfuncCtxt: Pointer[U8]): None =>
     var tmpvar: None = @xmlXPathRegisterFuncLookup[None](pctxt, pf, pfuncCtxt)
     tmpvar
 
@@ -6206,61 +6206,61 @@ primitive LibXML2
     var tmpvar: NullablePointer[Xmlnodeset] = @xmlXPathTrailing[NullablePointer[Xmlnodeset]](pnodes1, pnodes2)
     tmpvar
 
-  fun xmlXPathRegisterNs(pctxt: NullablePointer[Xmlxpathcontext], pprefix: String, pns_uri: String): I32 =>
+  fun xmlXPathRegisterNs(pctxt: NullablePointer[Xmlxpathcontext] tag, pprefix: String, pns_uri: String): I32 =>
     var tmpvar: I32 = @xmlXPathRegisterNs[I32](pctxt, pprefix.cstring(), pns_uri.cstring())
     tmpvar
 
-  fun xmlXPathNsLookup(pctxt: NullablePointer[Xmlxpathcontext], pprefix: String): String =>
+  fun xmlXPathNsLookup(pctxt: NullablePointer[Xmlxpathcontext] tag, pprefix: String): String =>
     var tmpvar: Pointer[U8] = @xmlXPathNsLookup[Pointer[U8]](pctxt, pprefix.cstring())
     let p: String iso = String.from_cstring(tmpvar).clone()
     consume p
 
 
-  fun xmlXPathRegisteredNsCleanup(pctxt: NullablePointer[Xmlxpathcontext]): None =>
+  fun xmlXPathRegisteredNsCleanup(pctxt: NullablePointer[Xmlxpathcontext] tag): None =>
     var tmpvar: None = @xmlXPathRegisteredNsCleanup[None](pctxt)
     tmpvar
 
-  fun xmlXPathRegisterFunc(pctxt: NullablePointer[Xmlxpathcontext], pname: String, pf: Pointer[FUNCTIONPOINTER]): I32 =>
+  fun xmlXPathRegisterFunc(pctxt: NullablePointer[Xmlxpathcontext] tag, pname: String, pf: Pointer[FUNCTIONPOINTER]): I32 =>
     var tmpvar: I32 = @xmlXPathRegisterFunc[I32](pctxt, pname.cstring(), pf)
     tmpvar
 
-  fun xmlXPathRegisterFuncNS(pctxt: NullablePointer[Xmlxpathcontext], pname: String, pns_uri: String, pf: Pointer[FUNCTIONPOINTER]): I32 =>
+  fun xmlXPathRegisterFuncNS(pctxt: NullablePointer[Xmlxpathcontext] tag, pname: String, pns_uri: String, pf: Pointer[FUNCTIONPOINTER]): I32 =>
     var tmpvar: I32 = @xmlXPathRegisterFuncNS[I32](pctxt, pname.cstring(), pns_uri.cstring(), pf)
     tmpvar
 
-  fun xmlXPathRegisterVariable(pctxt: NullablePointer[Xmlxpathcontext], pname: String, pvalue: NullablePointer[Xmlxpathobject]): I32 =>
+  fun xmlXPathRegisterVariable(pctxt: NullablePointer[Xmlxpathcontext] tag, pname: String, pvalue: NullablePointer[Xmlxpathobject]): I32 =>
     var tmpvar: I32 = @xmlXPathRegisterVariable[I32](pctxt, pname.cstring(), pvalue)
     tmpvar
 
-  fun xmlXPathRegisterVariableNS(pctxt: NullablePointer[Xmlxpathcontext], pname: String, pns_uri: String, pvalue: NullablePointer[Xmlxpathobject]): I32 =>
+  fun xmlXPathRegisterVariableNS(pctxt: NullablePointer[Xmlxpathcontext] tag, pname: String, pns_uri: String, pvalue: NullablePointer[Xmlxpathobject]): I32 =>
     var tmpvar: I32 = @xmlXPathRegisterVariableNS[I32](pctxt, pname.cstring(), pns_uri.cstring(), pvalue)
     tmpvar
 
-  fun xmlXPathFunctionLookup(pctxt: NullablePointer[Xmlxpathcontext], pname: String): Pointer[FUNCTIONPOINTER] =>
+  fun xmlXPathFunctionLookup(pctxt: NullablePointer[Xmlxpathcontext] tag, pname: String): Pointer[FUNCTIONPOINTER] =>
     var tmpvar: Pointer[FUNCTIONPOINTER] = @xmlXPathFunctionLookup[Pointer[FUNCTIONPOINTER]](pctxt, pname.cstring())
     tmpvar
 
-  fun xmlXPathFunctionLookupNS(pctxt: NullablePointer[Xmlxpathcontext], pname: String, pns_uri: String): Pointer[FUNCTIONPOINTER] =>
+  fun xmlXPathFunctionLookupNS(pctxt: NullablePointer[Xmlxpathcontext] tag, pname: String, pns_uri: String): Pointer[FUNCTIONPOINTER] =>
     var tmpvar: Pointer[FUNCTIONPOINTER] = @xmlXPathFunctionLookupNS[Pointer[FUNCTIONPOINTER]](pctxt, pname.cstring(), pns_uri.cstring())
     tmpvar
 
-  fun xmlXPathRegisteredFuncsCleanup(pctxt: NullablePointer[Xmlxpathcontext]): None =>
+  fun xmlXPathRegisteredFuncsCleanup(pctxt: NullablePointer[Xmlxpathcontext] tag): None =>
     var tmpvar: None = @xmlXPathRegisteredFuncsCleanup[None](pctxt)
     tmpvar
 
-  fun xmlXPathVariableLookup(pctxt: NullablePointer[Xmlxpathcontext], pname: String): NullablePointer[Xmlxpathobject] =>
+  fun xmlXPathVariableLookup(pctxt: NullablePointer[Xmlxpathcontext] tag, pname: String): NullablePointer[Xmlxpathobject] =>
     var tmpvar: NullablePointer[Xmlxpathobject] = @xmlXPathVariableLookup[NullablePointer[Xmlxpathobject]](pctxt, pname.cstring())
     tmpvar
 
-  fun xmlXPathVariableLookupNS(pctxt: NullablePointer[Xmlxpathcontext], pname: String, pns_uri: String): NullablePointer[Xmlxpathobject] =>
+  fun xmlXPathVariableLookupNS(pctxt: NullablePointer[Xmlxpathcontext] tag, pname: String, pns_uri: String): NullablePointer[Xmlxpathobject] =>
     var tmpvar: NullablePointer[Xmlxpathobject] = @xmlXPathVariableLookupNS[NullablePointer[Xmlxpathobject]](pctxt, pname.cstring(), pns_uri.cstring())
     tmpvar
 
-  fun xmlXPathRegisteredVariablesCleanup(pctxt: NullablePointer[Xmlxpathcontext]): None =>
+  fun xmlXPathRegisteredVariablesCleanup(pctxt: NullablePointer[Xmlxpathcontext] tag): None =>
     var tmpvar: None = @xmlXPathRegisteredVariablesCleanup[None](pctxt)
     tmpvar
 
-  fun xmlXPathNewParserContext(pstr: String, pctxt: NullablePointer[Xmlxpathcontext]): NullablePointer[Xmlxpathparsercontext] =>
+  fun xmlXPathNewParserContext(pstr: String, pctxt: NullablePointer[Xmlxpathcontext] tag): NullablePointer[Xmlxpathparsercontext] =>
     var tmpvar: NullablePointer[Xmlxpathparsercontext] = @xmlXPathNewParserContext[NullablePointer[Xmlxpathparsercontext]](pstr.cstring(), pctxt)
     tmpvar
 
@@ -6352,7 +6352,7 @@ primitive LibXML2
     var tmpvar: I32 = @xmlXPathEvaluatePredicateResult[I32](pctxt, pres)
     tmpvar
 
-  fun xmlXPathRegisterAllFunctions(pctxt: NullablePointer[Xmlxpathcontext]): None =>
+  fun xmlXPathRegisterAllFunctions(pctxt: NullablePointer[Xmlxpathcontext] tag): None =>
     var tmpvar: None = @xmlXPathRegisterAllFunctions[None](pctxt)
     tmpvar
 
@@ -6648,7 +6648,7 @@ primitive LibXML2
     var tmpvar: NullablePointer[Xmlxpathcontext] = @xmlXPtrNewContext[NullablePointer[Xmlxpathcontext]](pdoc, phere, porigin)
     tmpvar
 
-  fun xmlXPtrEval(pstr: String, pctx: NullablePointer[Xmlxpathcontext]): NullablePointer[Xmlxpathobject] =>
+  fun xmlXPtrEval(pstr: String, pctx: NullablePointer[Xmlxpathcontext] tag): NullablePointer[Xmlxpathobject] =>
     var tmpvar: NullablePointer[Xmlxpathobject] = @xmlXPtrEval[NullablePointer[Xmlxpathobject]](pstr.cstring(), pctx)
     tmpvar
 

@@ -7,6 +7,7 @@ class iso TestAttribs is UnitTest
   fun apply(h: TestHelper) =>
     h.assert_true(true)
 
+/*
     try
       var xmldoc: Xml2Doc = Xml2Doc.parseDoc(
       """
@@ -18,7 +19,6 @@ class iso TestAttribs is UnitTest
         ]>
         <test />
       """)?
-/*
 
       var elem: Xml2node = xmldoc.getRootElement()?
       var xmlattr: Xml2attr = elem.hasNsProp("attr", "http://abc.org")?

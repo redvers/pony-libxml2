@@ -1,16 +1,13 @@
 type XmlxpathcontextPTR is NullablePointer[Xmlxpathcontext]
 
 class Xml2xpathcontext
-  var ptr': XmlxpathcontextPTR
-  var ptr: Xmlxpathcontext
+  var ptr': XmlxpathcontextPTR val
 
   new create(xmldoc: Xml2Doc)? =>
-    ptr' = LibXML2.xmlXPathNewContext(xmldoc.ptr')
+    ptr' = recover val LibXML2.xmlXPathNewContext(xmldoc.ptr') end
 
     if (ptr'.is_none()) then
       error
-    else
-      ptr = ptr'.apply()?
     end
 
   fun ref xpathEval(str: String): Xml2pathobject? =>
@@ -21,5 +18,14 @@ class Xml2xpathcontext
     LibXML2.xmlXPathSetContextNode(xmlnode.ptr', ptr')
 
 
-  fun ref dispose() =>
+  fun ref final() =>
     @xmlXPathFreeContext[None](ptr')
+    ptr' = recover val NullablePointer[Xmlxpathcontext].none() end
+
+  fun _final() =>
+    if (ptr'.is_none()) then
+      return None
+    else
+      @xmlXPathFreeContext[None](ptr')
+    end
+
