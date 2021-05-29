@@ -1,16 +1,12 @@
-type XmlxpathobjectPTR is NullablePointer[Xmlxpathobject]
-type XmlnodePTR is NullablePointer[Xmlnode]
-type XmlnodesetPTR is NullablePointer[Xmlnodeset]
-
 class Xml2pathobject
-  var ptr': XmlxpathobjectPTR
+  var ptr': NullablePointer[Xmlxpathobject]
   var ptr: Xmlxpathobject
-  var nodeset': XmlnodesetPTR
+  var nodeset': NullablePointer[Xmlnodeset]
   var nodeset: Xmlnodeset
   var nodearray': Array[NullablePointer[Xmlnode]]
   var nodearray: Array[Xml2node] = Array[Xml2node]
 
-  new fromPTR(ptrx: XmlxpathobjectPTR)? =>
+  new fromPTR(ptrx: NullablePointer[Xmlxpathobject])? =>
     if (ptrx.is_none()) then
       error
     else

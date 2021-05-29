@@ -1,10 +1,8 @@
-type XmltextreaderPTR is NullablePointer[Xmltextreader]
-
 class Xml2textreader
-  var ptr': XmltextreaderPTR
+  var ptr': NullablePointer[Xmltextreader]
   var ptr: Xmltextreader
 
-  new fromPTR(ptrx: XmltextreaderPTR)? =>
+  new fromPTR(ptrx: NullablePointer[Xmltextreader])? =>
     if (ptrx.is_none()) then
       error
     else
@@ -47,7 +45,7 @@ class Xml2textreader
 
 //  fun xmlTextReaderExpand(preader: NullablePointer[Xmltextreader]): NullablePointer[Xmlnode] =>
   fun ref expand(): Xml2node ? =>
-    let ptrx: XmlnodePTR = LibXML2.xmlTextReaderExpand(ptr')
+    let ptrx: NullablePointer[Xmlnode] = LibXML2.xmlTextReaderExpand(ptr')
     Xml2node.fromPTR(ptrx)?
 
 //  fun xmlTextReaderCurrentDoc(preader: NullablePointer[Xmltextreader]): NullablePointer[Xmldoc]

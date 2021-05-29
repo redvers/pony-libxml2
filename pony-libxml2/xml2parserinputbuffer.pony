@@ -1,7 +1,5 @@
-type XmlparserinputbufferPTR is NullablePointer[Xmlparserinputbuffer]
-
 class Xml2parserinputbuffer
-  var ptr': XmlparserinputbufferPTR
+  var ptr': NullablePointer[Xmlparserinputbuffer]
   var ptr: Xmlparserinputbuffer
   var buffersize: I32
 
@@ -24,5 +22,5 @@ class Xml2parserinputbuffer
     end
 
   fun ref newTextReader(pURI: String): Xml2textreader ? =>
-    let ptrx: XmltextreaderPTR = LibXML2.xmlNewTextReader(ptr', pURI)
+    let ptrx: NullablePointer[Xmltextreader] = LibXML2.xmlNewTextReader(ptr', pURI)
     Xml2textreader.fromPTR(ptrx)?

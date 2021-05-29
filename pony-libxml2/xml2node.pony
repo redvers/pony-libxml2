@@ -1,9 +1,9 @@
 
 class Xml2node
-  var ptr': XmlnodePTR
+  var ptr': NullablePointer[Xmlnode]
   var ptr: Xmlnode
 
-  new fromPTR(ptrx: XmlnodePTR)? =>
+  new fromPTR(ptrx: NullablePointer[Xmlnode])? =>
     if (ptrx.is_none()) then
       error
     else
@@ -16,7 +16,7 @@ class Xml2node
 
 // use @xmlHasNsProp[NullablePointer[Xmlattr]](anon0: NullablePointer[Xmlnode], anon1: Pointer[U8] tag, anon2: Pointer[U8] tag)
   fun ref hasNsProp(pname: String, pnamespace: String): Xml2attr ? =>
-    let ptrx: XmlattrPTR = LibXML2.xmlHasNsProp(ptr', pname, pnamespace)
+    let ptrx:NullablePointer[Xmlattr] = LibXML2.xmlHasNsProp(ptr', pname, pnamespace)
     Xml2attr.fromPTR(ptrx)?
 
 //   fun xmlGetLineNo(pnode: NullablePointer[Xmlnode]): I64 =>

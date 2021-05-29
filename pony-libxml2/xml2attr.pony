@@ -1,10 +1,8 @@
-type XmlattrPTR is NullablePointer[Xmlattr]
-
 class Xml2attr
-  var ptr': XmlattrPTR
+  var ptr': NullablePointer[Xmlattr]
   var ptr: Xmlattr
 
-  new fromPTR(ptrx: XmlattrPTR)? =>
+  new fromPTR(ptrx: NullablePointer[Xmlattr])? =>
     if (ptrx.is_none()) then
       error
     else

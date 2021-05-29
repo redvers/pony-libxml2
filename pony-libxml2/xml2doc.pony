@@ -1,9 +1,7 @@
-type XmldocPTR is NullablePointer[Xmldoc]
-
 class Xml2Doc
   var ptr': NullablePointer[Xmldoc] val
 
-  new fromPTR(ptrx: XmldocPTR val)? =>
+  new fromPTR(ptrx: NullablePointer[Xmldoc] val)? =>
     if (ptrx.is_none()) then
       error
     else
