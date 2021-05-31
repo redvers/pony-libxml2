@@ -550,7 +550,7 @@ struct Xmlchrangegroup
   var plongRange: NullablePointer[Xmlchlrange] = NullablePointer[Xmlchlrange].none() // offset: 128
 
 
-struct Xmlxpathcontext
+struct val Xmlxpathcontext
   var pdoc: NullablePointer[Xmldoc] = NullablePointer[Xmldoc].none() // offset: 0
   var pnode: NullablePointer[Xmlnode] = NullablePointer[Xmlnode].none() // offset: 64
   var pnb_variables_unused: I32 = I32(0) // offset: 128
