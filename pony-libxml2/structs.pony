@@ -171,7 +171,7 @@ struct Xmlnode
   var pextra: U16 = U16(0) // offset: 912
 
 
-struct Xmldoc
+struct val Xmldoc
   var p_private: Pointer[U8] = Pointer[U8] // offset: 0
   var ptype: I32 = I32(0) // offset: 64
   var pname: Pointer[U8] = Pointer[U8] // offset: 128  // remove tag

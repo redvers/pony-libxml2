@@ -1,46 +1,61 @@
 class Xml2Doc
-  var ptr': NullablePointer[Xmldoc] val
-
-  new fromPTR(ptrx: NullablePointer[Xmldoc] val)? =>
-    if (ptrx.is_none()) then
-      error
-    else
-      ptr' = ptrx
-    end
+  var xmldoc: Xmldoc val
+  var allocated: Bool
 
   new parseFile(pfilename: String val)? =>
     let ptrx: NullablePointer[Xmldoc] val = recover LibXML2.xmlParseFile(pfilename) end
     if (ptrx.is_none()) then
       error
     else
-      ptr' = ptrx
+      xmldoc = ptrx.apply()?
+      allocated = true
     end
 
-  new parseDoc(pcur: String val)? =>
-    let ptrx: NullablePointer[Xmldoc] val = recover LibXML2.xmlParseDoc(pcur) end
+  new fromPTR(ptrx: NullablePointer[Xmldoc] val)? =>
     if (ptrx.is_none()) then
       error
     else
-      ptr' = ptrx
+      xmldoc = recover val ptrx.apply()? end
+      allocated = true
+    end
+
+  new parseDoc(pcur: String val)? =>
+    let ptrx: NullablePointer[Xmldoc] val = recover val LibXML2.xmlParseDoc(pcur) end
+    if (ptrx.is_none()) then
+      error
+    else
+      xmldoc = ptrx.apply()?
+      allocated = true
+    end
+
+  fun ptr(): NullablePointer[Xmldoc] val ? =>
+    if (allocated) then
+      recover val NullablePointer[Xmldoc](xmldoc) end
+    else
+      error
     end
 
 //  fun ref readerWalker(): Xml2textreader ? =>
 //    Xml2textreader.fromPTR(LibXML2.xmlReaderWalker(ptr'))?
 
 //use @xmlDocGetRootElement[NullablePointer[Xmlnode]](anon0: NullablePointer[Xmldoc])
-//  fun ref getRootElement(): Xml2node ? =>
-//    let ptrx: XmlnodePTR = LibXML2.xmlDocGetRootElement(ptr')
-//    Xml2node.fromPTR(ptrx)?
+  fun ref getRootElement(): Xml2node ? =>
+    if (allocated) then
+      let ptrx: NullablePointer[Xmlnode] = LibXML2.xmlDocGetRootElement(recover val NullablePointer[Xmldoc](xmldoc) end)
+      Xml2node.fromPTR(ptrx)?
+    else
+      error
+    end
 
   fun ref final() =>
-    @xmlFreeDoc[None](ptr')
-    ptr' = recover val NullablePointer[Xmldoc].none() end
+    @xmlFreeDoc[None](recover val NullablePointer[Xmldoc](xmldoc) end)
+    allocated = false
 
   fun _final() =>
-    if (ptr'.is_none()) then
-      return None
+    if (allocated) then
+      @xmlFreeDoc[None](recover val NullablePointer[Xmldoc](xmldoc) end)
     else
-      @xmlFreeDoc[None](ptr')
+      return None
     end
 
 //use @xmlDocCopyNode[NullablePointer[Xmlnode]](anon0: NullablePointer[Xmlnode], anon1: NullablePointer[Xmldoc], anon2: I32)

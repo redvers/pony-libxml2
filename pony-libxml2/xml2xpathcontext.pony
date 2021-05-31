@@ -2,7 +2,7 @@ class Xml2xpathcontext
   var ptr': NullablePointer[Xmlxpathcontext] val
 
   new create(xmldoc: Xml2Doc)? =>
-    ptr' = recover val LibXML2.xmlXPathNewContext(xmldoc.ptr') end
+    ptr' = recover val LibXML2.xmlXPathNewContext(xmldoc.ptr()?) end
 
     if (ptr'.is_none()) then
       error
@@ -26,4 +26,3 @@ class Xml2xpathcontext
     else
       @xmlXPathFreeContext[None](ptr')
     end
-
