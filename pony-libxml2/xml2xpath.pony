@@ -1,4 +1,5 @@
 class Xml2pathobject
+  var allocated: Bool
   var ptr': NullablePointer[Xmlxpathobject]
   var ptr: Xmlxpathobject
   var nodeset': NullablePointer[Xmlnodeset]
@@ -22,6 +23,9 @@ class Xml2pathobject
         for f in nodearray'.values() do
           nodearray.push(Xml2node.fromPTR(f)?)
         end
+
+        allocated = true
+
       end
     end
 
@@ -34,8 +38,23 @@ class Xml2pathobject
   fun ref apply(index: USize): Xml2node ref ? =>
     nodearray.apply(index)?
 
-  fun ref dispose() =>
-    @xmlXPathFreeNodeSet[None](nodeset')
+  fun ref final() =>
+    if (allocated) then
+      @xmlXPathFreeNodeSet[None](nodeset')
+      @xmlXPathFreeNodeSetList[None](ptr')
+      nodearray = Array[Xml2node].create(0)
+      allocated = false
+    end
+
+  fun _final() =>
+    if (allocated) then
+      let ns: NullablePointer[Xmlnodeset] tag = nodeset'
+      let po: NullablePointer[Xmlxpathobject] tag = ptr'
+      @xmlXPathFreeNodeSet[None](ns)
+      @xmlXPathFreeNodeSetList[None](po)
+    end
+
+
 
 //  fun xmlXPathCastNodeSetToString(pns: NullablePointer[Xmlnodeset]): String =>
   fun ref castNodeSetToString(): String =>
