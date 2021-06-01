@@ -155,7 +155,7 @@ use @xmlNewTextChild[NullablePointer[Xmlnode]](anon0: NullablePointer[Xmlnode], 
 use @xmlNewDocRawNode[NullablePointer[Xmlnode]](anon0: NullablePointer[Xmldoc] tag, anon1: NullablePointer[Xmlns], anon2: Pointer[U8] tag, anon3: Pointer[U8] tag)
 use @xmlNewDocFragment[NullablePointer[Xmlnode]](anon0: NullablePointer[Xmldoc] tag)
 use @xmlGetLineNo[I64](anon0: NullablePointer[Xmlnode])
-use @xmlGetNodePath[Pointer[U8]](anon0: NullablePointer[Xmlnode])
+use @xmlGetNodePath[Pointer[U8]](anon0: NullablePointer[Xmlnode] tag)
 use @xmlDocGetRootElement[NullablePointer[Xmlnode]](anon0: NullablePointer[Xmldoc] tag)
 use @xmlGetLastChild[NullablePointer[Xmlnode]](anon0: NullablePointer[Xmlnode])
 use @xmlNodeIsText[I32](anon0: NullablePointer[Xmlnode])

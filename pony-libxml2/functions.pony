@@ -676,7 +676,7 @@ primitive LibXML2
     var tmpvar: I64 = @xmlGetLineNo[I64](pnode)
     tmpvar
 
-  fun xmlGetNodePath(pnode: NullablePointer[Xmlnode]): String =>
+  fun xmlGetNodePath(pnode: NullablePointer[Xmlnode] tag): String =>
     var tmpvar: Pointer[U8] = @xmlGetNodePath[Pointer[U8]](pnode)
     let p: String iso = String.from_cstring(tmpvar).clone()
     consume p

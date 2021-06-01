@@ -9,9 +9,9 @@ actor Main
     try
       let xmldoc: Xml2Doc = Xml2Doc.parseFile("libxml2.xml")?
 
-//      fidToFilename(xmldoc, "f16")?
-//      var xn: Xml2node = idToNode(xmldoc, "_180")?
-//      nodeChildren(xmldoc, xn)?
+      fidToFilename(xmldoc, "f16")?
+      var xn: Xml2node = idToNode(xmldoc, "_180")?
+      nodeChildren(xmldoc, xn)?
 
 
     else
@@ -19,8 +19,7 @@ actor Main
       @exit[None](I32(0))
     end
 
-/*
- *
+
   fun nodeChildren(xmldoc: Xml2Doc, xmlnode: Xml2node): Array[Xml2node] ? =>
     let basepath: String = xmlnode.getNodePath()
     let xmlctx: Xml2xpathcontext = Xml2xpathcontext(xmldoc)?
@@ -46,4 +45,3 @@ actor Main
     xmlctx.final()
     s
 
-*/
