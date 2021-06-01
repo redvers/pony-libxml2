@@ -1,0 +1,3 @@
+all:
+	ponyc -d .
+	./memory

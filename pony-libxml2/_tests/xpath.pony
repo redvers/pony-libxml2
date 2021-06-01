@@ -25,7 +25,7 @@ class iso TestXPath is UnitTest
       h.assert_eq[I32](res.ptr.pboolval, I32(0))
 
 //    if len(res) != 2:
-      h.assert_eq[USize](res.size(), USize(2))
+      h.assert_eq[USize](res.size()?, USize(2))
       h.assert_eq[USize](res.nodearray.size(), USize(2))
 
 //    if res[0].name != "doc" or res[1].name != "foo":
@@ -40,13 +40,13 @@ class iso TestXPath is UnitTest
 
 
 //    ctxt.setContextNode(res[0])
-      h.assert_eq[I32](ctxt.xpathSetContextNode(res.nodearray.apply(0)?), I32(0))
+      h.assert_eq[I32](ctxt.xpathSetContextNode(res.nodearray.apply(0)?)?, I32(0))
 
 //    res = ctxt.xpathEval("foo")
       res = ctxt.xpathEval("foo")?
 //    if len(res) != 1:
       h.assert_eq[USize](res.nodearray.size(), USize(1))
-      h.assert_eq[USize](res.size(), USize(1))
+      h.assert_eq[USize](res.size()?, USize(1))
 
 //    if res[0].name != "foo":
       h.assert_eq[String](res.nodearray.apply(0)?.name(), "foo")

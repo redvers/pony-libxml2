@@ -1,2 +1,3 @@
 /pony-libxml21
 *.swp
+/pony-libxml2/pony-libxml2/_tests/memory/memory

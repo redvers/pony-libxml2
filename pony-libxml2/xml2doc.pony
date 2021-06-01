@@ -1,45 +1,53 @@
 class Xml2Doc
-  var ptr': NullablePointer[Xmldoc] val
+  var ptr': NullablePointer[Xmldoc]
+  var allocated: Bool
 
-  new fromPTR(ptrx: NullablePointer[Xmldoc] val)? =>
+  new fromPTR(ptrx: NullablePointer[Xmldoc])? =>
     if (ptrx.is_none()) then
       error
     else
       ptr' = ptrx
+      allocated = true
     end
 
   new parseFile(pfilename: String val)? =>
-    let ptrx: NullablePointer[Xmldoc] val = recover LibXML2.xmlParseFile(pfilename) end
+    let ptrx: NullablePointer[Xmldoc] = LibXML2.xmlParseFile(pfilename)
     if (ptrx.is_none()) then
       error
     else
       ptr' = ptrx
+      allocated = true
     end
 
   new parseDoc(pcur: String val)? =>
-    let ptrx: NullablePointer[Xmldoc] val = recover LibXML2.xmlParseDoc(pcur) end
+    let ptrx: NullablePointer[Xmldoc] = LibXML2.xmlParseDoc(pcur)
     if (ptrx.is_none()) then
       error
     else
       ptr' = ptrx
+      allocated = true
     end
 
 //  fun ref readerWalker(): Xml2textreader ? =>
 //    Xml2textreader.fromPTR(LibXML2.xmlReaderWalker(ptr'))?
 
-//use @xmlDocGetRootElement[NullablePointer[Xmlnode]](anon0: NullablePointer[Xmldoc])
-//  fun ref getRootElement(): Xml2node ? =>
-//    let ptrx: XmlnodePTR = LibXML2.xmlDocGetRootElement(ptr')
-//    Xml2node.fromPTR(ptrx)?
+// use @xmlDocGetRootElement[NullablePointer[Xmlnode]](anon0: NullablePointer[Xmldoc])
+  fun ref getRootElement(): Xml2node ? =>
+    if (allocated) then
+      let ptrx: NullablePointer[Xmlnode] = LibXML2.xmlDocGetRootElement(ptr')
+      Xml2node.fromPTR(ptrx)?
+    else
+      error
+    end
 
   fun ref final() =>
-    @xmlFreeDoc[None](ptr')
-    ptr' = recover val NullablePointer[Xmldoc].none() end
+    if (allocated) then
+      @xmlFreeDoc[None](ptr')
+      allocated = false
+    end
 
   fun _final() =>
-    if (ptr'.is_none()) then
-      return None
-    else
+    if (allocated) then
       @xmlFreeDoc[None](ptr')
     end
 

@@ -14,7 +14,7 @@ class iso TestReaderX is UnitTest
 
       var res: Xml2pathobject = ctx.xpathEval("//termdef")?
 
-      for ff in res.values() do
+      for ff in res.values()? do
         Debug.out(ff.getNodePath() + ": " + ff.getProp("term") + ff.castNodeToString())
       end
 
