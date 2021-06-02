@@ -62,7 +62,6 @@ class Xml2pathobject
       @xmlXPathFreeNodeSet[None](nodeset')
     end
 
-
 //  fun xmlXPathCastNodeSetToString(pns: NullablePointer[Xmlnodeset]): String =>
   fun ref castNodeSetToString(): String =>
     LibXML2.xmlXPathCastNodeSetToString(nodeset')

@@ -6,8 +6,8 @@ actor Main
 
     xmldoc(10)
     xmlctx(10)
-    xmleval(10000)
-    xmldoc(1000)
+    xmleval(10)
+    xmldoc(10)
 
 
 
@@ -44,6 +44,8 @@ actor Main
         let res: Xml2pathobject = c.xpathEval("//*")?
         res.final()
       end
+      c.final()
+      s.final()
     else
       die("Failed out in xpathEval grinding")
     end
