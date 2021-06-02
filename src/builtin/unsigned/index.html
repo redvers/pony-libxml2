@@ -1,0 +1,1882 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>unsigned.pony - pony-libxml2</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">pony-libxml2</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">pony-libxml2</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">package pony-libxml2 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../pony-libxml2--index/">Package</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xml2xpathcontext/">class Xml2xpathcontext</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xml2pathobject/">class Xml2pathobject</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xml2textreader/">class Xml2textreader</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xml2parserinputbuffer/">class Xml2parserinputbuffer</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xml2node/">class Xml2node</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xml2Doc/">class Xml2Doc</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xml2attr/">class Xml2attr</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-FUNCTIONPOINTER/">primitive FUNCTIONPOINTER</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-IoFile/">struct IoFile</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-VaListTag/">struct VaListTag</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlparserinputbuffer/">struct Xmlparserinputbuffer</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmloutputbuffer/">struct Xmloutputbuffer</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlbuffer/">struct Xmlbuffer</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlbuf/">struct Xmlbuf</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlnotation/">struct Xmlnotation</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlenumeration/">struct Xmlenumeration</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlattribute/">struct Xmlattribute</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlelementcontent/">struct Xmlelementcontent</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlelement/">struct Xmlelement</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlns/">struct Xmlns</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmldtd/">struct Xmldtd</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlattr/">struct Xmlattr</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlid/">struct Xmlid</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlref/">struct Xmlref</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlnode/">struct Xmlnode</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmldoc/">struct Xmldoc</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmldomwrapctxt/">struct Xmldomwrapctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlparserinput/">struct Xmlparserinput</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlparserctxt/">struct Xmlparserctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlsaxlocator/">struct Xmlsaxlocator</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlsaxhandler/">struct Xmlsaxhandler</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlparsernodeinfo/">struct Xmlparsernodeinfo</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlparsernodeinfoseq/">struct Xmlparsernodeinfoseq</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlsaxhandlerv1/">struct Xmlsaxhandlerv1</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlentity/">struct Xmlentity</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlregexp/">struct Xmlregexp</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlregexecctxt/">struct Xmlregexecctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmldict/">struct Xmldict</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlmutex/">struct Xmlmutex</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlrmutex/">struct Xmlrmutex</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlhashtable/">struct Xmlhashtable</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlerror/">struct Xmlerror</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmllink/">struct Xmllink</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmllist/">struct Xmllist</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlautomata/">struct Xmlautomata</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlautomatastate/">struct Xmlautomatastate</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlvalidstate/">struct Xmlvalidstate</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlvalidctxt/">struct Xmlvalidctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlcharencodinghandler/">struct Xmlcharencodinghandler</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xlinkhandler/">struct Xlinkhandler</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlglobalstate/">struct Xmlglobalstate</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlcatalog/">struct Xmlcatalog</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlchsrange/">struct Xmlchsrange</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlchlrange/">struct Xmlchlrange</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlchrangegroup/">struct Xmlchrangegroup</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxpathcontext/">struct Xmlxpathcontext</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxpathparsercontext/">struct Xmlxpathparsercontext</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlnodeset/">struct Xmlnodeset</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxpathobject/">struct Xmlxpathobject</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxpathtype/">struct Xmlxpathtype</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxpathvariable/">struct Xmlxpathvariable</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxpathfunct/">struct Xmlxpathfunct</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxpathaxis/">struct Xmlxpathaxis</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxpathcompexpr/">struct Xmlxpathcompexpr</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlshellctxt/">struct Xmlshellctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Htmlelemdesc/">struct Htmlelemdesc</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Htmlentitydesc/">struct Htmlentitydesc</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlpattern/">struct Xmlpattern</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlstreamctxt/">struct Xmlstreamctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlrelaxng/">struct Xmlrelaxng</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlrelaxngparserctxt/">struct Xmlrelaxngparserctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlrelaxngvalidctxt/">struct Xmlrelaxngvalidctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemaval/">struct Xmlschemaval</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschematype/">struct Xmlschematype</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemafacet/">struct Xmlschemafacet</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemaannot/">struct Xmlschemaannot</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemaattribute/">struct Xmlschemaattribute</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemaattributelink/">struct Xmlschemaattributelink</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemawildcardns/">struct Xmlschemawildcardns</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemawildcard/">struct Xmlschemawildcard</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemaattributegroup/">struct Xmlschemaattributegroup</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschematypelink/">struct Xmlschematypelink</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemafacetlink/">struct Xmlschemafacetlink</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemaelement/">struct Xmlschemaelement</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemanotation/">struct Xmlschemanotation</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschema/">struct Xmlschema</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschematron/">struct Xmlschematron</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschematronparserctxt/">struct Xmlschematronparserctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschematronvalidctxt/">struct Xmlschematronvalidctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmluri/">struct Xmluri</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxincludectxt/">struct Xmlxincludectxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlmodule/">struct Xmlmodule</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemaparserctxt/">struct Xmlschemaparserctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemavalidctxt/">struct Xmlschemavalidctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemasaxplug/">struct Xmlschemasaxplug</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmltextreader/">struct Xmltextreader</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlsavectxt/">struct Xmlsavectxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmltextwriter/">struct Xmltextwriter</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmllocationset/">struct Xmllocationset</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-LibXML2/">primitive LibXML2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">package builtin <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../builtin--index/">Package</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-U8/">primitive U8</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-U16/">primitive U16</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-U32/">primitive U32</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-U64/">primitive U64</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ULong/">primitive ULong</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-USize/">primitive USize</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-U128/">primitive U128</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Unsigned/">type Unsigned</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Stringable/">interface Stringable</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-String/">class String</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-StringBytes/">class StringBytes</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-StringRunes/">class StringRunes</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_UTF32Encoder/">primitive _UTF32Encoder</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-InputNotify/">interface InputNotify</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-InputStream/">interface InputStream</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Stdin/">actor Stdin</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ByteSeq/">type ByteSeq</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ByteSeqIter/">interface ByteSeqIter</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-OutStream/">interface OutStream</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-StdStream/">actor StdStream</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-SourceLoc/">interface SourceLoc</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-I8/">primitive I8</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-I16/">primitive I16</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-I32/">primitive I32</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-I64/">primitive I64</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ILong/">primitive ILong</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ISize/">primitive ISize</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-I128/">primitive I128</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Signed/">type Signed</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Seq/">interface Seq</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-RuntimeOptions/">struct RuntimeOptions</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_ArithmeticConvertible/">trait _ArithmeticConvertible</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Real/">trait Real</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Integer/">trait Integer</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-SignedInteger/">trait SignedInteger</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-UnsignedInteger/">trait UnsignedInteger</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-FloatingPoint/">trait FloatingPoint</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Number/">type Number</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Int/">type Int</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ReadSeq/">interface ReadSeq</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ReadElement/">interface ReadElement</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Pointer/">struct Pointer</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Platform/">primitive Platform</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-NullablePointer/">struct NullablePointer</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-None/">primitive None</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Iterator/">interface Iterator</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-F32/">primitive F32</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-F64/">primitive F64</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Float/">type Float</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Env/">class Env</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-DoNotOptimise/">primitive DoNotOptimise</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-DisposableActor/">interface DisposableActor</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Less/">primitive Less</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Equal/">primitive Equal</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Greater/">primitive Greater</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Compare/">type Compare</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-HasEq/">interface HasEq</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Equatable/">interface Equatable</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Comparable/">interface Comparable</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Bool/">primitive Bool</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-AsioEventID/">type AsioEventID</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-AsioEventNotify/">interface AsioEventNotify</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-AsioEvent/">primitive AsioEvent</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Array/">class Array</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ArrayKeys/">class ArrayKeys</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ArrayValues/">class ArrayValues</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ArrayPairs/">class ArrayPairs</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Any/">interface Any</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-AmbientAuth/">primitive AmbientAuth</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_ToString/">primitive _ToString</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_SignedArithmetic/">primitive _SignedArithmetic</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_SignedUnsafeArithmetic/">primitive _SignedUnsafeArithmetic</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_UnsignedCheckedArithmetic/">primitive _UnsignedCheckedArithmetic</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_SignedCheckedArithmetic/">primitive _SignedCheckedArithmetic</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_PartialArithmetic/">trait _PartialArithmetic</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_UnsignedPartialArithmetic/">primitive _UnsignedPartialArithmetic</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_SignedPartialArithmetic/">primitive _SignedPartialArithmetic</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">source <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../pony-libxml2/xml2xpathcontext/">xml2xpathcontext.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../pony-libxml2/xml2xpath/">xml2xpath.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../pony-libxml2/xml2textreader/">xml2textreader.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../pony-libxml2/xml2parserinputbuffer/">xml2parserinputbuffer.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../pony-libxml2/xml2node/">xml2node.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../pony-libxml2/xml2doc/">xml2doc.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../pony-libxml2/xml2attr/">xml2attr.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../pony-libxml2/structs/">structs.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../pony-libxml2/functions/">functions.pony</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">unsigned.pony</a>
+</li>
+                                    
+<li >
+    <a href="../stringable/">stringable.pony</a>
+</li>
+                                    
+<li >
+    <a href="../string/">string.pony</a>
+</li>
+                                    
+<li >
+    <a href="../stdin/">stdin.pony</a>
+</li>
+                                    
+<li >
+    <a href="../std_stream/">std_stream.pony</a>
+</li>
+                                    
+<li >
+    <a href="../source_loc/">source_loc.pony</a>
+</li>
+                                    
+<li >
+    <a href="../signed/">signed.pony</a>
+</li>
+                                    
+<li >
+    <a href="../seq/">seq.pony</a>
+</li>
+                                    
+<li >
+    <a href="../runtime_options/">runtime_options.pony</a>
+</li>
+                                    
+<li >
+    <a href="../real/">real.pony</a>
+</li>
+                                    
+<li >
+    <a href="../read_seq/">read_seq.pony</a>
+</li>
+                                    
+<li >
+    <a href="../pointer/">pointer.pony</a>
+</li>
+                                    
+<li >
+    <a href="../platform/">platform.pony</a>
+</li>
+                                    
+<li >
+    <a href="../nullable_pointer/">nullable_pointer.pony</a>
+</li>
+                                    
+<li >
+    <a href="../none/">none.pony</a>
+</li>
+                                    
+<li >
+    <a href="../iterator/">iterator.pony</a>
+</li>
+                                    
+<li >
+    <a href="../float/">float.pony</a>
+</li>
+                                    
+<li >
+    <a href="../env/">env.pony</a>
+</li>
+                                    
+<li >
+    <a href="../do_not_optimise/">do_not_optimise.pony</a>
+</li>
+                                    
+<li >
+    <a href="../disposable_actor/">disposable_actor.pony</a>
+</li>
+                                    
+<li >
+    <a href="../compare/">compare.pony</a>
+</li>
+                                    
+<li >
+    <a href="../bool/">bool.pony</a>
+</li>
+                                    
+<li >
+    <a href="../asio_event/">asio_event.pony</a>
+</li>
+                                    
+<li >
+    <a href="../array/">array.pony</a>
+</li>
+                                    
+<li >
+    <a href="../any/">any.pony</a>
+</li>
+                                    
+<li >
+    <a href="../ambient_auth/">ambient_auth.pony</a>
+</li>
+                                    
+<li >
+    <a href="../_to_string/">_to_string.pony</a>
+</li>
+                                    
+<li >
+    <a href="../_arithmetic/">_arithmetic.pony</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../../pony-libxml2/functions/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../stringable/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<pre><code class="language-pony-full-source">primitive U8 is UnsignedInteger[U8]
+  new create(value: U8) =&gt; value
+  new from[B: (Number &amp; Real[B] val)](a: B) =&gt; a.u8()
+
+  new min_value() =&gt; 0
+  new max_value() =&gt; 0xFF
+
+  fun next_pow2(): U8 =&gt;
+    let x = (this - 1).clz()
+    1 &lt;&lt; (if x == 0 then 0 else bitwidth() - x end)
+
+  fun abs(): U8 =&gt; this
+  fun bit_reverse(): U8 =&gt; @&quot;llvm.bitreverse.i8&quot;[U8](this)
+  fun bswap(): U8 =&gt; this
+  fun popcount(): U8 =&gt; @&quot;llvm.ctpop.i8&quot;[U8](this)
+  fun clz(): U8 =&gt; @&quot;llvm.ctlz.i8&quot;[U8](this, false)
+  fun ctz(): U8 =&gt; @&quot;llvm.cttz.i8&quot;[U8](this, false)
+
+  fun clz_unsafe(): U8 =&gt;
+    &quot;&quot;&quot;
+    Unsafe operation.
+    If this is 0, the result is undefined.
+    &quot;&quot;&quot;
+    @&quot;llvm.ctlz.i8&quot;[U8](this, true)
+
+  fun ctz_unsafe(): U8 =&gt;
+    &quot;&quot;&quot;
+    Unsafe operation.
+    If this is 0, the result is undefined.
+    &quot;&quot;&quot;
+    @&quot;llvm.cttz.i8&quot;[U8](this, true)
+
+  fun bitwidth(): U8 =&gt; 8
+
+  fun bytewidth(): USize =&gt; bitwidth().usize() / 8
+
+  fun min(y: U8): U8 =&gt; if this &lt; y then this else y end
+  fun max(y: U8): U8 =&gt; if this &gt; y then this else y end
+
+  fun addc(y: U8): (U8, Bool) =&gt;
+    @&quot;llvm.uadd.with.overflow.i8&quot;[(U8, Bool)](this, y)
+
+  fun subc(y: U8): (U8, Bool) =&gt;
+    @&quot;llvm.usub.with.overflow.i8&quot;[(U8, Bool)](this, y)
+
+  fun mulc(y: U8): (U8, Bool) =&gt;
+    @&quot;llvm.umul.with.overflow.i8&quot;[(U8, Bool)](this, y)
+
+  fun divc(y: U8): (U8, Bool) =&gt;
+    _UnsignedCheckedArithmetic.div_checked[U8](this, y)
+
+  fun remc(y: U8): (U8, Bool) =&gt;
+    _UnsignedCheckedArithmetic.rem_checked[U8](this, y)
+
+  fun add_partial(y: U8): U8 ? =&gt;
+    _UnsignedPartialArithmetic.add_partial[U8](this, y)?
+
+  fun sub_partial(y: U8): U8 ? =&gt;
+    _UnsignedPartialArithmetic.sub_partial[U8](this, y)?
+
+  fun mul_partial(y: U8): U8 ? =&gt;
+    _UnsignedPartialArithmetic.mul_partial[U8](this, y)?
+
+  fun div_partial(y: U8): U8 ? =&gt;
+    _UnsignedPartialArithmetic.div_partial[U8](this, y)?
+
+  fun rem_partial(y: U8): U8 ? =&gt;
+    _UnsignedPartialArithmetic.rem_partial[U8](this, y)?
+
+  fun divrem_partial(y: U8): (U8, U8) ? =&gt;
+    _UnsignedPartialArithmetic.divrem_partial[U8](this, y)?
+
+primitive U16 is UnsignedInteger[U16]
+  new create(value: U16) =&gt; value
+  new from[A: (Number &amp; Real[A] val)](a: A) =&gt; a.u16()
+
+  new min_value() =&gt; 0
+  new max_value() =&gt; 0xFFFF
+
+  fun next_pow2(): U16 =&gt;
+    let x = (this - 1).clz()
+    1 &lt;&lt; (if x == 0 then 0 else bitwidth() - x end)
+
+  fun abs(): U16 =&gt; this
+  fun bit_reverse(): U16 =&gt; @&quot;llvm.bitreverse.i16&quot;[U16](this)
+  fun bswap(): U16 =&gt; @&quot;llvm.bswap.i16&quot;[U16](this)
+  fun popcount(): U16 =&gt; @&quot;llvm.ctpop.i16&quot;[U16](this)
+  fun clz(): U16 =&gt; @&quot;llvm.ctlz.i16&quot;[U16](this, false)
+  fun ctz(): U16 =&gt; @&quot;llvm.cttz.i16&quot;[U16](this, false)
+
+  fun clz_unsafe(): U16 =&gt;
+    &quot;&quot;&quot;
+    Unsafe operation.
+    If this is 0, the result is undefined.
+    &quot;&quot;&quot;
+    @&quot;llvm.ctlz.i16&quot;[U16](this, true)
+
+  fun ctz_unsafe(): U16 =&gt;
+    &quot;&quot;&quot;
+    Unsafe operation.
+    If this is 0, the result is undefined.
+    &quot;&quot;&quot;
+    @&quot;llvm.cttz.i16&quot;[U16](this, true)
+
+  fun bitwidth(): U16 =&gt; 16
+
+  fun bytewidth(): USize =&gt; bitwidth().usize() / 8
+
+  fun min(y: U16): U16 =&gt; if this &lt; y then this else y end
+  fun max(y: U16): U16 =&gt; if this &gt; y then this else y end
+
+  fun addc(y: U16): (U16, Bool) =&gt;
+    @&quot;llvm.uadd.with.overflow.i16&quot;[(U16, Bool)](this, y)
+
+  fun subc(y: U16): (U16, Bool) =&gt;
+    @&quot;llvm.usub.with.overflow.i16&quot;[(U16, Bool)](this, y)
+
+  fun mulc(y: U16): (U16, Bool) =&gt;
+    @&quot;llvm.umul.with.overflow.i16&quot;[(U16, Bool)](this, y)
+
+  fun divc(y: U16): (U16, Bool) =&gt;
+    _UnsignedCheckedArithmetic.div_checked[U16](this, y)
+
+  fun remc(y: U16): (U16, Bool) =&gt;
+    _UnsignedCheckedArithmetic.rem_checked[U16](this, y)
+
+  fun add_partial(y: U16): U16 ? =&gt;
+    _UnsignedPartialArithmetic.add_partial[U16](this, y)?
+
+  fun sub_partial(y: U16): U16 ? =&gt;
+    _UnsignedPartialArithmetic.sub_partial[U16](this, y)?
+
+  fun mul_partial(y: U16): U16 ? =&gt;
+    _UnsignedPartialArithmetic.mul_partial[U16](this, y)?
+
+  fun div_partial(y: U16): U16 ? =&gt;
+    _UnsignedPartialArithmetic.div_partial[U16](this, y)?
+
+  fun rem_partial(y: U16): U16 ? =&gt;
+    _UnsignedPartialArithmetic.rem_partial[U16](this, y)?
+
+  fun divrem_partial(y: U16): (U16, U16) ? =&gt;
+    _UnsignedPartialArithmetic.divrem_partial[U16](this, y)?
+
+primitive U32 is UnsignedInteger[U32]
+  new create(value: U32) =&gt; value
+  new from[A: (Number &amp; Real[A] val)](a: A) =&gt; a.u32()
+
+  new min_value() =&gt; 0
+  new max_value() =&gt; 0xFFFF_FFFF
+
+  fun next_pow2(): U32 =&gt;
+    let x = (this - 1).clz()
+    1 &lt;&lt; (if x == 0 then 0 else bitwidth() - x end)
+
+  fun abs(): U32 =&gt; this
+  fun bit_reverse(): U32 =&gt; @&quot;llvm.bitreverse.i32&quot;[U32](this)
+  fun bswap(): U32 =&gt; @&quot;llvm.bswap.i32&quot;[U32](this)
+  fun popcount(): U32 =&gt; @&quot;llvm.ctpop.i32&quot;[U32](this)
+  fun clz(): U32 =&gt; @&quot;llvm.ctlz.i32&quot;[U32](this, false)
+  fun ctz(): U32 =&gt; @&quot;llvm.cttz.i32&quot;[U32](this, false)
+
+  fun clz_unsafe(): U32 =&gt;
+    &quot;&quot;&quot;
+    Unsafe operation.
+    If this is 0, the result is undefined.
+    &quot;&quot;&quot;
+    @&quot;llvm.ctlz.i32&quot;[U32](this, true)
+
+  fun ctz_unsafe(): U32 =&gt;
+    &quot;&quot;&quot;
+    Unsafe operation.
+    If this is 0, the result is undefined.
+    &quot;&quot;&quot;
+    @&quot;llvm.cttz.i32&quot;[U32](this, true)
+
+  fun bitwidth(): U32 =&gt; 32
+
+  fun bytewidth(): USize =&gt; bitwidth().usize() / 8
+
+  fun min(y: U32): U32 =&gt; if this &lt; y then this else y end
+  fun max(y: U32): U32 =&gt; if this &gt; y then this else y end
+
+  fun addc(y: U32): (U32, Bool) =&gt;
+    @&quot;llvm.uadd.with.overflow.i32&quot;[(U32, Bool)](this, y)
+
+  fun subc(y: U32): (U32, Bool) =&gt;
+    @&quot;llvm.usub.with.overflow.i32&quot;[(U32, Bool)](this, y)
+
+  fun mulc(y: U32): (U32, Bool) =&gt;
+    @&quot;llvm.umul.with.overflow.i32&quot;[(U32, Bool)](this, y)
+
+  fun divc(y: U32): (U32, Bool) =&gt;
+    _UnsignedCheckedArithmetic.div_checked[U32](this, y)
+
+  fun remc(y: U32): (U32, Bool) =&gt;
+    _UnsignedCheckedArithmetic.rem_checked[U32](this, y)
+
+  fun add_partial(y: U32): U32 ? =&gt;
+    _UnsignedPartialArithmetic.add_partial[U32](this, y)?
+
+  fun sub_partial(y: U32): U32 ? =&gt;
+    _UnsignedPartialArithmetic.sub_partial[U32](this, y)?
+
+  fun mul_partial(y: U32): U32 ? =&gt;
+    _UnsignedPartialArithmetic.mul_partial[U32](this, y)?
+
+  fun div_partial(y: U32): U32 ? =&gt;
+    _UnsignedPartialArithmetic.div_partial[U32](this, y)?
+
+  fun rem_partial(y: U32): U32 ? =&gt;
+    _UnsignedPartialArithmetic.rem_partial[U32](this, y)?
+
+  fun divrem_partial(y: U32): (U32, U32) ? =&gt;
+    _UnsignedPartialArithmetic.divrem_partial[U32](this, y)?
+
+primitive U64 is UnsignedInteger[U64]
+  new create(value: U64) =&gt; value
+  new from[A: (Number &amp; Real[A] val)](a: A) =&gt; a.u64()
+
+  new min_value() =&gt; 0
+  new max_value() =&gt; 0xFFFF_FFFF_FFFF_FFFF
+
+  fun next_pow2(): U64 =&gt;
+    let x = (this - 1).clz()
+    1 &lt;&lt; (if x == 0 then 0 else bitwidth() - x end)
+
+  fun abs(): U64 =&gt; this
+  fun bit_reverse(): U64 =&gt; @&quot;llvm.bitreverse.i64&quot;[U64](this)
+  fun bswap(): U64 =&gt; @&quot;llvm.bswap.i64&quot;[U64](this)
+  fun popcount(): U64 =&gt; @&quot;llvm.ctpop.i64&quot;[U64](this)
+  fun clz(): U64 =&gt; @&quot;llvm.ctlz.i64&quot;[U64](this, false)
+  fun ctz(): U64 =&gt; @&quot;llvm.cttz.i64&quot;[U64](this, false)
+
+  fun clz_unsafe(): U64 =&gt;
+    &quot;&quot;&quot;
+    Unsafe operation.
+    If this is 0, the result is undefined.
+    &quot;&quot;&quot;
+    @&quot;llvm.ctlz.i64&quot;[U64](this, true)
+
+  fun ctz_unsafe(): U64 =&gt;
+    &quot;&quot;&quot;
+    Unsafe operation.
+    If this is 0, the result is undefined.
+    &quot;&quot;&quot;
+    @&quot;llvm.cttz.i64&quot;[U64](this, true)
+
+  fun bitwidth(): U64 =&gt; 64
+
+  fun bytewidth(): USize =&gt; bitwidth().usize() / 8
+
+  fun min(y: U64): U64 =&gt; if this &lt; y then this else y end
+  fun max(y: U64): U64 =&gt; if this &gt; y then this else y end
+
+  fun hash(): USize =&gt;
+    ifdef ilp32 then
+      ((this &gt;&gt; 32).u32() xor this.u32()).hash()
+    else
+      usize().hash()
+    end
+
+  fun addc(y: U64): (U64, Bool) =&gt;
+    @&quot;llvm.uadd.with.overflow.i64&quot;[(U64, Bool)](this, y)
+
+  fun subc(y: U64): (U64, Bool) =&gt;
+    @&quot;llvm.usub.with.overflow.i64&quot;[(U64, Bool)](this, y)
+
+  fun mulc(y: U64): (U64, Bool) =&gt;
+    @&quot;llvm.umul.with.overflow.i64&quot;[(U64, Bool)](this, y)
+
+  fun divc(y: U64): (U64, Bool) =&gt;
+    _UnsignedCheckedArithmetic.div_checked[U64](this, y)
+
+  fun remc(y: U64): (U64, Bool) =&gt;
+    _UnsignedCheckedArithmetic.rem_checked[U64](this, y)
+
+  fun add_partial(y: U64): U64 ? =&gt;
+    _UnsignedPartialArithmetic.add_partial[U64](this, y)?
+
+  fun sub_partial(y: U64): U64 ? =&gt;
+    _UnsignedPartialArithmetic.sub_partial[U64](this, y)?
+
+  fun mul_partial(y: U64): U64 ? =&gt;
+    _UnsignedPartialArithmetic.mul_partial[U64](this, y)?
+
+  fun div_partial(y: U64): U64 ? =&gt;
+    _UnsignedPartialArithmetic.div_partial[U64](this, y)?
+
+  fun rem_partial(y: U64): U64 ? =&gt;
+    _UnsignedPartialArithmetic.rem_partial[U64](this, y)?
+
+  fun divrem_partial(y: U64): (U64, U64) ? =&gt;
+    _UnsignedPartialArithmetic.divrem_partial[U64](this, y)?
+
+primitive ULong is UnsignedInteger[ULong]
+  new create(value: ULong) =&gt; value
+  new from[A: (Number &amp; Real[A] val)](a: A) =&gt; a.ulong()
+
+  new min_value() =&gt; 0
+
+  new max_value() =&gt;
+    ifdef ilp32 or llp64 then
+      0xFFFF_FFFF
+    else
+      0xFFFF_FFFF_FFFF_FFFF
+    end
+
+  fun next_pow2(): ULong =&gt;
+    let x = (this - 1).clz()
+    1 &lt;&lt; (if x == 0 then 0 else bitwidth() - x end)
+
+  fun abs(): ULong =&gt; this
+
+  fun bit_reverse(): ULong =&gt;
+    ifdef ilp32 or llp64 then
+      @&quot;llvm.bitreverse.i32&quot;[ULong](this)
+    else
+      @&quot;llvm.bitreverse.i64&quot;[ULong](this)
+    end
+
+  fun bswap(): ULong =&gt;
+    ifdef ilp32 or llp64 then
+      @&quot;llvm.bswap.i32&quot;[ULong](this)
+    else
+      @&quot;llvm.bswap.i64&quot;[ULong](this)
+    end
+
+  fun popcount(): ULong =&gt;
+    ifdef ilp32 or llp64 then
+      @&quot;llvm.ctpop.i32&quot;[ULong](this)
+    else
+      @&quot;llvm.ctpop.i64&quot;[ULong](this)
+    end
+
+  fun clz(): ULong =&gt;
+    ifdef ilp32 or llp64 then
+      @&quot;llvm.ctlz.i32&quot;[ULong](this, false)
+    else
+      @&quot;llvm.ctlz.i64&quot;[ULong](this, false)
+    end
+
+  fun ctz(): ULong =&gt;
+    ifdef ilp32 or llp64 then
+      @&quot;llvm.cttz.i32&quot;[ULong](this, false)
+    else
+      @&quot;llvm.cttz.i64&quot;[ULong](this, false)
+    end
+
+  fun clz_unsafe(): ULong =&gt;
+    &quot;&quot;&quot;
+    Unsafe operation.
+    If this is 0, the result is undefined.
+    &quot;&quot;&quot;
+    ifdef ilp32 or llp64 then
+      @&quot;llvm.ctlz.i32&quot;[ULong](this, true)
+    else
+      @&quot;llvm.ctlz.i64&quot;[ULong](this, true)
+    end
+
+  fun ctz_unsafe(): ULong =&gt;
+    &quot;&quot;&quot;
+    Unsafe operation.
+    If this is 0, the result is undefined.
+    &quot;&quot;&quot;
+    ifdef ilp32 or llp64 then
+      @&quot;llvm.cttz.i32&quot;[ULong](this, false)
+    else
+      @&quot;llvm.cttz.i64&quot;[ULong](this, true)
+    end
+
+  fun bitwidth(): ULong =&gt; ifdef ilp32 or llp64 then 32 else 64 end
+
+  fun bytewidth(): USize =&gt; bitwidth().usize() / 8
+
+  fun min(y: ULong): ULong =&gt; if this &lt; y then this else y end
+  fun max(y: ULong): ULong =&gt; if this &gt; y then this else y end
+
+  fun hash(): USize =&gt;
+    ifdef ilp32 or llp64 then
+      u32().hash()
+    else
+      u64().hash()
+    end
+
+  fun addc(y: ULong): (ULong, Bool) =&gt;
+    ifdef ilp32 or llp64 then
+      @&quot;llvm.uadd.with.overflow.i32&quot;[(ULong, Bool)](this, y)
+    else
+      @&quot;llvm.uadd.with.overflow.i64&quot;[(ULong, Bool)](this, y)
+    end
+
+  fun subc(y: ULong): (ULong, Bool) =&gt;
+    ifdef ilp32 or llp64 then
+      @&quot;llvm.usub.with.overflow.i32&quot;[(ULong, Bool)](this, y)
+    else
+      @&quot;llvm.usub.with.overflow.i64&quot;[(ULong, Bool)](this, y)
+    end
+
+  fun mulc(y: ULong): (ULong, Bool) =&gt;
+    ifdef ilp32 or llp64 then
+      @&quot;llvm.umul.with.overflow.i32&quot;[(ULong, Bool)](this, y)
+    else
+      @&quot;llvm.umul.with.overflow.i64&quot;[(ULong, Bool)](this, y)
+    end
+
+  fun divc(y: ULong): (ULong, Bool) =&gt;
+    _UnsignedCheckedArithmetic.div_checked[ULong](this, y)
+
+  fun remc(y: ULong): (ULong, Bool) =&gt;
+    _UnsignedCheckedArithmetic.rem_checked[ULong](this, y)
+
+  fun add_partial(y: ULong): ULong ? =&gt;
+    _UnsignedPartialArithmetic.add_partial[ULong](this, y)?
+
+  fun sub_partial(y: ULong): ULong ? =&gt;
+    _UnsignedPartialArithmetic.sub_partial[ULong](this, y)?
+
+  fun mul_partial(y: ULong): ULong ? =&gt;
+    _UnsignedPartialArithmetic.mul_partial[ULong](this, y)?
+
+  fun div_partial(y: ULong): ULong ? =&gt;
+    _UnsignedPartialArithmetic.div_partial[ULong](this, y)?
+
+  fun rem_partial(y: ULong): ULong ? =&gt;
+    _UnsignedPartialArithmetic.rem_partial[ULong](this, y)?
+
+  fun divrem_partial(y: ULong): (ULong, ULong) ? =&gt;
+    _UnsignedPartialArithmetic.divrem_partial[ULong](this, y)?
+
+primitive USize is UnsignedInteger[USize]
+  new create(value: USize) =&gt; value
+  new from[A: (Number &amp; Real[A] val)](a: A) =&gt; a.usize()
+
+  new min_value() =&gt; 0
+
+  new max_value() =&gt;
+    ifdef ilp32 then
+      0xFFFF_FFFF
+    else
+      0xFFFF_FFFF_FFFF_FFFF
+    end
+
+  fun next_pow2(): USize =&gt;
+    let x = (this - 1).clz()
+    1 &lt;&lt; (if x == 0 then 0 else bitwidth() - x end)
+
+  fun abs(): USize =&gt; this
+
+  fun bit_reverse(): USize =&gt;
+    ifdef ilp32 then
+      @&quot;llvm.bitreverse.i32&quot;[USize](this)
+    else
+      @&quot;llvm.bitreverse.i64&quot;[USize](this)
+    end
+
+  fun bswap(): USize =&gt;
+    ifdef ilp32 then
+      @&quot;llvm.bswap.i32&quot;[USize](this)
+    else
+      @&quot;llvm.bswap.i64&quot;[USize](this)
+    end
+
+  fun popcount(): USize =&gt;
+    ifdef ilp32 then
+      @&quot;llvm.ctpop.i32&quot;[USize](this)
+    else
+      @&quot;llvm.ctpop.i64&quot;[USize](this)
+    end
+
+  fun clz(): USize =&gt;
+    ifdef ilp32 then
+      @&quot;llvm.ctlz.i32&quot;[USize](this, false)
+    else
+      @&quot;llvm.ctlz.i64&quot;[USize](this, false)
+    end
+
+  fun ctz(): USize =&gt;
+    ifdef ilp32 then
+      @&quot;llvm.cttz.i32&quot;[USize](this, false)
+    else
+      @&quot;llvm.cttz.i64&quot;[USize](this, false)
+    end
+
+  fun clz_unsafe(): USize =&gt;
+    &quot;&quot;&quot;
+    Unsafe operation.
+    If this is 0, the result is undefined.
+    &quot;&quot;&quot;
+    ifdef ilp32 then
+      @&quot;llvm.ctlz.i32&quot;[USize](this, true)
+    else
+      @&quot;llvm.ctlz.i64&quot;[USize](this, true)
+    end
+
+  fun ctz_unsafe(): USize =&gt;
+    &quot;&quot;&quot;
+    Unsafe operation.
+    If this is 0, the result is undefined.
+    &quot;&quot;&quot;
+    ifdef ilp32 then
+      @&quot;llvm.cttz.i32&quot;[USize](this, true)
+    else
+      @&quot;llvm.cttz.i64&quot;[USize](this, true)
+    end
+
+  fun bitwidth(): USize =&gt; ifdef ilp32 then 32 else 64 end
+
+  fun bytewidth(): USize =&gt; bitwidth().usize() / 8
+
+  fun min(y: USize): USize =&gt; if this &lt; y then this else y end
+  fun max(y: USize): USize =&gt; if this &gt; y then this else y end
+
+  fun addc(y: USize): (USize, Bool) =&gt;
+    ifdef ilp32 then
+      @&quot;llvm.uadd.with.overflow.i32&quot;[(USize, Bool)](this, y)
+    else
+      @&quot;llvm.uadd.with.overflow.i64&quot;[(USize, Bool)](this, y)
+    end
+
+  fun subc(y: USize): (USize, Bool) =&gt;
+    ifdef ilp32 then
+      @&quot;llvm.usub.with.overflow.i32&quot;[(USize, Bool)](this, y)
+    else
+      @&quot;llvm.usub.with.overflow.i64&quot;[(USize, Bool)](this, y)
+    end
+
+  fun mulc(y: USize): (USize, Bool) =&gt;
+    ifdef ilp32 then
+      @&quot;llvm.umul.with.overflow.i32&quot;[(USize, Bool)](this, y)
+    else
+      @&quot;llvm.umul.with.overflow.i64&quot;[(USize, Bool)](this, y)
+    end
+
+  fun divc(y: USize): (USize, Bool) =&gt;
+    _UnsignedCheckedArithmetic.div_checked[USize](this, y)
+
+  fun remc(y: USize): (USize, Bool) =&gt;
+    _UnsignedCheckedArithmetic.rem_checked[USize](this, y)
+
+  fun add_partial(y: USize): USize ? =&gt;
+    _UnsignedPartialArithmetic.add_partial[USize](this, y)?
+
+  fun sub_partial(y: USize): USize ? =&gt;
+    _UnsignedPartialArithmetic.sub_partial[USize](this, y)?
+
+  fun mul_partial(y: USize): USize ? =&gt;
+    _UnsignedPartialArithmetic.mul_partial[USize](this, y)?
+
+  fun div_partial(y: USize): USize ? =&gt;
+    _UnsignedPartialArithmetic.div_partial[USize](this, y)?
+
+  fun rem_partial(y: USize): USize ? =&gt;
+    _UnsignedPartialArithmetic.rem_partial[USize](this, y)?
+
+  fun divrem_partial(y: USize): (USize, USize) ? =&gt;
+    _UnsignedPartialArithmetic.divrem_partial[USize](this, y)?
+
+primitive U128 is UnsignedInteger[U128]
+  new create(value: U128) =&gt; value
+  new from[A: (Number &amp; Real[A] val)](a: A) =&gt; a.u128()
+
+  new min_value() =&gt; 0
+  new max_value() =&gt; 0xFFFF_FFFF_FFFF_FFFF_FFFF_FFFF_FFFF_FFFF
+
+  fun next_pow2(): U128 =&gt;
+    let x = (this - 1).clz()
+    1 &lt;&lt; (if x == 0 then 0 else bitwidth() - x end)
+
+  fun abs(): U128 =&gt; this
+  fun bit_reverse(): U128 =&gt; @&quot;llvm.bitreverse.i128&quot;[U128](this)
+  fun bswap(): U128 =&gt; @&quot;llvm.bswap.i128&quot;[U128](this)
+  fun popcount(): U128 =&gt; @&quot;llvm.ctpop.i128&quot;[U128](this)
+  fun clz(): U128 =&gt; @&quot;llvm.ctlz.i128&quot;[U128](this, false)
+  fun ctz(): U128 =&gt; @&quot;llvm.cttz.i128&quot;[U128](this, false)
+
+  fun clz_unsafe(): U128 =&gt;
+    &quot;&quot;&quot;
+    Unsafe operation.
+    If this is 0, the result is undefined.
+    &quot;&quot;&quot;
+    @&quot;llvm.ctlz.i128&quot;[U128](this, true)
+
+  fun ctz_unsafe(): U128 =&gt;
+    &quot;&quot;&quot;
+    Unsafe operation.
+    If this is 0, the result is undefined.
+    &quot;&quot;&quot;
+    @&quot;llvm.cttz.i128&quot;[U128](this, true)
+
+  fun bitwidth(): U128 =&gt; 128
+
+  fun bytewidth(): USize =&gt; bitwidth().usize() / 8
+
+  fun min(y: U128): U128 =&gt; if this &lt; y then this else y end
+  fun max(y: U128): U128 =&gt; if this &gt; y then this else y end
+
+  fun hash(): USize =&gt;
+    ifdef ilp32 then
+      ((this &gt;&gt; 96).u32() xor
+      (this &gt;&gt; 64).u32() xor
+      (this &gt;&gt; 32).u32() xor
+      this.u32()).hash()
+    else
+      ((this &gt;&gt; 64).u64() xor this.u64()).hash()
+    end
+
+  fun hash64(): U64 =&gt;
+    ((this &gt;&gt; 64).u64() xor this.u64()).hash64()
+
+  fun string(): String iso^ =&gt;
+    _ToString._u128(this, false)
+
+  fun mul(y: U128): U128 =&gt;
+    ifdef native128 then
+      this * y
+    else
+      let x_hi = (this &gt;&gt; 64).u64()
+      let x_lo = this.u64()
+      let y_hi = (y &gt;&gt; 64).u64()
+      let y_lo = y.u64()
+
+      let mask = U64(0x00000000FFFFFFFF)
+
+      var lo = (x_lo and mask) * (y_lo and mask)
+      var t = lo &gt;&gt; 32
+      lo = lo and mask
+      t = t + ((x_lo &gt;&gt; 32) * (y_lo and mask))
+      lo = lo + ((t and mask) &lt;&lt; 32)
+
+      var hi = t &gt;&gt; 32
+      t = lo &gt;&gt; 32
+      lo = lo and mask
+      t = t + ((y_lo &gt;&gt; 32) * (x_lo and mask))
+      lo = lo + ((t and mask) &lt;&lt; 32)
+      hi = hi + (t &gt;&gt; 32)
+      hi = hi + ((x_lo &gt;&gt; 32) * (y_lo &gt;&gt; 32))
+      hi = hi + (x_hi * y_lo) + (x_lo * y_hi)
+
+      (hi.u128() &lt;&lt; 64) or lo.u128()
+    end
+
+  fun divrem(y: U128): (U128, U128) =&gt;
+    ifdef native128 then
+      (this / y, this % y)
+    else
+      if y == 0 then
+        return (0, 0)
+      end
+
+      var quot: U128 = 0
+      var qbit: U128 = 1
+      var num = this
+      var den = y
+
+      while den.i128() &gt;= 0 do
+        den = den &lt;&lt; 1
+        qbit = qbit &lt;&lt; 1
+      end
+
+      while qbit != 0 do
+        if den &lt;= num then
+          num = num - den
+          quot = quot + qbit
+        end
+
+        den = den &gt;&gt; 1
+        qbit = qbit &gt;&gt; 1
+      end
+      (quot, num)
+    end
+
+  fun div(y: U128): U128 =&gt;
+    ifdef native128 then
+      this / y
+    else
+      (let q, let r) = divrem(y)
+      q
+    end
+
+  fun rem(y: U128): U128 =&gt;
+    ifdef native128 then
+      this % y
+    else
+      (let q, let r) = divrem(y)
+      r
+    end
+
+  fun mul_unsafe(y: U128): U128 =&gt;
+    &quot;&quot;&quot;
+    Unsafe operation.
+    If the operation overflows, the result is undefined.
+    &quot;&quot;&quot;
+    ifdef native128 then
+      this *~ y
+    else
+      this * y
+    end
+
+  fun divrem_unsafe(y: U128): (U128, U128) =&gt;
+    &quot;&quot;&quot;
+    Unsafe operation.
+    If y is 0, the result is undefined.
+    If the operation overflows, the result is undefined.
+    &quot;&quot;&quot;
+    ifdef native128 then
+      (this *~ y, this /~ y)
+    else
+      divrem(y)
+    end
+
+  fun div_unsafe(y: U128): U128 =&gt;
+    &quot;&quot;&quot;
+    Unsafe operation.
+    If y is 0, the result is undefined.
+    If the operation overflows, the result is undefined.
+    &quot;&quot;&quot;
+    ifdef native128 then
+      this /~ y
+    else
+      this / y
+    end
+
+  fun rem_unsafe(y: U128): U128 =&gt;
+    &quot;&quot;&quot;
+    Unsafe operation.
+    If y is 0, the result is undefined.
+    If the operation overflows, the result is undefined.
+    &quot;&quot;&quot;
+    ifdef native128 then
+      this %~ y
+    else
+      this % y
+    end
+
+  fun f32(): F32 =&gt;
+    let v = f64()
+    if v &gt; F32.max_value().f64() then
+      F32._inf(false)
+    else
+      v.f32()
+    end
+
+  fun f64(): F64 =&gt;
+    if this == 0 then
+      return 0
+    end
+
+    var a = this
+    let sd = bitwidth() - clz()
+    var e = (sd - 1).u64()
+
+    if sd &gt; 53 then
+      match sd
+      | 54 =&gt; a = a &lt;&lt; 1
+      | 55 =&gt; None
+      else
+        a = (a &gt;&gt; (sd - 55)) or
+          if (a and (-1 &gt;&gt; ((bitwidth() + 55) - sd))) != 0 then 1 else 0 end
+      end
+
+      if (a and 4) != 0 then
+        a = a or 1
+      end
+
+      a = (a + 1) &gt;&gt; 2
+
+      if (a and (1 &lt;&lt; 53)) != 0 then
+        a = a &gt;&gt; 1
+        e = e + 1
+      end
+    else
+      a = a &lt;&lt; (53 - sd)
+    end
+
+    F64.from_bits(((e + 1023) &lt;&lt; 52) or (a.u64() and 0xF_FFFF_FFFF_FFFF))
+
+  fun f32_unsafe(): F32 =&gt;
+    &quot;&quot;&quot;
+    Unsafe operation.
+    If the value doesn't fit in the destination type, the result is undefined.
+    &quot;&quot;&quot;
+    f64_unsafe().f32_unsafe()
+
+  fun f64_unsafe(): F64 =&gt;
+    &quot;&quot;&quot;
+    Unsafe operation.
+    If the value doesn't fit in the destination type, the result is undefined.
+    &quot;&quot;&quot;
+    f64()
+
+  fun addc(y: U128): (U128, Bool) =&gt;
+    ifdef native128 then
+      @&quot;llvm.uadd.with.overflow.i128&quot;[(U128, Bool)](this, y)
+    else
+      let overflow = this &gt; (max_value() - y)
+      (this + y, overflow)
+    end
+
+  fun subc(y: U128): (U128, Bool) =&gt;
+    ifdef native128 then
+      @&quot;llvm.usub.with.overflow.i128&quot;[(U128, Bool)](this, y)
+    else
+      let overflow = this &lt; y
+      (this - y, overflow)
+    end
+
+  fun mulc(y: U128): (U128, Bool) =&gt;
+    ifdef native128 then
+      @&quot;llvm.umul.with.overflow.i128&quot;[(U128, Bool)](this, y)
+    else
+      let result = this * y
+      let overflow = (this != 0) and ((result / this) != y)
+      (result, overflow)
+    end
+
+  fun divc(y: U128): (U128, Bool) =&gt;
+    _UnsignedCheckedArithmetic.div_checked[U128](this, y)
+
+  fun remc(y: U128): (U128, Bool) =&gt;
+    _UnsignedCheckedArithmetic.rem_checked[U128](this, y)
+
+  fun add_partial(y: U128): U128 ? =&gt;
+    _UnsignedPartialArithmetic.add_partial[U128](this, y)?
+
+  fun sub_partial(y: U128): U128 ? =&gt;
+    _UnsignedPartialArithmetic.sub_partial[U128](this, y)?
+
+  fun mul_partial(y: U128): U128 ? =&gt;
+    _UnsignedPartialArithmetic.mul_partial[U128](this, y)?
+
+  fun div_partial(y: U128): U128 ? =&gt;
+    _UnsignedPartialArithmetic.div_partial[U128](this, y)?
+
+  fun rem_partial(y: U128): U128 ? =&gt;
+    _UnsignedPartialArithmetic.rem_partial[U128](this, y)?
+
+  fun divrem_partial(y: U128): (U128, U128) ? =&gt;
+    _UnsignedPartialArithmetic.divrem_partial[U128](this, y)?
+
+type Unsigned is (U8 | U16 | U32 | U64 | U128 | ULong | USize)
+
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

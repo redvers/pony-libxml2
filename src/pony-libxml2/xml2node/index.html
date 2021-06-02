@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>xml2node.pony - pony-libxml2</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">pony-libxml2</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">pony-libxml2</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">package pony-libxml2 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../pony-libxml2--index/">Package</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xml2xpathcontext/">class Xml2xpathcontext</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xml2pathobject/">class Xml2pathobject</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xml2textreader/">class Xml2textreader</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xml2parserinputbuffer/">class Xml2parserinputbuffer</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xml2node/">class Xml2node</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xml2Doc/">class Xml2Doc</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xml2attr/">class Xml2attr</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-FUNCTIONPOINTER/">primitive FUNCTIONPOINTER</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-IoFile/">struct IoFile</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-VaListTag/">struct VaListTag</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlparserinputbuffer/">struct Xmlparserinputbuffer</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmloutputbuffer/">struct Xmloutputbuffer</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlbuffer/">struct Xmlbuffer</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlbuf/">struct Xmlbuf</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlnotation/">struct Xmlnotation</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlenumeration/">struct Xmlenumeration</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlattribute/">struct Xmlattribute</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlelementcontent/">struct Xmlelementcontent</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlelement/">struct Xmlelement</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlns/">struct Xmlns</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmldtd/">struct Xmldtd</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlattr/">struct Xmlattr</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlid/">struct Xmlid</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlref/">struct Xmlref</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlnode/">struct Xmlnode</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmldoc/">struct Xmldoc</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmldomwrapctxt/">struct Xmldomwrapctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlparserinput/">struct Xmlparserinput</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlparserctxt/">struct Xmlparserctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlsaxlocator/">struct Xmlsaxlocator</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlsaxhandler/">struct Xmlsaxhandler</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlparsernodeinfo/">struct Xmlparsernodeinfo</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlparsernodeinfoseq/">struct Xmlparsernodeinfoseq</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlsaxhandlerv1/">struct Xmlsaxhandlerv1</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlentity/">struct Xmlentity</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlregexp/">struct Xmlregexp</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlregexecctxt/">struct Xmlregexecctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmldict/">struct Xmldict</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlmutex/">struct Xmlmutex</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlrmutex/">struct Xmlrmutex</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlhashtable/">struct Xmlhashtable</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlerror/">struct Xmlerror</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmllink/">struct Xmllink</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmllist/">struct Xmllist</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlautomata/">struct Xmlautomata</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlautomatastate/">struct Xmlautomatastate</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlvalidstate/">struct Xmlvalidstate</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlvalidctxt/">struct Xmlvalidctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlcharencodinghandler/">struct Xmlcharencodinghandler</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xlinkhandler/">struct Xlinkhandler</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlglobalstate/">struct Xmlglobalstate</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlcatalog/">struct Xmlcatalog</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlchsrange/">struct Xmlchsrange</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlchlrange/">struct Xmlchlrange</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlchrangegroup/">struct Xmlchrangegroup</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxpathcontext/">struct Xmlxpathcontext</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxpathparsercontext/">struct Xmlxpathparsercontext</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlnodeset/">struct Xmlnodeset</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxpathobject/">struct Xmlxpathobject</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxpathtype/">struct Xmlxpathtype</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxpathvariable/">struct Xmlxpathvariable</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxpathfunct/">struct Xmlxpathfunct</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxpathaxis/">struct Xmlxpathaxis</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxpathcompexpr/">struct Xmlxpathcompexpr</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlshellctxt/">struct Xmlshellctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Htmlelemdesc/">struct Htmlelemdesc</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Htmlentitydesc/">struct Htmlentitydesc</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlpattern/">struct Xmlpattern</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlstreamctxt/">struct Xmlstreamctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlrelaxng/">struct Xmlrelaxng</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlrelaxngparserctxt/">struct Xmlrelaxngparserctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlrelaxngvalidctxt/">struct Xmlrelaxngvalidctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemaval/">struct Xmlschemaval</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschematype/">struct Xmlschematype</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemafacet/">struct Xmlschemafacet</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemaannot/">struct Xmlschemaannot</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemaattribute/">struct Xmlschemaattribute</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemaattributelink/">struct Xmlschemaattributelink</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemawildcardns/">struct Xmlschemawildcardns</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemawildcard/">struct Xmlschemawildcard</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemaattributegroup/">struct Xmlschemaattributegroup</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschematypelink/">struct Xmlschematypelink</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemafacetlink/">struct Xmlschemafacetlink</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemaelement/">struct Xmlschemaelement</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemanotation/">struct Xmlschemanotation</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschema/">struct Xmlschema</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschematron/">struct Xmlschematron</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschematronparserctxt/">struct Xmlschematronparserctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschematronvalidctxt/">struct Xmlschematronvalidctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmluri/">struct Xmluri</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxincludectxt/">struct Xmlxincludectxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlmodule/">struct Xmlmodule</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemaparserctxt/">struct Xmlschemaparserctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemavalidctxt/">struct Xmlschemavalidctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemasaxplug/">struct Xmlschemasaxplug</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmltextreader/">struct Xmltextreader</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlsavectxt/">struct Xmlsavectxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmltextwriter/">struct Xmltextwriter</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmllocationset/">struct Xmllocationset</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-LibXML2/">primitive LibXML2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">package builtin <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../builtin--index/">Package</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-U8/">primitive U8</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-U16/">primitive U16</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-U32/">primitive U32</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-U64/">primitive U64</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ULong/">primitive ULong</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-USize/">primitive USize</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-U128/">primitive U128</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Unsigned/">type Unsigned</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Stringable/">interface Stringable</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-String/">class String</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-StringBytes/">class StringBytes</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-StringRunes/">class StringRunes</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_UTF32Encoder/">primitive _UTF32Encoder</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-InputNotify/">interface InputNotify</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-InputStream/">interface InputStream</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Stdin/">actor Stdin</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ByteSeq/">type ByteSeq</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ByteSeqIter/">interface ByteSeqIter</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-OutStream/">interface OutStream</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-StdStream/">actor StdStream</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-SourceLoc/">interface SourceLoc</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-I8/">primitive I8</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-I16/">primitive I16</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-I32/">primitive I32</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-I64/">primitive I64</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ILong/">primitive ILong</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ISize/">primitive ISize</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-I128/">primitive I128</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Signed/">type Signed</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Seq/">interface Seq</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-RuntimeOptions/">struct RuntimeOptions</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_ArithmeticConvertible/">trait _ArithmeticConvertible</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Real/">trait Real</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Integer/">trait Integer</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-SignedInteger/">trait SignedInteger</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-UnsignedInteger/">trait UnsignedInteger</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-FloatingPoint/">trait FloatingPoint</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Number/">type Number</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Int/">type Int</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ReadSeq/">interface ReadSeq</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ReadElement/">interface ReadElement</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Pointer/">struct Pointer</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Platform/">primitive Platform</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-NullablePointer/">struct NullablePointer</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-None/">primitive None</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Iterator/">interface Iterator</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-F32/">primitive F32</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-F64/">primitive F64</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Float/">type Float</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Env/">class Env</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-DoNotOptimise/">primitive DoNotOptimise</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-DisposableActor/">interface DisposableActor</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Less/">primitive Less</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Equal/">primitive Equal</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Greater/">primitive Greater</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Compare/">type Compare</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-HasEq/">interface HasEq</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Equatable/">interface Equatable</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Comparable/">interface Comparable</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Bool/">primitive Bool</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-AsioEventID/">type AsioEventID</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-AsioEventNotify/">interface AsioEventNotify</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-AsioEvent/">primitive AsioEvent</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Array/">class Array</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ArrayKeys/">class ArrayKeys</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ArrayValues/">class ArrayValues</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ArrayPairs/">class ArrayPairs</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Any/">interface Any</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-AmbientAuth/">primitive AmbientAuth</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_ToString/">primitive _ToString</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_SignedArithmetic/">primitive _SignedArithmetic</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_SignedUnsafeArithmetic/">primitive _SignedUnsafeArithmetic</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_UnsignedCheckedArithmetic/">primitive _UnsignedCheckedArithmetic</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_SignedCheckedArithmetic/">primitive _SignedCheckedArithmetic</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_PartialArithmetic/">trait _PartialArithmetic</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_UnsignedPartialArithmetic/">primitive _UnsignedPartialArithmetic</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_SignedPartialArithmetic/">primitive _SignedPartialArithmetic</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">source <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../xml2xpathcontext/">xml2xpathcontext.pony</a>
+</li>
+                                    
+<li >
+    <a href="../xml2xpath/">xml2xpath.pony</a>
+</li>
+                                    
+<li >
+    <a href="../xml2textreader/">xml2textreader.pony</a>
+</li>
+                                    
+<li >
+    <a href="../xml2parserinputbuffer/">xml2parserinputbuffer.pony</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">xml2node.pony</a>
+</li>
+                                    
+<li >
+    <a href="../xml2doc/">xml2doc.pony</a>
+</li>
+                                    
+<li >
+    <a href="../xml2attr/">xml2attr.pony</a>
+</li>
+                                    
+<li >
+    <a href="../structs/">structs.pony</a>
+</li>
+                                    
+<li >
+    <a href="../functions/">functions.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/unsigned/">unsigned.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/stringable/">stringable.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/string/">string.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/stdin/">stdin.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/std_stream/">std_stream.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/source_loc/">source_loc.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/signed/">signed.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/seq/">seq.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/runtime_options/">runtime_options.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/real/">real.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/read_seq/">read_seq.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/pointer/">pointer.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/platform/">platform.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/nullable_pointer/">nullable_pointer.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/none/">none.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/iterator/">iterator.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/float/">float.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/env/">env.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/do_not_optimise/">do_not_optimise.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/disposable_actor/">disposable_actor.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/compare/">compare.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/bool/">bool.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/asio_event/">asio_event.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/array/">array.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/any/">any.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/ambient_auth/">ambient_auth.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/_to_string/">_to_string.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../builtin/_arithmetic/">_arithmetic.pony</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../xml2parserinputbuffer/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../xml2doc/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<pre><code class="language-pony-full-source">
+class Xml2node
+  var ptr': NullablePointer[Xmlnode]
+  var ptr: Xmlnode
+
+  new fromPTR(ptrx: NullablePointer[Xmlnode])? =&gt;
+    if (ptrx.is_none()) then
+      error
+    else
+      ptr' = ptrx
+      ptr = ptr'.apply()?
+    end
+
+  fun ref name(): String val =&gt;
+    String.from_cstring(ptr.pname).clone()
+
+// use @xmlHasNsProp[NullablePointer[Xmlattr]](anon0: NullablePointer[Xmlnode], anon1: Pointer[U8] tag, anon2: Pointer[U8] tag)
+  fun ref hasNsProp(pname: String, pnamespace: String): Xml2attr ? =&gt;
+    let ptrx:NullablePointer[Xmlattr] = LibXML2.xmlHasNsProp(ptr', pname, pnamespace)
+    Xml2attr.fromPTR(ptrx)?
+
+//   fun xmlGetLineNo(pnode: NullablePointer[Xmlnode]): I64 =&gt;
+  fun ref getLineNo(): I64 =&gt;
+    LibXML2.xmlGetLineNo(ptr')
+
+//   fun xmlGetNodePath(pnode: NullablePointer[Xmlnode]): String =&gt;
+  fun ref getNodePath(): String =&gt;
+    LibXML2.xmlGetNodePath(ptr')
+
+//   fun xmlXPathCastNodeToString(pnode: NullablePointer[Xmlnode]): String =&gt;
+  fun ref xpathCastNodeToString(): String =&gt;
+    LibXML2.xmlXPathCastNodeToString(ptr')
+
+//   fun xmlGetProp(pnode: NullablePointer[Xmlnode], pname: String): String =&gt;
+  fun ref getProp(pname: String): String =&gt;
+        LibXML2.xmlGetProp(ptr', pname)
+
+//   fun xmlNodeGetContent(pcur: NullablePointer[Xmlnode]): String =&gt;
+    fun ref getContent(): String =&gt;
+        LibXML2.xmlNodeGetContent(ptr')
+
+//   fun xmlNodeGetLang(pcur: NullablePointer[Xmlnode]): String =&gt;
+    fun ref getLang(): String =&gt;
+        LibXML2.xmlNodeGetLang(ptr')
+
+//  xmlXPathCastNodeToString[Pointer[U8]](anon0: NullablePointer[Xmlxpathobject])
+  fun ref castNodeToString(): String =&gt;
+    LibXML2.xmlXPathCastNodeToString(ptr')
+
+
+
+  fun ref dispose() =&gt;
+    @xmlFreeNode[None](ptr')
+
+//   fun htmlAutoCloseTag(pdoc: NullablePointer[Xmldoc], pname: String, pelem: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun htmlIsAutoClosed(pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun htmlNodeDumpFileFormat(pout: NullablePointer[IoFile], pdoc: NullablePointer[Xmldoc], pcur: NullablePointer[Xmlnode], pencoding: String, pformat: I32): I32 =&gt;
+//   fun htmlNodeDumpFile(pout: NullablePointer[IoFile], pdoc: NullablePointer[Xmldoc], pcur: NullablePointer[Xmlnode]): None =&gt;
+//   fun htmlNodeDumpFormatOutput(pbuf: NullablePointer[Xmloutputbuffer], pdoc: NullablePointer[Xmldoc], pcur: NullablePointer[Xmlnode], pencoding: String, pformat: I32): None =&gt;
+//   fun htmlNodeDumpOutput(pbuf: NullablePointer[Xmloutputbuffer], pdoc: NullablePointer[Xmldoc], pcur: NullablePointer[Xmlnode], pencoding: String): None =&gt;
+//   fun htmlNodeDump(pbuf: NullablePointer[Xmlbuffer], pdoc: NullablePointer[Xmldoc], pcur: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun nodePop(pctxt: NullablePointer[Xmlparserctxt]): NullablePointer[Xmlnode] =&gt;
+//   fun nodePush(pctxt: NullablePointer[Xmlparserctxt], pvalue: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xlinkIsLink(pdoc: NullablePointer[Xmldoc], pnode: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlAddChildList(pparent: NullablePointer[Xmlnode], pcur: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlAddChild(pparent: NullablePointer[Xmlnode], pcur: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlAddNextSibling(pcur: NullablePointer[Xmlnode], pelem: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlAddPrevSibling(pcur: NullablePointer[Xmlnode], pelem: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlAddSibling(pcur: NullablePointer[Xmlnode], pelem: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlBufGetNodeContent(pbuf: NullablePointer[Xmlbuf], pcur: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlBufNodeDump(pbuf: NullablePointer[Xmlbuf], pdoc: NullablePointer[Xmldoc], pcur: NullablePointer[Xmlnode], plevel: I32, pformat: I32): U64 =&gt;
+//   fun xmlChildElementCount(pparent: NullablePointer[Xmlnode]): U64 =&gt;
+//   fun xmlCopyNodeList(pnode: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlCopyNode(pnode: NullablePointer[Xmlnode], precursive: I32): NullablePointer[Xmlnode] =&gt;
+//   fun xmlCopyPropList(ptarget: NullablePointer[Xmlnode], pcur: NullablePointer[Xmlattr]): NullablePointer[Xmlattr] =&gt;
+//   fun xmlCopyProp(ptarget: NullablePointer[Xmlnode], pcur: NullablePointer[Xmlattr]): NullablePointer[Xmlattr] =&gt;
+//   fun xmlDebugDumpNodeList(poutput: NullablePointer[IoFile], pnode: NullablePointer[Xmlnode], pdepth: I32): None =&gt;
+//   fun xmlDebugDumpNode(poutput: NullablePointer[IoFile], pnode: NullablePointer[Xmlnode], pdepth: I32): None =&gt;
+//   fun xmlDebugDumpOneNode(poutput: NullablePointer[IoFile], pnode: NullablePointer[Xmlnode], pdepth: I32): None =&gt;
+//   fun xmlDocCopyNodeList(pdoc: NullablePointer[Xmldoc], pnode: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlDocCopyNode(pnode: NullablePointer[Xmlnode], pdoc: NullablePointer[Xmldoc], precursive: I32): NullablePointer[Xmlnode] =&gt;
+//   fun xmlDocSetRootElement(pdoc: NullablePointer[Xmldoc], proot: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlDOMWrapAdoptNode(pctxt: NullablePointer[Xmldomwrapctxt], psourceDoc: NullablePointer[Xmldoc], pnode: NullablePointer[Xmlnode], pdestDoc: NullablePointer[Xmldoc], pdestParent: NullablePointer[Xmlnode], poptions: I32): I32 =&gt;
+//   fun xmlDOMWrapCloneNode(pctxt: NullablePointer[Xmldomwrapctxt], psourceDoc: NullablePointer[Xmldoc], pnode: NullablePointer[Xmlnode], pclonedNode: Pointer[NullablePointer[Xmlnode]], pdestDoc: NullablePointer[Xmldoc], pdestParent: NullablePointer[Xmlnode], pdeep: I32, poptions: I32): I32 =&gt;
+//   fun xmlDOMWrapReconcileNamespaces(pctxt: NullablePointer[Xmldomwrapctxt], pelem: NullablePointer[Xmlnode], poptions: I32): I32 =&gt;
+//   fun xmlDOMWrapRemoveNode(pctxt: NullablePointer[Xmldomwrapctxt], pdoc: NullablePointer[Xmldoc], pnode: NullablePointer[Xmlnode], poptions: I32): I32 =&gt;
+//   fun xmlElemDump(pf: NullablePointer[IoFile], pdoc: NullablePointer[Xmldoc], pcur: NullablePointer[Xmlnode]): None =&gt;
+//   fun xmlFirstElementChild(pparent: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlFreeNodeList(pcur: NullablePointer[Xmlnode]): None =&gt;
+//   fun xmlFreeNode(pcur: NullablePointer[Xmlnode]): None =&gt;
+//   fun xmlGetLastChild(pparent: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlGetNoNsProp(pnode: NullablePointer[Xmlnode], pname: String): String =&gt;
+//   fun xmlGetNsList(pdoc: NullablePointer[Xmldoc], pnode: NullablePointer[Xmlnode]): Pointer[NullablePointer[Xmlns]] =&gt;
+//   fun xmlGetNsProp(pnode: NullablePointer[Xmlnode], pname: String, pnameSpace: String): String =&gt;
+//   fun xmlGetProp(pnode: NullablePointer[Xmlnode], pname: String): String =&gt;
+//   fun xmlHasNsProp(pnode: NullablePointer[Xmlnode], pname: String, pnameSpace: String): NullablePointer[Xmlattr] =&gt;
+//   fun xmlHasProp(pnode: NullablePointer[Xmlnode], pname: String): NullablePointer[Xmlattr] =&gt;
+//   fun xmlIsBlankNode(pnode: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlIsID(pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode], pattr: NullablePointer[Xmlattr]): I32 =&gt;
+//   fun xmlIsRef(pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode], pattr: NullablePointer[Xmlattr]): I32 =&gt;
+//   fun xmlLastElementChild(pparent: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlLsCountNode(pnode: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlLsOneNode(poutput: NullablePointer[IoFile], pnode: NullablePointer[Xmlnode]): None =&gt;
+//   fun xmlNewCDataBlock(pdoc: NullablePointer[Xmldoc], pcontent: String, plen: I32): NullablePointer[Xmlnode] =&gt;
+//   fun xmlNewCharRef(pdoc: NullablePointer[Xmldoc], pname: String): NullablePointer[Xmlnode] =&gt;
+//   fun xmlNewChild(pparent: NullablePointer[Xmlnode], pns: NullablePointer[Xmlns], pname: String, pcontent: String): NullablePointer[Xmlnode] =&gt;
+//   fun xmlNewComment(pcontent: String): NullablePointer[Xmlnode] =&gt;
+//   fun xmlNewDocComment(pdoc: NullablePointer[Xmldoc], pcontent: String): NullablePointer[Xmlnode] =&gt;
+//   fun xmlNewDocFragment(pdoc: NullablePointer[Xmldoc]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlNewDocNodeEatName(pdoc: NullablePointer[Xmldoc], pns: NullablePointer[Xmlns], pname: String, pcontent: String): NullablePointer[Xmlnode] =&gt;
+//   fun xmlNewDocNode(pdoc: NullablePointer[Xmldoc], pns: NullablePointer[Xmlns], pname: String, pcontent: String): NullablePointer[Xmlnode] =&gt;
+//   fun xmlNewDocPI(pdoc: NullablePointer[Xmldoc], pname: String, pcontent: String): NullablePointer[Xmlnode] =&gt;
+//   fun xmlNewDocRawNode(pdoc: NullablePointer[Xmldoc], pns: NullablePointer[Xmlns], pname: String, pcontent: String): NullablePointer[Xmlnode] =&gt;
+//   fun xmlNewDocTextLen(pdoc: NullablePointer[Xmldoc], pcontent: String, plen: I32): NullablePointer[Xmlnode] =&gt;
+//   fun xmlNewDocText(pdoc: NullablePointer[Xmldoc], pcontent: String): NullablePointer[Xmlnode] =&gt;
+//   fun xmlNewNodeEatName(pns: NullablePointer[Xmlns], pname: String): NullablePointer[Xmlnode] =&gt;
+//   fun xmlNewNode(pns: NullablePointer[Xmlns], pname: String): NullablePointer[Xmlnode] =&gt;
+//   fun xmlNewNs(pnode: NullablePointer[Xmlnode], phref: String, pprefix: String): NullablePointer[Xmlns] =&gt;
+//   fun xmlNewNsPropEatName(pnode: NullablePointer[Xmlnode], pns: NullablePointer[Xmlns], pname: String, pvalue: String): NullablePointer[Xmlattr] =&gt;
+//   fun xmlNewNsProp(pnode: NullablePointer[Xmlnode], pns: NullablePointer[Xmlns], pname: String, pvalue: String): NullablePointer[Xmlattr] =&gt;
+//   fun xmlNewPI(pname: String, pcontent: String): NullablePointer[Xmlnode] =&gt;
+//   fun xmlNewProp(pnode: NullablePointer[Xmlnode], pname: String, pvalue: String): NullablePointer[Xmlattr] =&gt;
+//   fun xmlNewReference(pdoc: NullablePointer[Xmldoc], pname: String): NullablePointer[Xmlnode] =&gt;
+//   fun xmlNewTextChild(pparent: NullablePointer[Xmlnode], pns: NullablePointer[Xmlns], pname: String, pcontent: String): NullablePointer[Xmlnode] =&gt;
+//   fun xmlNewTextLen(pcontent: String, plen: I32): NullablePointer[Xmlnode] =&gt;
+//   fun xmlNewText(pcontent: String): NullablePointer[Xmlnode] =&gt;
+//   fun xmlNewTextWriterTree(pdoc: NullablePointer[Xmldoc], pnode: NullablePointer[Xmlnode], pcompression: I32): NullablePointer[Xmltextwriter] =&gt;
+//   fun xmlNextElementSibling(pnode: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlNodeAddContentLen(pcur: NullablePointer[Xmlnode], pcontent: String, plen: I32): None =&gt;
+//   fun xmlNodeAddContent(pcur: NullablePointer[Xmlnode], pcontent: String): None =&gt;
+//   fun xmlNodeBufGetContent(pbuffer: NullablePointer[Xmlbuffer], pcur: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlNodeDumpOutput(pbuf: NullablePointer[Xmloutputbuffer], pdoc: NullablePointer[Xmldoc], pcur: NullablePointer[Xmlnode], plevel: I32, pformat: I32, pencoding: String): None =&gt;
+//   fun xmlNodeDump(pbuf: NullablePointer[Xmlbuffer], pdoc: NullablePointer[Xmldoc], pcur: NullablePointer[Xmlnode], plevel: I32, pformat: I32): I32 =&gt;
+//   fun xmlNodeGetBase(pdoc: NullablePointer[Xmldoc], pcur: NullablePointer[Xmlnode]): String =&gt;
+//   fun xmlNodeGetContent(pcur: NullablePointer[Xmlnode]): String =&gt;
+//   fun xmlNodeGetLang(pcur: NullablePointer[Xmlnode]): String =&gt;
+//   fun xmlNodeGetSpacePreserve(pcur: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlNodeIsText(pnode: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlNodeListGetRawString(pdoc: NullablePointer[Xmldoc], plist: NullablePointer[Xmlnode], pinLine: I32): String =&gt;
+//   fun xmlNodeListGetString(pdoc: NullablePointer[Xmldoc], plist: NullablePointer[Xmlnode], pinLine: I32): String =&gt;
+//   fun xmlNodeSetBase(pcur: NullablePointer[Xmlnode], puri: String): None =&gt;
+//   fun xmlNodeSetContentLen(pcur: NullablePointer[Xmlnode], pcontent: String, plen: I32): None =&gt;
+//   fun xmlNodeSetContent(pcur: NullablePointer[Xmlnode], pcontent: String): None =&gt;
+//   fun xmlNodeSetLang(pcur: NullablePointer[Xmlnode], plang: String): None =&gt;
+//   fun xmlNodeSetName(pcur: NullablePointer[Xmlnode], pname: String): None =&gt;
+//   fun xmlNodeSetSpacePreserve(pcur: NullablePointer[Xmlnode], pval: I32): None =&gt;
+//   fun xmlParseBalancedChunkMemory(pdoc: NullablePointer[Xmldoc], psax: NullablePointer[Xmlsaxhandler], puser_data: Pointer[U8], pdepth: I32, pstring: String, plst: Pointer[NullablePointer[Xmlnode]]): I32 =&gt;
+//   fun xmlParseBalancedChunkMemoryRecover(pdoc: NullablePointer[Xmldoc], psax: NullablePointer[Xmlsaxhandler], puser_data: Pointer[U8], pdepth: I32, pstring: String, plst: Pointer[NullablePointer[Xmlnode]], precover: I32): I32 =&gt;
+//   fun xmlParseCtxtExternalEntity(pctx: NullablePointer[Xmlparserctxt], pURL: String, pID: String, plst: Pointer[NullablePointer[Xmlnode]]): I32 =&gt;
+//   fun xmlParseExternalEntity(pdoc: NullablePointer[Xmldoc], psax: NullablePointer[Xmlsaxhandler], puser_data: Pointer[U8], pdepth: I32, pURL: String, pID: String, plst: Pointer[NullablePointer[Xmlnode]]): I32 =&gt;
+//   fun xmlParseInNodeContext(pnode: NullablePointer[Xmlnode], pdata: String, pdatalen: I32, poptions: I32, plst: Pointer[NullablePointer[Xmlnode]]): I32 =&gt;
+//   fun xmlParserFindNodeInfoIndex(pseq: NullablePointer[Xmlparsernodeinfoseq], pnode: NullablePointer[Xmlnode]): U64 =&gt;
+//   fun xmlParserFindNodeInfo(pctxt: NullablePointer[Xmlparserctxt], pnode: NullablePointer[Xmlnode]): NullablePointer[Xmlparsernodeinfo] =&gt;
+//   fun xmlPatternMatch(pcomp: NullablePointer[Xmlpattern], pnode: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlPreviousElementSibling(pnode: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlReconciliateNs(pdoc: NullablePointer[Xmldoc], ptree: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlRelaxNGValidateFullElement(pctxt: NullablePointer[Xmlrelaxngvalidctxt], pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlRelaxNGValidatePopElement(pctxt: NullablePointer[Xmlrelaxngvalidctxt], pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlRelaxNGValidatePushElement(pctxt: NullablePointer[Xmlrelaxngvalidctxt], pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlReplaceNode(pold: NullablePointer[Xmlnode], pcur: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlSaveTree(pctxt: NullablePointer[Xmlsavectxt], pnode: NullablePointer[Xmlnode]): I64 =&gt;
+//   fun xmlSchemaValidateOneElement(pctxt: NullablePointer[Xmlschemavalidctxt], pelem: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlSchemaValPredefTypeNodeNoNorm(ptype: NullablePointer[Xmlschematype], pvalue: String, pval: Pointer[NullablePointer[Xmlschemaval]], pnode: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlSchemaValPredefTypeNode(ptype: NullablePointer[Xmlschematype], pvalue: String, pval: Pointer[NullablePointer[Xmlschemaval]], pnode: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlSearchNsByHref(pdoc: NullablePointer[Xmldoc], pnode: NullablePointer[Xmlnode], phref: String): NullablePointer[Xmlns] =&gt;
+//   fun xmlSearchNs(pdoc: NullablePointer[Xmldoc], pnode: NullablePointer[Xmlnode], pnameSpace: String): NullablePointer[Xmlns] =&gt;
+//   fun xmlSetListDoc(plist: NullablePointer[Xmlnode], pdoc: NullablePointer[Xmldoc]): None =&gt;
+//   fun xmlSetNs(pnode: NullablePointer[Xmlnode], pns: NullablePointer[Xmlns]): None =&gt;
+//   fun xmlSetNsProp(pnode: NullablePointer[Xmlnode], pns: NullablePointer[Xmlns], pname: String, pvalue: String): NullablePointer[Xmlattr] =&gt;
+//   fun xmlSetProp(pnode: NullablePointer[Xmlnode], pname: String, pvalue: String): NullablePointer[Xmlattr] =&gt;
+//   fun xmlSetTreeDoc(ptree: NullablePointer[Xmlnode], pdoc: NullablePointer[Xmldoc]): None =&gt;
+//   fun xmlShellBase(pctxt: NullablePointer[Xmlshellctxt], parg: String, pnode: NullablePointer[Xmlnode], pnode2: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlShellCat(pctxt: NullablePointer[Xmlshellctxt], parg: String, pnode: NullablePointer[Xmlnode], pnode2: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlShellDir(pctxt: NullablePointer[Xmlshellctxt], parg: String, pnode: NullablePointer[Xmlnode], pnode2: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlShellDu(pctxt: NullablePointer[Xmlshellctxt], parg: String, ptree: NullablePointer[Xmlnode], pnode2: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlShellList(pctxt: NullablePointer[Xmlshellctxt], parg: String, pnode: NullablePointer[Xmlnode], pnode2: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlShellLoad(pctxt: NullablePointer[Xmlshellctxt], pfilename: String, pnode: NullablePointer[Xmlnode], pnode2: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlShellPrintNode(pnode: NullablePointer[Xmlnode]): None =&gt;
+//   fun xmlShellPwd(pctxt: NullablePointer[Xmlshellctxt], pbuffer: String, pnode: NullablePointer[Xmlnode], pnode2: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlShellSave(pctxt: NullablePointer[Xmlshellctxt], pfilename: String, pnode: NullablePointer[Xmlnode], pnode2: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlShellValidate(pctxt: NullablePointer[Xmlshellctxt], pdtd: String, pnode: NullablePointer[Xmlnode], pnode2: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlShellWrite(pctxt: NullablePointer[Xmlshellctxt], pfilename: String, pnode: NullablePointer[Xmlnode], pnode2: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlStringGetNodeList(pdoc: NullablePointer[Xmldoc], pvalue: String): NullablePointer[Xmlnode] =&gt;
+//   fun xmlStringLenGetNodeList(pdoc: NullablePointer[Xmldoc], pvalue: String, plen: I32): NullablePointer[Xmlnode] =&gt;
+//   fun xmlTextConcat(pnode: NullablePointer[Xmlnode], pcontent: String, plen: I32): I32 =&gt;
+//   fun xmlTextMerge(pfirst: NullablePointer[Xmlnode], psecond: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlTextReaderCurrentNode(preader: NullablePointer[Xmltextreader]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlTextReaderExpand(preader: NullablePointer[Xmltextreader]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlTextReaderPreserve(preader: NullablePointer[Xmltextreader]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlUnlinkNode(pcur: NullablePointer[Xmlnode]): None =&gt;
+//   fun xmlUnsetNsProp(pnode: NullablePointer[Xmlnode], pns: NullablePointer[Xmlns], pname: String): I32 =&gt;
+//   fun xmlUnsetProp(pnode: NullablePointer[Xmlnode], pname: String): I32 =&gt;
+//   fun xmlValidateElement(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlValidateOneAttribute(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode], pattr: NullablePointer[Xmlattr], pvalue: String): I32 =&gt;
+//   fun xmlValidateOneElement(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlValidateOneNamespace(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode], pprefix: String, pns: NullablePointer[Xmlns], pvalue: String): I32 =&gt;
+//   fun xmlValidatePopElement(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode], pqname: String): I32 =&gt;
+//   fun xmlValidatePushElement(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode], pqname: String): I32 =&gt;
+//   fun xmlValidCtxtNormalizeAttributeValue(pctxt: NullablePointer[Xmlvalidctxt], pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode], pname: String, pvalue: String): String =&gt;
+//   fun xmlValidGetValidElements(pprev: NullablePointer[Xmlnode], pnext: NullablePointer[Xmlnode], pnames: Pointer[Pointer[U8] tag], pmax: I32): I32 =&gt;
+//   fun xmlValidNormalizeAttributeValue(pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode], pname: String, pvalue: String): String =&gt;
+//   fun xmlXIncludeProcessNode(pctxt: NullablePointer[Xmlxincludectxt], ptree: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlXIncludeProcessTreeFlagsData(ptree: NullablePointer[Xmlnode], pflags: I32, pdata: Pointer[U8]): I32 =&gt;
+//   fun xmlXIncludeProcessTreeFlags(ptree: NullablePointer[Xmlnode], pflags: I32): I32 =&gt;
+//   fun xmlXIncludeProcessTree(ptree: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlXPathCastNodeSetToBoolean(pns: NullablePointer[Xmlnodeset]): I32 =&gt;
+//   fun xmlXPathCastNodeSetToNumber(pns: NullablePointer[Xmlnodeset]): F64 =&gt;
+//   fun xmlXPathCastNodeSetToString(pns: NullablePointer[Xmlnodeset]): String =&gt;
+//   fun xmlXPathCastNodeToNumber(pnode: NullablePointer[Xmlnode]): F64 =&gt;
+//   fun xmlXPathCmpNodes(pnode1: NullablePointer[Xmlnode], pnode2: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlXPathDifference(pnodes1: NullablePointer[Xmlnodeset], pnodes2: NullablePointer[Xmlnodeset]): NullablePointer[Xmlnodeset] =&gt;
+//   fun xmlXPathDistinct(pnodes: NullablePointer[Xmlnodeset]): NullablePointer[Xmlnodeset] =&gt;
+//   fun xmlXPathDistinctSorted(pnodes: NullablePointer[Xmlnodeset]): NullablePointer[Xmlnodeset] =&gt;
+//   fun xmlXPathFreeNodeSet(pobj: NullablePointer[Xmlnodeset]): None =&gt;
+//   fun xmlXPathHasSameNodes(pnodes1: NullablePointer[Xmlnodeset], pnodes2: NullablePointer[Xmlnodeset]): I32 =&gt;
+//   fun xmlXPathIntersection(pnodes1: NullablePointer[Xmlnodeset], pnodes2: NullablePointer[Xmlnodeset]): NullablePointer[Xmlnodeset] =&gt;
+//   fun xmlXPathLeading(pnodes1: NullablePointer[Xmlnodeset], pnodes2: NullablePointer[Xmlnodeset]): NullablePointer[Xmlnodeset] =&gt;
+//   fun xmlXPathLeadingSorted(pnodes1: NullablePointer[Xmlnodeset], pnodes2: NullablePointer[Xmlnodeset]): NullablePointer[Xmlnodeset] =&gt;
+//   fun xmlXPathNewNodeSetList(pval: NullablePointer[Xmlnodeset]): NullablePointer[Xmlxpathobject] =&gt;
+//   fun xmlXPathNewNodeSet(pval: NullablePointer[Xmlnode]): NullablePointer[Xmlxpathobject] =&gt;
+//   fun xmlXPathNewValueTree(pval: NullablePointer[Xmlnode]): NullablePointer[Xmlxpathobject] =&gt;
+//   fun xmlXPathNextAncestorOrSelf(pctxt: NullablePointer[Xmlxpathparsercontext], pcur: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlXPathNextAncestor(pctxt: NullablePointer[Xmlxpathparsercontext], pcur: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlXPathNextAttribute(pctxt: NullablePointer[Xmlxpathparsercontext], pcur: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlXPathNextChild(pctxt: NullablePointer[Xmlxpathparsercontext], pcur: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlXPathNextDescendantOrSelf(pctxt: NullablePointer[Xmlxpathparsercontext], pcur: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlXPathNextDescendant(pctxt: NullablePointer[Xmlxpathparsercontext], pcur: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlXPathNextFollowing(pctxt: NullablePointer[Xmlxpathparsercontext], pcur: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlXPathNextFollowingSibling(pctxt: NullablePointer[Xmlxpathparsercontext], pcur: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlXPathNextNamespace(pctxt: NullablePointer[Xmlxpathparsercontext], pcur: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlXPathNextParent(pctxt: NullablePointer[Xmlxpathparsercontext], pcur: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlXPathNextPreceding(pctxt: NullablePointer[Xmlxpathparsercontext], pcur: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlXPathNextPrecedingSibling(pctxt: NullablePointer[Xmlxpathparsercontext], pcur: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlXPathNextSelf(pctxt: NullablePointer[Xmlxpathparsercontext], pcur: NullablePointer[Xmlnode]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlXPathNodeEval(pnode: NullablePointer[Xmlnode], pstr: String, pctx: NullablePointer[Xmlxpathcontext]): NullablePointer[Xmlxpathobject] =&gt;
+//   fun xmlXPathNodeLeading(pnodes: NullablePointer[Xmlnodeset], pnode: NullablePointer[Xmlnode]): NullablePointer[Xmlnodeset] =&gt;
+//   fun xmlXPathNodeLeadingSorted(pnodes: NullablePointer[Xmlnodeset], pnode: NullablePointer[Xmlnode]): NullablePointer[Xmlnodeset] =&gt;
+//   fun xmlXPathNodeSetAddNs(pcur: NullablePointer[Xmlnodeset], pnode: NullablePointer[Xmlnode], pns: NullablePointer[Xmlns]): I32 =&gt;
+//   fun xmlXPathNodeSetAdd(pcur: NullablePointer[Xmlnodeset], pval: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlXPathNodeSetAddUnique(pcur: NullablePointer[Xmlnodeset], pval: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlXPathNodeSetContains(pcur: NullablePointer[Xmlnodeset], pval: NullablePointer[Xmlnode]): I32 =&gt;
+//   fun xmlXPathNodeSetCreate(pval: NullablePointer[Xmlnode]): NullablePointer[Xmlnodeset] =&gt;
+//   fun xmlXPathNodeSetDel(pcur: NullablePointer[Xmlnodeset], pval: NullablePointer[Xmlnode]): None =&gt;
+//   fun xmlXPathNodeSetMerge(pval1: NullablePointer[Xmlnodeset], pval2: NullablePointer[Xmlnodeset]): NullablePointer[Xmlnodeset] =&gt;
+//   fun xmlXPathNodeSetRemove(pcur: NullablePointer[Xmlnodeset], pval: I32): None =&gt;
+//   fun xmlXPathNodeSetSort(pset: NullablePointer[Xmlnodeset]): None =&gt;
+//   fun xmlXPathNodeTrailing(pnodes: NullablePointer[Xmlnodeset], pnode: NullablePointer[Xmlnode]): NullablePointer[Xmlnodeset] =&gt;
+//   fun xmlXPathNodeTrailingSorted(pnodes: NullablePointer[Xmlnodeset], pnode: NullablePointer[Xmlnode]): NullablePointer[Xmlnodeset] =&gt;
+//   fun xmlXPathPopNodeSet(pctxt: NullablePointer[Xmlxpathparsercontext]): NullablePointer[Xmlnodeset] =&gt;
+//   fun xmlXPathSetContextNode(pnode: NullablePointer[Xmlnode], pctx: NullablePointer[Xmlxpathcontext]): I32 =&gt;
+//   fun xmlXPathTrailing(pnodes1: NullablePointer[Xmlnodeset], pnodes2: NullablePointer[Xmlnodeset]): NullablePointer[Xmlnodeset] =&gt;
+//   fun xmlXPathTrailingSorted(pnodes1: NullablePointer[Xmlnodeset], pnodes2: NullablePointer[Xmlnodeset]): NullablePointer[Xmlnodeset] =&gt;
+//   fun xmlXPathWrapNodeSet(pval: NullablePointer[Xmlnodeset]): NullablePointer[Xmlxpathobject] =&gt;
+//   fun xmlXPtrBuildNodeList(pobj: NullablePointer[Xmlxpathobject]): NullablePointer[Xmlnode] =&gt;
+//   fun xmlXPtrNewCollapsedRange(pstart: NullablePointer[Xmlnode]): NullablePointer[Xmlxpathobject] =&gt;
+//   fun xmlXPtrNewContext(pdoc: NullablePointer[Xmldoc], phere: NullablePointer[Xmlnode], porigin: NullablePointer[Xmlnode]): NullablePointer[Xmlxpathcontext] =&gt;
+//   fun xmlXPtrNewLocationSetNodeSet(pset: NullablePointer[Xmlnodeset]): NullablePointer[Xmlxpathobject] =&gt;
+//   fun xmlXPtrNewLocationSetNodes(pstart: NullablePointer[Xmlnode], pend: NullablePointer[Xmlnode]): NullablePointer[Xmlxpathobject] =&gt;
+//   fun xmlXPtrNewRangeNodeObject(pstart: NullablePointer[Xmlnode], pend: NullablePointer[Xmlxpathobject]): NullablePointer[Xmlxpathobject] =&gt;
+//   fun xmlXPtrNewRangeNodePoint(pstart: NullablePointer[Xmlnode], pend: NullablePointer[Xmlxpathobject]): NullablePointer[Xmlxpathobject] =&gt;
+//   fun xmlXPtrNewRangeNodes(pstart: NullablePointer[Xmlnode], pend: NullablePointer[Xmlnode]): NullablePointer[Xmlxpathobject] =&gt;
+//   fun xmlXPtrNewRangePointNode(pstart: NullablePointer[Xmlxpathobject], pend: NullablePointer[Xmlnode]): NullablePointer[Xmlxpathobject] =&gt;
+//   fun xmlXPtrNewRange(pstart: NullablePointer[Xmlnode], pstartindex: I32, pend: NullablePointer[Xmlnode], pendindex: I32): NullablePointer[Xmlxpathobject] =&gt;
+
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

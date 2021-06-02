@@ -1,0 +1,2029 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>array.pony - pony-libxml2</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">pony-libxml2</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">pony-libxml2</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">package pony-libxml2 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../pony-libxml2--index/">Package</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xml2xpathcontext/">class Xml2xpathcontext</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xml2pathobject/">class Xml2pathobject</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xml2textreader/">class Xml2textreader</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xml2parserinputbuffer/">class Xml2parserinputbuffer</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xml2node/">class Xml2node</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xml2Doc/">class Xml2Doc</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xml2attr/">class Xml2attr</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-FUNCTIONPOINTER/">primitive FUNCTIONPOINTER</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-IoFile/">struct IoFile</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-VaListTag/">struct VaListTag</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlparserinputbuffer/">struct Xmlparserinputbuffer</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmloutputbuffer/">struct Xmloutputbuffer</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlbuffer/">struct Xmlbuffer</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlbuf/">struct Xmlbuf</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlnotation/">struct Xmlnotation</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlenumeration/">struct Xmlenumeration</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlattribute/">struct Xmlattribute</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlelementcontent/">struct Xmlelementcontent</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlelement/">struct Xmlelement</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlns/">struct Xmlns</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmldtd/">struct Xmldtd</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlattr/">struct Xmlattr</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlid/">struct Xmlid</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlref/">struct Xmlref</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlnode/">struct Xmlnode</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmldoc/">struct Xmldoc</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmldomwrapctxt/">struct Xmldomwrapctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlparserinput/">struct Xmlparserinput</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlparserctxt/">struct Xmlparserctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlsaxlocator/">struct Xmlsaxlocator</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlsaxhandler/">struct Xmlsaxhandler</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlparsernodeinfo/">struct Xmlparsernodeinfo</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlparsernodeinfoseq/">struct Xmlparsernodeinfoseq</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlsaxhandlerv1/">struct Xmlsaxhandlerv1</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlentity/">struct Xmlentity</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlregexp/">struct Xmlregexp</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlregexecctxt/">struct Xmlregexecctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmldict/">struct Xmldict</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlmutex/">struct Xmlmutex</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlrmutex/">struct Xmlrmutex</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlhashtable/">struct Xmlhashtable</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlerror/">struct Xmlerror</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmllink/">struct Xmllink</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmllist/">struct Xmllist</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlautomata/">struct Xmlautomata</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlautomatastate/">struct Xmlautomatastate</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlvalidstate/">struct Xmlvalidstate</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlvalidctxt/">struct Xmlvalidctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlcharencodinghandler/">struct Xmlcharencodinghandler</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xlinkhandler/">struct Xlinkhandler</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlglobalstate/">struct Xmlglobalstate</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlcatalog/">struct Xmlcatalog</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlchsrange/">struct Xmlchsrange</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlchlrange/">struct Xmlchlrange</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlchrangegroup/">struct Xmlchrangegroup</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxpathcontext/">struct Xmlxpathcontext</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxpathparsercontext/">struct Xmlxpathparsercontext</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlnodeset/">struct Xmlnodeset</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxpathobject/">struct Xmlxpathobject</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxpathtype/">struct Xmlxpathtype</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxpathvariable/">struct Xmlxpathvariable</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxpathfunct/">struct Xmlxpathfunct</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxpathaxis/">struct Xmlxpathaxis</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxpathcompexpr/">struct Xmlxpathcompexpr</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlshellctxt/">struct Xmlshellctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Htmlelemdesc/">struct Htmlelemdesc</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Htmlentitydesc/">struct Htmlentitydesc</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlpattern/">struct Xmlpattern</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlstreamctxt/">struct Xmlstreamctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlrelaxng/">struct Xmlrelaxng</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlrelaxngparserctxt/">struct Xmlrelaxngparserctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlrelaxngvalidctxt/">struct Xmlrelaxngvalidctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemaval/">struct Xmlschemaval</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschematype/">struct Xmlschematype</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemafacet/">struct Xmlschemafacet</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemaannot/">struct Xmlschemaannot</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemaattribute/">struct Xmlschemaattribute</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemaattributelink/">struct Xmlschemaattributelink</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemawildcardns/">struct Xmlschemawildcardns</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemawildcard/">struct Xmlschemawildcard</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemaattributegroup/">struct Xmlschemaattributegroup</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschematypelink/">struct Xmlschematypelink</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemafacetlink/">struct Xmlschemafacetlink</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemaelement/">struct Xmlschemaelement</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemanotation/">struct Xmlschemanotation</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschema/">struct Xmlschema</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschematron/">struct Xmlschematron</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschematronparserctxt/">struct Xmlschematronparserctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschematronvalidctxt/">struct Xmlschematronvalidctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmluri/">struct Xmluri</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlxincludectxt/">struct Xmlxincludectxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlmodule/">struct Xmlmodule</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemaparserctxt/">struct Xmlschemaparserctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemavalidctxt/">struct Xmlschemavalidctxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlschemasaxplug/">struct Xmlschemasaxplug</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmltextreader/">struct Xmltextreader</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmlsavectxt/">struct Xmlsavectxt</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmltextwriter/">struct Xmltextwriter</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-Xmllocationset/">struct Xmllocationset</a>
+</li>
+                                    
+<li >
+    <a href="../../../pony-libxml2-LibXML2/">primitive LibXML2</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">package builtin <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../builtin--index/">Package</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-U8/">primitive U8</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-U16/">primitive U16</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-U32/">primitive U32</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-U64/">primitive U64</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ULong/">primitive ULong</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-USize/">primitive USize</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-U128/">primitive U128</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Unsigned/">type Unsigned</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Stringable/">interface Stringable</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-String/">class String</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-StringBytes/">class StringBytes</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-StringRunes/">class StringRunes</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_UTF32Encoder/">primitive _UTF32Encoder</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-InputNotify/">interface InputNotify</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-InputStream/">interface InputStream</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Stdin/">actor Stdin</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ByteSeq/">type ByteSeq</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ByteSeqIter/">interface ByteSeqIter</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-OutStream/">interface OutStream</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-StdStream/">actor StdStream</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-SourceLoc/">interface SourceLoc</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-I8/">primitive I8</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-I16/">primitive I16</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-I32/">primitive I32</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-I64/">primitive I64</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ILong/">primitive ILong</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ISize/">primitive ISize</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-I128/">primitive I128</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Signed/">type Signed</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Seq/">interface Seq</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-RuntimeOptions/">struct RuntimeOptions</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_ArithmeticConvertible/">trait _ArithmeticConvertible</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Real/">trait Real</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Integer/">trait Integer</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-SignedInteger/">trait SignedInteger</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-UnsignedInteger/">trait UnsignedInteger</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-FloatingPoint/">trait FloatingPoint</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Number/">type Number</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Int/">type Int</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ReadSeq/">interface ReadSeq</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ReadElement/">interface ReadElement</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Pointer/">struct Pointer</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Platform/">primitive Platform</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-NullablePointer/">struct NullablePointer</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-None/">primitive None</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Iterator/">interface Iterator</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-F32/">primitive F32</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-F64/">primitive F64</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Float/">type Float</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Env/">class Env</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-DoNotOptimise/">primitive DoNotOptimise</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-DisposableActor/">interface DisposableActor</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Less/">primitive Less</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Equal/">primitive Equal</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Greater/">primitive Greater</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Compare/">type Compare</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-HasEq/">interface HasEq</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Equatable/">interface Equatable</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Comparable/">interface Comparable</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Bool/">primitive Bool</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-AsioEventID/">type AsioEventID</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-AsioEventNotify/">interface AsioEventNotify</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-AsioEvent/">primitive AsioEvent</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Array/">class Array</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ArrayKeys/">class ArrayKeys</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ArrayValues/">class ArrayValues</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-ArrayPairs/">class ArrayPairs</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-Any/">interface Any</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-AmbientAuth/">primitive AmbientAuth</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_ToString/">primitive _ToString</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_SignedArithmetic/">primitive _SignedArithmetic</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_SignedUnsafeArithmetic/">primitive _SignedUnsafeArithmetic</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_UnsignedCheckedArithmetic/">primitive _UnsignedCheckedArithmetic</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_SignedCheckedArithmetic/">primitive _SignedCheckedArithmetic</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_PartialArithmetic/">trait _PartialArithmetic</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_UnsignedPartialArithmetic/">primitive _UnsignedPartialArithmetic</a>
+</li>
+                                    
+<li >
+    <a href="../../../builtin-_SignedPartialArithmetic/">primitive _SignedPartialArithmetic</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">source <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../pony-libxml2/xml2xpathcontext/">xml2xpathcontext.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../pony-libxml2/xml2xpath/">xml2xpath.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../pony-libxml2/xml2textreader/">xml2textreader.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../pony-libxml2/xml2parserinputbuffer/">xml2parserinputbuffer.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../pony-libxml2/xml2node/">xml2node.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../pony-libxml2/xml2doc/">xml2doc.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../pony-libxml2/xml2attr/">xml2attr.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../pony-libxml2/structs/">structs.pony</a>
+</li>
+                                    
+<li >
+    <a href="../../pony-libxml2/functions/">functions.pony</a>
+</li>
+                                    
+<li >
+    <a href="../unsigned/">unsigned.pony</a>
+</li>
+                                    
+<li >
+    <a href="../stringable/">stringable.pony</a>
+</li>
+                                    
+<li >
+    <a href="../string/">string.pony</a>
+</li>
+                                    
+<li >
+    <a href="../stdin/">stdin.pony</a>
+</li>
+                                    
+<li >
+    <a href="../std_stream/">std_stream.pony</a>
+</li>
+                                    
+<li >
+    <a href="../source_loc/">source_loc.pony</a>
+</li>
+                                    
+<li >
+    <a href="../signed/">signed.pony</a>
+</li>
+                                    
+<li >
+    <a href="../seq/">seq.pony</a>
+</li>
+                                    
+<li >
+    <a href="../runtime_options/">runtime_options.pony</a>
+</li>
+                                    
+<li >
+    <a href="../real/">real.pony</a>
+</li>
+                                    
+<li >
+    <a href="../read_seq/">read_seq.pony</a>
+</li>
+                                    
+<li >
+    <a href="../pointer/">pointer.pony</a>
+</li>
+                                    
+<li >
+    <a href="../platform/">platform.pony</a>
+</li>
+                                    
+<li >
+    <a href="../nullable_pointer/">nullable_pointer.pony</a>
+</li>
+                                    
+<li >
+    <a href="../none/">none.pony</a>
+</li>
+                                    
+<li >
+    <a href="../iterator/">iterator.pony</a>
+</li>
+                                    
+<li >
+    <a href="../float/">float.pony</a>
+</li>
+                                    
+<li >
+    <a href="../env/">env.pony</a>
+</li>
+                                    
+<li >
+    <a href="../do_not_optimise/">do_not_optimise.pony</a>
+</li>
+                                    
+<li >
+    <a href="../disposable_actor/">disposable_actor.pony</a>
+</li>
+                                    
+<li >
+    <a href="../compare/">compare.pony</a>
+</li>
+                                    
+<li >
+    <a href="../bool/">bool.pony</a>
+</li>
+                                    
+<li >
+    <a href="../asio_event/">asio_event.pony</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">array.pony</a>
+</li>
+                                    
+<li >
+    <a href="../any/">any.pony</a>
+</li>
+                                    
+<li >
+    <a href="../ambient_auth/">ambient_auth.pony</a>
+</li>
+                                    
+<li >
+    <a href="../_to_string/">_to_string.pony</a>
+</li>
+                                    
+<li >
+    <a href="../_arithmetic/">_arithmetic.pony</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../asio_event/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../any/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<pre><code class="language-pony-full-source">class Array[A] is Seq[A]
+  &quot;&quot;&quot;
+  Contiguous, resizable memory to store elements of type A.
+
+  ## Usage
+
+  Creating an Array of String:
+  ```pony
+    let array: Array[String] = [&quot;dog&quot;; &quot;cat&quot;; &quot;wombat&quot;]
+    // array.size() == 3
+    // array.space() &gt;= 3
+  ```
+
+  Creating an empty Array of String, which may hold at least 10 elements before
+  requesting more space:
+  ```pony
+    let array = Array[String](10)
+    // array.size() == 0
+    // array.space() &gt;= 10
+  ```
+
+  Accessing elements can be done via the `apply(i: USize): this-&gt;A ?` method.
+  The provided index might be out of bounds so `apply` is partial and has to be
+  called within a try-catch block or inside another partial method:
+  ```pony
+    let array: Array[String] = [&quot;dog&quot;; &quot;cat&quot;; &quot;wombat&quot;]
+    let is_second_element_wobat = try
+      // indexes start from 0, so 1 is the second element
+      array(1)? == &quot;wombat&quot;
+    else
+      false
+    end
+  ```
+
+  Adding and removing elements to and from the end of the Array can be done via
+  `push` and `pop` methods. You could treat the array as a LIFO stack using
+  those methods:
+  ```pony
+    while (array.size() &gt; 0) do
+      let elem = array.pop()?
+      // do something with element
+    end
+  ```
+
+  Modifying the Array can be done via `update`, `insert` and `delete` methods
+  which alter the Array at an arbitrary index, moving elements left (when
+  deleting) or right (when inserting) as necessary.
+
+  Iterating over the elements of an Array can be done using the `values` method:
+  ```pony
+    for element in array.values() do
+        // do something with element
+    end
+  ```
+
+  ## Memory allocation
+  Array allocates contiguous memory. It always allocates at least enough memory
+  space to hold all of its elements. Space is the number of elements the Array
+  can hold without allocating more memory. The `space()` method returns the
+  number of elements an Array can hold. The `size()` method returns the number
+  of elements the Array holds.
+
+  Different data types require different amounts of memory. Array[U64] with size
+  of 6 will take more memory than an Array[U8] of the same size.
+
+  When creating an Array or adding more elements will calculate the next power
+  of 2 of the requested number of elements and allocate that much space, with a
+  lower bound of space for 8 elements.
+
+  Here's a few examples of the space allocated when initialising an Array with
+  various number of elements:
+
+  | size | space |
+  |------|-------|
+  | 0    | 0     |
+  | 1    | 8     |
+  | 8    | 8     |
+  | 9    | 16    |
+  | 16   | 16    |
+  | 17   | 32    |
+
+  Call the `compact()` method to ask the GC to reclaim unused space. There are
+  no guarantees that the GC will actually reclaim any space.
+  &quot;&quot;&quot;
+  var _size: USize
+  var _alloc: USize
+  var _ptr: Pointer[A]
+
+  new create(len: USize = 0) =&gt;
+    &quot;&quot;&quot;
+    Create an array with zero elements, but space for len elements.
+    &quot;&quot;&quot;
+    _size = 0
+
+    if len &gt; 0 then
+      _alloc = len.next_pow2().max(len).max(8)
+      _ptr = Pointer[A]._alloc(_alloc)
+    else
+      _alloc = 0
+      _ptr = Pointer[A]
+    end
+
+  new init(from: A^, len: USize) =&gt;
+    &quot;&quot;&quot;
+    Create an array of len elements, all initialised to the given value.
+    &quot;&quot;&quot;
+    _size = len
+
+    if len &gt; 0 then
+      _alloc = len.next_pow2().max(len).max(8)
+      _ptr = Pointer[A]._alloc(_alloc)
+
+      var i: USize = 0
+
+      while i &lt; len do
+        _ptr._update(i, from)
+        i = i + 1
+      end
+    else
+      _alloc = 0
+      _ptr = Pointer[A]
+    end
+
+  new from_cpointer(ptr: Pointer[A], len: USize, alloc: USize = 0) =&gt;
+    &quot;&quot;&quot;
+    Create an array from a C-style pointer and length. The contents are not
+    copied.
+    &quot;&quot;&quot;
+    if ptr.is_null() then
+      _size = 0
+      _alloc = 0
+    else
+      _size = len
+      if alloc &gt; len then
+        _alloc = alloc
+      else
+        _alloc = len
+      end
+    end
+
+    _ptr = ptr
+
+  fun _copy_to(
+    ptr: Pointer[this-&gt;A!],
+    copy_len: USize,
+    from_offset: USize = 0,
+    to_offset: USize = 0)
+  =&gt;
+    &quot;&quot;&quot;
+    Copy copy_len elements from this to that at specified offsets.
+    &quot;&quot;&quot;
+    _ptr._offset(from_offset)._copy_to(ptr._offset(to_offset), copy_len)
+
+  fun cpointer(offset: USize = 0): Pointer[A] tag =&gt;
+    &quot;&quot;&quot;
+    Return the underlying C-style pointer.
+    &quot;&quot;&quot;
+    _ptr._offset(offset)
+
+  fun size(): USize =&gt;
+    &quot;&quot;&quot;
+    The number of elements in the array.
+    &quot;&quot;&quot;
+    _size
+
+  fun space(): USize =&gt;
+    &quot;&quot;&quot;
+    The available space in the array.
+    &quot;&quot;&quot;
+    _alloc
+
+  fun ref reserve(len: USize) =&gt;
+    &quot;&quot;&quot;
+    Reserve space for len elements, including whatever elements are already in
+    the array. Array space grows geometrically.
+    &quot;&quot;&quot;
+    if _alloc &lt; len then
+      _alloc = len.next_pow2().max(len).max(8)
+      _ptr = _ptr._realloc(_alloc)
+    end
+
+  fun box _element_size(): USize =&gt;
+    &quot;&quot;&quot;
+    Element size in bytes for an element.
+    &quot;&quot;&quot;
+    _ptr._element_size()
+
+  fun ref compact() =&gt;
+    &quot;&quot;&quot;
+    Try to remove unused space, making it available for garbage collection. The
+    request may be ignored.
+    &quot;&quot;&quot;
+    if _size &lt;= (512 / _ptr._element_size()) then
+      if _size.next_pow2() != _alloc.next_pow2() then
+        _alloc = _size.next_pow2()
+        let old_ptr = _ptr = Pointer[A]._alloc(_alloc)
+        old_ptr._copy_to(_ptr._convert[A!](), _size)
+      end
+    elseif _size &lt; _alloc then
+      _alloc = _size
+      let old_ptr = _ptr = Pointer[A]._alloc(_alloc)
+      old_ptr._copy_to(_ptr._convert[A!](), _size)
+    end
+
+  fun ref undefined[B: (A &amp; Real[B] val &amp; Number) = A](len: USize) =&gt;
+    &quot;&quot;&quot;
+    Resize to len elements, populating previously empty elements with random
+    memory. This is only allowed for an array of numbers.
+    &quot;&quot;&quot;
+    reserve(len)
+    _size = len
+
+  fun box read_u8[B: (A &amp; Real[B] val &amp; U8) = A](offset: USize): U8 ? =&gt;
+    &quot;&quot;&quot;
+    Reads a U8 from offset. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    if offset &lt; _size then
+      _ptr._offset(offset)._convert[U8]()._apply(0)
+    else
+      error
+    end
+
+  fun box read_u16[B: (A &amp; Real[B] val &amp; U8) = A](offset: USize): U16 ? =&gt;
+    &quot;&quot;&quot;
+    Reads a U16 from offset. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u16_bytes = U16(0).bytewidth()
+    if (offset + u16_bytes) &lt;= _size then
+      _ptr._offset(offset)._convert[U16]()._apply(0)
+    else
+      error
+    end
+
+  fun box read_u32[B: (A &amp; Real[B] val &amp; U8) = A](offset: USize): U32 ? =&gt;
+    &quot;&quot;&quot;
+    Reads a U32 from offset. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u32_bytes = U32(0).bytewidth()
+    if (offset + u32_bytes) &lt;= _size then
+      _ptr._offset(offset)._convert[U32]()._apply(0)
+    else
+      error
+    end
+
+  fun box read_u64[B: (A &amp; Real[B] val &amp; U8) = A](offset: USize): U64 ? =&gt;
+    &quot;&quot;&quot;
+    Reads a U64 from offset. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u64_bytes = U64(0).bytewidth()
+    if (offset + u64_bytes) &lt;= _size then
+      _ptr._offset(offset)._convert[U64]()._apply(0)
+    else
+      error
+    end
+
+  fun box read_u128[B: (A &amp; Real[B] val &amp; U8) = A](offset: USize): U128 ? =&gt;
+    &quot;&quot;&quot;
+    Reads a U128 from offset. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u128_bytes = U128(0).bytewidth()
+    if (offset + u128_bytes) &lt;= _size then
+      _ptr._offset(offset)._convert[U128]()._apply(0)
+    else
+      error
+    end
+
+  fun apply(i: USize): this-&gt;A ? =&gt;
+    &quot;&quot;&quot;
+    Get the i-th element, raising an error if the index is out of bounds.
+    &quot;&quot;&quot;
+    if i &lt; _size then
+      _ptr._apply(i)
+    else
+      error
+    end
+
+  fun ref update_u8[B: (A &amp; Real[B] val &amp; U8) = A](offset: USize, value: U8): U8 ? =&gt;
+    &quot;&quot;&quot;
+    Write a U8 at offset. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    if offset &lt; _size then
+      _ptr._offset(offset)._convert[U8]()._update(0, value)
+    else
+      error
+    end
+
+  fun ref update_u16[B: (A &amp; Real[B] val &amp; U8) = A](offset: USize, value: U16): U16 ? =&gt;
+    &quot;&quot;&quot;
+    Write a U16 at offset. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u16_bytes = U16(0).bytewidth()
+    if (offset + u16_bytes) &lt;= _size then
+      _ptr._offset(offset)._convert[U16]()._update(0, value)
+    else
+      error
+    end
+
+  fun ref update_u32[B: (A &amp; Real[B] val &amp; U8) = A](offset: USize, value: U32): U32 ? =&gt;
+    &quot;&quot;&quot;
+    Write a U32 at offset. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u32_bytes = U32(0).bytewidth()
+    if (offset + u32_bytes) &lt;= _size then
+      _ptr._offset(offset)._convert[U32]()._update(0, value)
+    else
+      error
+    end
+
+  fun ref update_u64[B: (A &amp; Real[B] val &amp; U8) = A](offset: USize, value: U64): U64 ? =&gt;
+    &quot;&quot;&quot;
+    Write a U64 at offset. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u64_bytes = U64(0).bytewidth()
+    if (offset + u64_bytes) &lt;= _size then
+      _ptr._offset(offset)._convert[U64]()._update(0, value)
+    else
+      error
+    end
+
+  fun ref update_u128[B: (A &amp; Real[B] val &amp; U8) = A](offset: USize, value: U128): U128 ? =&gt;
+    &quot;&quot;&quot;
+    Write a U128 at offset. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u128_bytes = U128(0).bytewidth()
+    if (offset + u128_bytes) &lt;= _size then
+      _ptr._offset(offset)._convert[U128]()._update(0, value)
+    else
+      error
+    end
+
+  fun ref update(i: USize, value: A): A^ ? =&gt;
+    &quot;&quot;&quot;
+    Change the i-th element, raising an error if the index is out of bounds.
+    &quot;&quot;&quot;
+    if i &lt; _size then
+      _ptr._update(i, consume value)
+    else
+      error
+    end
+
+  fun ref insert(i: USize, value: A) ? =&gt;
+    &quot;&quot;&quot;
+    Insert an element into the array. Elements after this are moved up by one
+    index, extending the array.
+
+    When inserting right beyond the last element, at index `this.size()`,
+    the element will be appended, similar to `push()`,
+    an insert at index `0` prepends the value to the array.
+    An insert into an index beyond `this.size()` raises an error.
+
+    ```pony
+    let array = Array[U8](4)              // []
+    array.insert(0, 0xDE)?                // prepend: [0xDE]
+    array.insert(array.size(), 0xBE)?     // append:  [0xDE; 0xBE]
+    array.insert(1, 0xAD)?                // insert:  [0xDE; 0xAD; 0xBE]
+    array.insert(array.size() + 1, 0xEF)? // error
+    ```
+    &quot;&quot;&quot;
+    if i &lt;= _size then
+      reserve(_size + 1)
+      _ptr._offset(i)._insert(1, _size - i)
+      _ptr._update(i, consume value)
+      _size = _size + 1
+    else
+      error
+    end
+
+  fun ref delete(i: USize): A^ ? =&gt;
+    &quot;&quot;&quot;
+    Delete an element from the array. Elements after this are moved down by one
+    index, compacting the array.
+    An out of bounds index raises an error.
+    The deleted element is returned.
+    &quot;&quot;&quot;
+    if i &lt; _size then
+      _size = _size - 1
+      _ptr._offset(i)._delete(1, _size - i)
+    else
+      error
+    end
+
+  fun ref truncate(len: USize) =&gt;
+    &quot;&quot;&quot;
+    Truncate an array to the given length, discarding excess elements. If the
+    array is already smaller than len, do nothing.
+    &quot;&quot;&quot;
+    _size = _size.min(len)
+
+  fun ref trim_in_place(from: USize = 0, to: USize = -1) =&gt;
+    &quot;&quot;&quot;
+    Trim the array to a portion of itself, covering `from` until `to`.
+    Unlike slice, the operation does not allocate a new array nor copy elements.
+    &quot;&quot;&quot;
+    let last = _size.min(to)
+    let offset = last.min(from)
+    let size' = last - offset
+
+    // use the new size' for alloc if we're not including the last used byte
+    // from the original data and only include the extra allocated bytes if
+    // we're including the last byte.
+    _alloc = if last == _size then _alloc - offset else size' end
+
+    _size = size'
+
+    // if _alloc == 0 then we've trimmed all the memory originally allocated.
+    // if we do _ptr._offset, we will spill into memory not allocated/owned
+    // by this array and could potentially cause a segfault if we cross
+    // a pagemap boundary into a pagemap address that hasn't been allocated
+    // yet when `reserve` is called next.
+    if _alloc == 0 then
+      _ptr = Pointer[A]
+    else
+      _ptr = _ptr._offset(offset)
+    end
+
+  fun val trim(from: USize = 0, to: USize = -1): Array[A] val =&gt;
+    &quot;&quot;&quot;
+    Return a shared portion of this array, covering `from` until `to`.
+    Both the original and the new array are immutable, as they share memory.
+    The operation does not allocate a new array pointer nor copy elements.
+    &quot;&quot;&quot;
+    let last = _size.min(to)
+    let offset = last.min(from)
+
+    recover
+      let size' = last - offset
+
+      // use the new size' for alloc if we're not including the last used byte
+      // from the original data and only include the extra allocated bytes if
+      // we're including the last byte.
+      let alloc = if last == _size then _alloc - offset else size' end
+
+      if size' &gt; 0 then
+        from_cpointer(_ptr._offset(offset)._unsafe(), size', alloc)
+      else
+        create()
+      end
+    end
+
+  fun iso chop[B: (A &amp; Any #send) = A](split_point: USize): (Array[A] iso^, Array[A] iso^) =&gt;
+    &quot;&quot;&quot;
+    Chops the array in half at the split point requested and returns both
+    the left and right portions. The original array is trimmed in place and
+    returned as the left portion. If the split point is larger than the
+    array, the left portion is the original array and the right portion
+    is a new empty array.
+    The operation does not allocate a new array pointer nor copy elements.
+
+    The entry type must be sendable so that the two halves can be isolated.
+    Otherwise, two entries may have shared references to mutable data,
+    or even to each other, such as in the code below:
+
+    ```pony
+      class Example
+         var other: (Example | None) = None
+
+      let arr: Array[Example] iso = recover
+         let obj1 = Example
+         let obj2 = Example
+         obj1.other = obj2
+         obj2.other = obj1
+         [obj1; obj2]
+      end
+    ```
+    &quot;&quot;&quot;
+    let start_ptr = cpointer(split_point)
+    let size' = _size - _size.min(split_point)
+    let alloc = _alloc - _size.min(split_point)
+
+    trim_in_place(0, split_point)
+
+    let right = recover
+      if size' &gt; 0 then
+        from_cpointer(start_ptr._unsafe(), size', alloc)
+      else
+        create()
+      end
+    end
+
+    (consume this, consume right)
+
+
+  fun iso unchop(b: Array[A] iso):
+    ((Array[A] iso^, Array[A] iso^) | Array[A] iso^)
+  =&gt;
+    &quot;&quot;&quot;
+    Unchops two iso arrays to return the original array they were chopped from.
+    Both input arrays are isolated and mutable and were originally chopped from
+    a single array. This function checks that they are indeed two arrays chopped
+    from the same original array and can be unchopped before doing the
+    unchopping and returning the unchopped array. If the two arrays cannot be
+    unchopped it returns both arrays without modifying them.
+    The operation does not allocate a new array pointer nor copy elements.
+    &quot;&quot;&quot;
+    if _size == 0 then
+      return consume b
+    end
+
+    if b.size() == 0 then
+      return consume this
+    end
+
+    (let unchoppable, let a_left) =
+      if (_size == _alloc) and (cpointer(_size) == b.cpointer()) then
+        (true, true)
+      elseif (b.size() == b.space()) and (b.cpointer(b.size()) == cpointer())
+        then
+        (true, false)
+      else
+        (false, false)
+      end
+
+    if not unchoppable then
+      return (consume this, consume b)
+    end
+
+    if a_left then
+      _alloc = _alloc + b._alloc
+      _size = _size + b._size
+      consume this
+    else
+      b._alloc = b._alloc + _alloc
+      b._size = b._size + _size
+      consume b
+    end
+
+  fun ref copy_from[B: (A &amp; Real[B] val &amp; U8) = A](
+    src: Array[U8] box,
+    src_idx: USize,
+    dst_idx: USize,
+    len: USize)
+  =&gt;
+    &quot;&quot;&quot;
+    Copy len elements from src(src_idx) to this(dst_idx).
+    Only works for Array[U8].
+    &quot;&quot;&quot;
+    reserve(dst_idx + len)
+    src._ptr._offset(src_idx)._copy_to(_ptr._convert[U8]()._offset(dst_idx), len)
+
+    if _size &lt; (dst_idx + len) then
+      _size = dst_idx + len
+    end
+
+  fun copy_to(
+    dst: Array[this-&gt;A!],
+    src_idx: USize,
+    dst_idx: USize,
+    len: USize)
+  =&gt;
+    &quot;&quot;&quot;
+    Copy len elements from this(src_idx) to dst(dst_idx).
+    &quot;&quot;&quot;
+    dst.reserve(dst_idx + len)
+    _ptr._offset(src_idx)._copy_to(dst._ptr._offset(dst_idx), len)
+
+    if dst._size &lt; (dst_idx + len) then
+      dst._size = dst_idx + len
+    end
+
+  fun ref remove(i: USize, n: USize) =&gt;
+    &quot;&quot;&quot;
+    Remove n elements from the array, beginning at index i.
+    &quot;&quot;&quot;
+    if i &lt; _size then
+      let count = n.min(_size - i)
+      _size = _size - count
+      _ptr._offset(i)._delete(count, _size - i)
+    end
+
+  fun ref clear() =&gt;
+    &quot;&quot;&quot;
+    Remove all elements from the array.
+    &quot;&quot;&quot;
+    _size = 0
+
+  fun ref push_u8[B: (A &amp; Real[B] val &amp; U8) = A](value: U8) =&gt;
+    &quot;&quot;&quot;
+    Add a U8 to the end of the array. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u8_bytes = U8(0).bytewidth()
+    reserve(_size + u8_bytes)
+    _ptr._offset(_size)._convert[U8]()._update(0, value)
+    _size = _size + u8_bytes
+
+  fun ref push_u16[B: (A &amp; Real[B] val &amp; U8) = A](value: U16) =&gt;
+    &quot;&quot;&quot;
+    Add a U16 to the end of the array. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u16_bytes = U16(0).bytewidth()
+    reserve(_size + u16_bytes)
+    _ptr._offset(_size)._convert[U16]()._update(0, value)
+    _size = _size + u16_bytes
+
+  fun ref push_u32[B: (A &amp; Real[B] val &amp; U8) = A](value: U32) =&gt;
+    &quot;&quot;&quot;
+    Add a U32 to the end of the array. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u32_bytes = U32(0).bytewidth()
+    reserve(_size + u32_bytes)
+    _ptr._offset(_size)._convert[U32]()._update(0, value)
+    _size = _size + u32_bytes
+
+  fun ref push_u64[B: (A &amp; Real[B] val &amp; U8) = A](value: U64) =&gt;
+    &quot;&quot;&quot;
+    Add a U64 to the end of the array. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u64_bytes = U64(0).bytewidth()
+    reserve(_size + u64_bytes)
+    _ptr._offset(_size)._convert[U64]()._update(0, value)
+    _size = _size + u64_bytes
+
+  fun ref push_u128[B: (A &amp; Real[B] val &amp; U8) = A](value: U128) =&gt;
+    &quot;&quot;&quot;
+    Add a U128 to the end of the array. This is only allowed for an array of U8s.
+    &quot;&quot;&quot;
+    let u128_bytes = U128(0).bytewidth()
+    reserve(_size + u128_bytes)
+    _ptr._offset(_size)._convert[U128]()._update(0, value)
+    _size = _size + u128_bytes
+
+  fun ref push(value: A) =&gt;
+    &quot;&quot;&quot;
+    Add an element to the end of the array.
+    &quot;&quot;&quot;
+    reserve(_size + 1)
+    _ptr._update(_size, consume value)
+    _size = _size + 1
+
+  fun ref pop(): A^ ? =&gt;
+    &quot;&quot;&quot;
+    Remove an element from the end of the array.
+    The removed element is returned.
+    &quot;&quot;&quot;
+    delete(_size - 1)?
+
+  fun ref unshift(value: A) =&gt;
+    &quot;&quot;&quot;
+    Add an element to the beginning of the array.
+    &quot;&quot;&quot;
+    try
+      insert(0, consume value)?
+    end
+
+  fun ref shift(): A^ ? =&gt;
+    &quot;&quot;&quot;
+    Remove an element from the beginning of the array.
+    The removed element is returned.
+    &quot;&quot;&quot;
+    delete(0)?
+
+  fun ref append(
+    seq: (ReadSeq[A] &amp; ReadElement[A^]),
+    offset: USize = 0,
+    len: USize = -1)
+  =&gt;
+    &quot;&quot;&quot;
+    Append the elements from a sequence, starting from the given offset.
+    &quot;&quot;&quot;
+    if offset &gt;= seq.size() then
+      return
+    end
+
+    let copy_len = len.min(seq.size() - offset)
+    reserve(_size + copy_len)
+
+    var n = USize(0)
+
+    try
+      while n &lt; copy_len do
+        _ptr._update(_size + n, seq(offset + n)?)
+
+        n = n + 1
+      end
+    end
+
+    _size = _size + n
+
+  fun ref concat(iter: Iterator[A^], offset: USize = 0, len: USize = -1) =&gt;
+    &quot;&quot;&quot;
+    Add len iterated elements to the end of the array, starting from the given
+    offset.
+    &quot;&quot;&quot;
+
+    var n = USize(0)
+
+    try
+      while n &lt; offset do
+        if iter.has_next() then
+          iter.next()?
+        else
+          return
+        end
+
+        n = n + 1
+      end
+    end
+
+    n = 0
+
+    // If a concrete len is specified, we take the caller at their word
+    // and reserve that much space, even though we can't verify that the
+    // iterator actually has that many elements available. Reserving ahead
+    // of time lets us take a fast path of direct pointer access.
+    if len != -1 then
+      reserve(_size + len)
+
+      try
+        while n &lt; len do
+          if iter.has_next() then
+            _ptr._update(_size + n, iter.next()?)
+          else
+            break
+          end
+
+          n = n + 1
+        end
+      end
+
+      _size = _size + n
+    else
+      try
+        while n &lt; len do
+          if iter.has_next() then
+            push(iter.next()?)
+          else
+            break
+          end
+
+          n = n + 1
+        end
+      end
+    end
+
+  fun find(
+    value: A!,
+    offset: USize = 0,
+    nth: USize = 0,
+    predicate: {(box-&gt;A!, box-&gt;A!): Bool} val = {(l, r) =&gt; l is r })
+    : USize ?
+  =&gt;
+    &quot;&quot;&quot;
+    Find the `nth` appearance of `value` from the beginning of the array,
+    starting at `offset` and examining higher indices, and using the supplied
+    `predicate` for comparisons. Returns the index of the value, or raise an
+    error if the value isn't present.
+
+    By default, the search starts at the first element of the array, returns
+    the first instance of `value` found, and uses object identity for
+    comparison.
+    &quot;&quot;&quot;
+    var i = offset
+    var n = USize(0)
+
+    while i &lt; _size do
+      if predicate(_ptr._apply(i), value) then
+        if n == nth then
+          return i
+        end
+
+        n = n + 1
+      end
+
+      i = i + 1
+    end
+
+    error
+
+  fun contains(
+    value: A!,
+    predicate: {(box-&gt;A!, box-&gt;A!): Bool} val =
+      {(l: box-&gt;A!, r: box-&gt;A!): Bool =&gt; l is r })
+    : Bool
+  =&gt;
+    &quot;&quot;&quot;
+    Returns true if the array contains `value`, false otherwise.
+
+    The default predicate checks for matches by identity. To search for matches
+    by structural equality, pass an object literal such as `{(l, r) =&gt; l == r}`.
+    &quot;&quot;&quot;
+    var i = USize(0)
+
+    while i &lt; _size do
+      if predicate(_ptr._apply(i), value) then
+        return true
+      end
+
+      i = i + 1
+    end
+    false
+
+  fun rfind(
+    value: A!,
+    offset: USize = -1,
+    nth: USize = 0,
+    predicate: {(box-&gt;A!, box-&gt;A!): Bool} val =
+      {(l: box-&gt;A!, r: box-&gt;A!): Bool =&gt; l is r })
+    : USize ?
+  =&gt;
+    &quot;&quot;&quot;
+    Find the `nth` appearance of `value` from the end of the array, starting at
+    `offset` and examining lower indices, and using the supplied `predicate` for
+    comparisons. Returns the index of the value, or raise an error if the value
+    isn't present.
+
+    By default, the search starts at the last element of the array, returns the
+    first instance of `value` found, and uses object identity for comparison.
+    &quot;&quot;&quot;
+    if _size &gt; 0 then
+      var i = if offset &gt;= _size then _size - 1 else offset end
+      var n = USize(0)
+
+      repeat
+        if predicate(_ptr._apply(i), value) then
+          if n == nth then
+            return i
+          end
+
+          n = n + 1
+        end
+      until (i = i - 1) == 0
+      end
+    end
+
+    error
+
+  fun clone(): Array[this-&gt;A!]^ =&gt;
+    &quot;&quot;&quot;
+    Clone the array.
+    The new array contains references to the same elements that the old array
+    contains, the elements themselves are not cloned.
+    &quot;&quot;&quot;
+    let out = Array[this-&gt;A!](_size)
+    _ptr._copy_to(out._ptr, _size)
+    out._size = _size
+    out
+
+  fun slice(
+    from: USize = 0,
+    to: USize = -1,
+    step: USize = 1)
+    : Array[this-&gt;A!]^
+  =&gt;
+    &quot;&quot;&quot;
+    Create a new array that is a clone of a portion of this array. The range is
+    exclusive and saturated.
+    The new array contains references to the same elements that the old array
+    contains, the elements themselves are not cloned.
+    &quot;&quot;&quot;
+    let out = Array[this-&gt;A!]
+    let last = _size.min(to)
+    let len = last - from
+
+    if (last &gt; from) and (step &gt; 0) then
+      out.reserve((len + (step - 1)) / step)
+
+      if step == 1 then
+        copy_to(out, from, 0, len)
+      else
+        try
+          var i = from
+
+          while i &lt; last do
+            out.push(this(i)?)
+            i = i + step
+          end
+        end
+      end
+    end
+
+    out
+
+  fun permute(indices: Iterator[USize]): Array[this-&gt;A!]^ ? =&gt;
+    &quot;&quot;&quot;
+    Create a new array with the elements permuted.
+    Permute to an arbitrary order that may include duplicates. An out of bounds
+    index raises an error.
+    The new array contains references to the same elements that the old array
+    contains, the elements themselves are not copied.
+    &quot;&quot;&quot;
+    let out = Array[this-&gt;A!]
+    for i in indices do
+      out.push(this(i)?)
+    end
+    out
+
+  fun reverse(): Array[this-&gt;A!]^ =&gt;
+    &quot;&quot;&quot;
+    Create a new array with the elements in reverse order.
+    The new array contains references to the same elements that the old array
+    contains, the elements themselves are not copied.
+    &quot;&quot;&quot;
+    clone() .&gt; reverse_in_place()
+
+  fun ref reverse_in_place() =&gt;
+    &quot;&quot;&quot;
+    Reverse the array in place.
+    &quot;&quot;&quot;
+    if _size &gt; 1 then
+      var i: USize = 0
+      var j = _size - 1
+
+      while i &lt; j do
+        let x = _ptr._apply(i)
+        _ptr._update(i, _ptr._apply(j))
+        _ptr._update(j, x)
+        i = i + 1
+        j = j - 1
+      end
+    end
+
+  fun ref swap_elements(i: USize, j: USize) ? =&gt;
+    &quot;&quot;&quot;
+    Swap the element at index i with the element at index j.
+    If either i or j are out of bounds, an error is raised.
+    &quot;&quot;&quot;
+    if (i &gt;= _size) or (j &gt;= _size) then error end
+
+    let x = _ptr._apply(i)
+    _ptr._update(i, _ptr._apply(j))
+    _ptr._update(j, consume x)
+
+  fun keys(): ArrayKeys[A, this-&gt;Array[A]]^ =&gt;
+    &quot;&quot;&quot;
+    Return an iterator over the indices in the array.
+    &quot;&quot;&quot;
+    ArrayKeys[A, this-&gt;Array[A]](this)
+
+  fun values(): ArrayValues[A, this-&gt;Array[A]]^ =&gt;
+    &quot;&quot;&quot;
+    Return an iterator over the values in the array.
+    &quot;&quot;&quot;
+    ArrayValues[A, this-&gt;Array[A]](this)
+
+  fun pairs(): ArrayPairs[A, this-&gt;Array[A]]^ =&gt;
+    &quot;&quot;&quot;
+    Return an iterator over the (index, value) pairs in the array.
+    &quot;&quot;&quot;
+    ArrayPairs[A, this-&gt;Array[A]](this)
+
+class ArrayKeys[A, B: Array[A] #read] is Iterator[USize]
+  let _array: B
+  var _i: USize
+
+  new create(array: B) =&gt;
+    _array = array
+    _i = 0
+
+  fun has_next(): Bool =&gt;
+    _i &lt; _array.size()
+
+  fun ref next(): USize =&gt;
+    if _i &lt; _array.size() then
+      _i = _i + 1
+    else
+      _i
+    end
+
+class ArrayValues[A, B: Array[A] #read] is Iterator[B-&gt;A]
+  let _array: B
+  var _i: USize
+
+  new create(array: B) =&gt;
+    _array = array
+    _i = 0
+
+  fun has_next(): Bool =&gt;
+    _i &lt; _array.size()
+
+  fun ref next(): B-&gt;A ? =&gt;
+    _array(_i = _i + 1)?
+
+  fun ref rewind(): ArrayValues[A, B] =&gt;
+    _i = 0
+    this
+
+class ArrayPairs[A, B: Array[A] #read] is Iterator[(USize, B-&gt;A)]
+  let _array: B
+  var _i: USize
+
+  new create(array: B) =&gt;
+    _array = array
+    _i = 0
+
+  fun has_next(): Bool =&gt;
+    _i &lt; _array.size()
+
+  fun ref next(): (USize, B-&gt;A) ? =&gt;
+    (_i, _array(_i = _i + 1)?)
+
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
