@@ -24,15 +24,15 @@ class Xml2xpathcontext
     else
       error
     end
-//
 
   fun ref final() =>
-    @xmlXPathFreeContext[None](ptr')
+    if (allocated) then
+      @xmlXPathFreeContext[None](ptr')
+      allocated = false
+    end
 
-//  fun _final() =>
-//    if (ptr'.is_none()) then
-//      return None
-//    else
-//      @xmlXPathFreeContext[None](ptr')
-//    end
+  fun _final() =>
+    if (allocated) then
+      @xmlXPathFreeContext[None](ptr')
+    end
 

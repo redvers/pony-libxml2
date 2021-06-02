@@ -1,3 +1,4 @@
+
 class Xml2Doc
   var ptr': NullablePointer[Xmldoc]
   var allocated: Bool
