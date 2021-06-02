@@ -742,11 +742,11 @@ primitive LibXML2
     var tmpvar: I32 = @xmlTextConcat[I32](pnode, pcontent.cstring(), plen)
     tmpvar
 
-  fun xmlFreeNodeList(pcur: NullablePointer[Xmlnode]): None =>
+  fun xmlFreeNodeList(pcur: NullablePointer[Xmlnode] tag): None =>
     var tmpvar: None = @xmlFreeNodeList[None](pcur)
     tmpvar
 
-  fun xmlFreeNode(pcur: NullablePointer[Xmlnode]): None =>
+  fun xmlFreeNode(pcur: NullablePointer[Xmlnode] tag): None =>
     var tmpvar: None = @xmlFreeNode[None](pcur)
     tmpvar
 

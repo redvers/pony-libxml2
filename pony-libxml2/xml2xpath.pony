@@ -51,8 +51,7 @@ class Xml2pathobject
     if (allocated) then
       @xmlXPathFreeNodeSetList[None](ptr')
       @xmlXPathFreeNodeSet[None](nodeset')
-      nodearray.clear()
-      nodearray.compact()
+      nodearray = Array[Xml2node]
       allocated = false
     end
 
@@ -60,6 +59,7 @@ class Xml2pathobject
     if (allocated) then
       @xmlXPathFreeNodeSetList[None](ptr')
       @xmlXPathFreeNodeSet[None](nodeset')
+      @pony_triggergc[None](@pony_ctx[Pointer[None]]())
     end
 
 //  fun xmlXPathCastNodeSetToString(pns: NullablePointer[Xmlnodeset]): String =>

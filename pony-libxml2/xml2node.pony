@@ -1,7 +1,7 @@
-
 class Xml2node
   var ptr': NullablePointer[Xmlnode]
   var ptr: Xmlnode
+  var allocated: Bool
 
   new fromPTR(ptrx: NullablePointer[Xmlnode])? =>
     if (ptrx.is_none()) then
@@ -9,6 +9,7 @@ class Xml2node
     else
       ptr' = ptrx
       ptr = ptr'.apply()?
+      allocated = true
     end
 
   fun ref name(): String val =>
@@ -46,11 +47,6 @@ class Xml2node
 //  xmlXPathCastNodeToString[Pointer[U8]](anon0: NullablePointer[Xmlxpathobject])
   fun ref castNodeToString(): String =>
     LibXML2.xmlXPathCastNodeToString(ptr')
-
-
-
-  fun ref dispose() =>
-    @xmlFreeNode[None](ptr')
 
 //   fun htmlAutoCloseTag(pdoc: NullablePointer[Xmldoc], pname: String, pelem: NullablePointer[Xmlnode]): I32 =>
 //   fun htmlIsAutoClosed(pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode]): I32 =>

@@ -6,8 +6,10 @@ actor Main
 
     xmldoc(10)
     xmlctx(10)
-    xmleval(10)
-    xmldoc(10)
+    for f in Range(0,10000) do
+      xmleval(1)
+    end
+    xmldoc(1000000)
 
 
 
