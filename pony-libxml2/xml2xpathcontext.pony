@@ -27,12 +27,12 @@ class Xml2xpathcontext
 
   fun ref final() =>
     if (allocated) then
-      @xmlXPathFreeContext[None](ptr')
+      @xmlXPathFreeContext(ptr')
       allocated = false
     end
 
   fun _final() =>
     if (allocated) then
-      @xmlXPathFreeContext[None](ptr')
+      @xmlXPathFreeContext(ptr')
     end
 

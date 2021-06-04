@@ -1,3 +1,8 @@
+
+use @pony_triggergc[None](ptr: Pointer[None])
+use @pony_ctx[Pointer[None]]()
+
+
 class Xml2pathobject
   var allocated: Bool
   var ptr': NullablePointer[Xmlxpathobject]
@@ -49,17 +54,17 @@ class Xml2pathobject
 
   fun ref final() =>
     if (allocated) then
-      @xmlXPathFreeNodeSetList[None](ptr')
-      @xmlXPathFreeNodeSet[None](nodeset')
+      @xmlXPathFreeNodeSetList(ptr')
+      @xmlXPathFreeNodeSet(nodeset')
       nodearray = Array[Xml2node]
       allocated = false
     end
 
   fun _final() =>
     if (allocated) then
-      @xmlXPathFreeNodeSetList[None](ptr')
-      @xmlXPathFreeNodeSet[None](nodeset')
-      @pony_triggergc[None](@pony_ctx[Pointer[None]]())
+      @xmlXPathFreeNodeSetList(ptr')
+      @xmlXPathFreeNodeSet(nodeset')
+      @pony_triggergc(@pony_ctx())
     end
 
 //  fun xmlXPathCastNodeSetToString(pns: NullablePointer[Xmlnodeset]): String =>

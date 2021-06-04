@@ -43,13 +43,13 @@ class Xml2Doc
 
   fun ref final() =>
     if (allocated) then
-      @xmlFreeDoc[None](ptr')
+      @xmlFreeDoc(ptr')
       allocated = false
     end
 
   fun _final() =>
     if (allocated) then
-      @xmlFreeDoc[None](ptr')
+      @xmlFreeDoc(ptr')
     end
 
 //use @xmlDocCopyNode[NullablePointer[Xmlnode]](anon0: NullablePointer[Xmlnode], anon1: NullablePointer[Xmldoc], anon2: I32)
