@@ -48,6 +48,28 @@ class Xml2node
   fun ref castNodeToString(): String =>
     LibXML2.xmlXPathCastNodeToString(ptr')
 
+  fun ref getChildren(): Array[Xml2node] =>
+    var rv: Array[Xml2node] = Array[Xml2node]
+    var elementCount: U64 = LibXML2.xmlChildElementCount(ptr')
+
+    if (elementCount == 0) then
+      return(rv)
+    end
+
+    var fptr: NullablePointer[Xmlnode] = LibXML2.xmlFirstElementChild(ptr')
+    try
+      rv.push(Xml2node.fromPTR(fptr)?)
+      while (elementCount > 0) do
+        elementCount = elementCount - 1
+        fptr = LibXML2.xmlNextElementSibling(fptr)
+        rv.push(Xml2node.fromPTR(fptr)?)
+      end
+    end
+    rv
+
+
+
+
 //   fun htmlAutoCloseTag(pdoc: NullablePointer[Xmldoc], pname: String, pelem: NullablePointer[Xmlnode]): I32 =>
 //   fun htmlIsAutoClosed(pdoc: NullablePointer[Xmldoc], pelem: NullablePointer[Xmlnode]): I32 =>
 //   fun htmlNodeDumpFileFormat(pout: NullablePointer[IoFile], pdoc: NullablePointer[Xmldoc], pcur: NullablePointer[Xmlnode], pencoding: String, pformat: I32): I32 =>
