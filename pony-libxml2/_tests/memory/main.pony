@@ -1,6 +1,9 @@
 use "collections"
 use "../../../pony-libxml2"
 
+use @printf[I32](fmt: Pointer[U8] tag, ...)
+use @exit[None](exitcode: I32)
+
 actor Main
   new create(env': Env) =>
 
@@ -15,7 +18,7 @@ actor Main
 
 
   be xmldoc(cnt: USize) =>
-    @printf[I32]("Grinding Xmldoc structs...\n".cstring())
+    @printf("Grinding Xmldoc structs...\n".cstring())
     try
       for f in Range(0,cnt) do
         let s: Xml2Doc = Xml2Doc.parseFile("../../../libxml2.xml")?
@@ -26,7 +29,7 @@ actor Main
     end
 
   be xmlctx(cnt: USize) =>
-    @printf[I32]("Grinding Xmlxpathcontext structs...\n".cstring())
+    @printf("Grinding Xmlxpathcontext structs...\n".cstring())
     try
       let s: Xml2Doc = Xml2Doc.parseFile("../../../libxml2.xml")?
       for f in Range(0,cnt) do
@@ -38,7 +41,7 @@ actor Main
     end
 
   be xmleval(cnt: USize) =>
-    @printf[I32]("Grinding xpathEval...\n".cstring())
+    @printf("Grinding xpathEval...\n".cstring())
     try
       let s: Xml2Doc = Xml2Doc.parseFile("../../../libxml2.xml")?
       let c: Xml2xpathcontext = Xml2xpathcontext.create(s)?
@@ -55,5 +58,5 @@ actor Main
 
 
   fun die(s: String) =>
-    @printf[I32]("%s\n", s.cstring())
-    @exit[None](I32(1))
+    @printf("%s\n".cstring(), s.cstring())
+    @exit(I32(1))

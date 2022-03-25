@@ -1,5 +1,5 @@
 use "../../pony-libxml2"
-use "ponytest"
+use "pony_test"
 use "debug"
 
 class iso TestAttribs is UnitTest

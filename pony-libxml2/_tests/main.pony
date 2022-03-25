@@ -1,5 +1,5 @@
 use "../../pony-libxml2"
-use "ponytest"
+use "pony_test"
 
 actor Main is TestList
   fun @runtime_override_defaults(rto: RuntimeOptions) =>
