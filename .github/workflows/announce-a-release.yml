@@ -22,7 +22,7 @@ jobs:
           ref: "main"
           token: ${{ secrets.RELEASE_TOKEN }}
       - name: Release notes
-        uses: docker://ghcr.io/ponylang/release-bot-action:0.6.4
+        uses: docker://ghcr.io/ponylang/release-bot-action:0.6.3
         with:
           entrypoint: publish-release-notes-to-github
         env:
