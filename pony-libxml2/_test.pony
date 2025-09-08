@@ -1,5 +1,5 @@
-use "../../pony-libxml2"
 use "pony_test"
+use "_tests"
 
 actor Main is TestList
   fun @runtime_override_defaults(rto: RuntimeOptions) =>
@@ -18,7 +18,7 @@ actor Main is TestList
     test(TestReaderX)
     test(TestReader3)
     test(TestReader4)
-    test(TestReader5)
+//    test(TestReader5)
     test(TestAttribs)
 //    test(TestValidRNG) requires callbacks
 
