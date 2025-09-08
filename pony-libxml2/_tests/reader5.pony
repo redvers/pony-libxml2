@@ -9,7 +9,7 @@ class iso TestReader5 is UnitTest
     h.assert_true(true)
 
     try
-      var f: Xml2parserinputbuffer = Xml2parserinputbuffer.createFilename("REC-xml-19980210.xml", I32(1))?
+      var f: Xml2parserinputbuffer = Xml2parserinputbuffer.createFilename("./pony-libxml2/_tests/REC-xml-19980210.xml", I32(1))?
       var reader: Xml2textreader = f.newTextReader("REC")?
 
       /* Apparently there isn't a clean interface from Xml2Node to
