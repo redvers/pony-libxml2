@@ -1,0 +1,39 @@
+name: Manually generate documentation
+
+on:
+  workflow_dispatch
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "update-documentation"
+  cancel-in-progress: true
+
+jobs:
+  generate-documentation:
+    name: Generate documentation for release
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+      - name: Generate documentation
+        uses: docker://ponylang/library-documentation-action-v2:release
+        with:
+          site_url: "https://redvers.github.io/pony-libxml2/"
+          library_name: "pony-libxml2"
+          docs_build_dir: "build/pony-libxml2-docs"
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'build/pony-libxml2-docs/site/'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
