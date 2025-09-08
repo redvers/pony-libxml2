@@ -8,7 +8,7 @@
     "homepage": "https://github.com/redvers/pony-libxml2",
     "license": "BSD-2-Clause",
     "documentation_url": "https://redvers.github.io/pony-libxml2",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "name": "pony-libxml2"
   }
 }
