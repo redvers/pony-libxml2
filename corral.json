@@ -1,0 +1,14 @@
+{
+  "packages": [
+    "pony-libxml2"
+  ],
+  "deps": [],
+  "info": {
+    "description": "Pony binding to libxml2",
+    "homepage": "https://github.com/redvers/pony-libxml2",
+    "license": "",
+    "documentation_url": "",
+    "version": "",
+    "name": ""
+  }
+}
