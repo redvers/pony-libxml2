@@ -56,7 +56,7 @@ class Xml2pathobject
   fun ref final() =>
     if (allocated) then
       @xmlXPathFreeNodeSetList(ptr')
-      @xmlXPathFreeNodeSet(nodeset')
+//      @xmlXPathFreeNodeSet(nodeset')
       nodearray = Array[Xml2node]
       allocated = false
     end
@@ -64,7 +64,7 @@ class Xml2pathobject
   fun _final() =>
     if (allocated) then
       @xmlXPathFreeNodeSetList(ptr')
-      @xmlXPathFreeNodeSet(nodeset')
+//      @xmlXPathFreeNodeSet(nodeset')
       @pony_triggergc(@pony_ctx())
     end
 

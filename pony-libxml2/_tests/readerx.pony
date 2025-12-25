@@ -9,7 +9,7 @@ class iso TestReaderX is UnitTest
 
 
     try
-      var xmldoc: Xml2Doc = Xml2Doc.parseFile("REC-xml-19980210.xml")?
+      var xmldoc: Xml2Doc = Xml2Doc.parseFile("./pony-libxml2/_tests/REC-xml-19980210.xml")?
       var ctx: Xml2xpathcontext = Xml2xpathcontext(xmldoc)?
 
       var res: Xml2pathobject = ctx.xpathEval("//termdef")?

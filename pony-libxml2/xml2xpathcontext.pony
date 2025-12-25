@@ -27,6 +27,13 @@ class Xml2xpathcontext
       error
     end
 
+  fun ref xmlXPathRegisterNs(abbrv: String val, uri: String val): I32 ? =>
+    if (allocated) then
+      LibXML2.xmlXPathRegisterNs(ptr', abbrv, uri)
+    else
+      error
+    end
+
   fun ref final() =>
     if (allocated) then
       @xmlXPathFreeContext(ptr')
