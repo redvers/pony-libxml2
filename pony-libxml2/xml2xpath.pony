@@ -1,3 +1,4 @@
+use "structs/"
 
 use @pony_triggergc[None](ptr: Pointer[None])
 use @pony_ctx[Pointer[None]]()
@@ -5,13 +6,13 @@ use @pony_ctx[Pointer[None]]()
 
 class Xml2pathobject
   var allocated: Bool
-  var ptr': NullablePointer[Xmlxpathobject]
-  var ptr: Xmlxpathobject
-  var nodeset': NullablePointer[Xmlnodeset]
-  var nodeset: Xmlnodeset
+  var ptr': NullablePointer[XmlXPathObject]
+  var ptr: XmlXPathObject
+  var nodeset': NullablePointer[XmlNodeSet]
+  var nodeset: XmlNodeSet
   var nodearray: Array[Xml2node] = Array[Xml2node]
 
-  new fromPTR(ptrx: NullablePointer[Xmlxpathobject])? =>
+  new fromPTR(ptrx: NullablePointer[XmlXPathObject])? =>
     if (ptrx.is_none()) then
       error
     else
@@ -22,7 +23,7 @@ class Xml2pathobject
       else
         nodeset' = ptr.pnodesetval
         nodeset = nodeset'.apply()?
-        let nodearray': Array[NullablePointer[Xmlnode]] = Array[NullablePointer[Xmlnode]].from_cpointer(nodeset.pnodeTab, nodeset.pnodeNr.usize())
+        let nodearray': Array[NullablePointer[XmlNode]] = Array[NullablePointer[XmlNode]].from_cpointer(nodeset.pnodeTab, nodeset.pnodeNr.usize())
 
         for f in nodearray'.values() do
           nodearray.push(Xml2node.fromPTR(f)?)
@@ -67,11 +68,11 @@ class Xml2pathobject
       @pony_triggergc(@pony_ctx())
     end
 
-//  fun xmlXPathCastNodeSetToString(pns: NullablePointer[Xmlnodeset]): String =>
+//  fun xmlXPathCastNodeSetToString(pns: NullablePointer[XmlNodeSet]): String =>
   fun ref castNodeSetToString(): String =>
     LibXML2.xmlXPathCastNodeSetToString(nodeset')
 
-//  xmlXPathCastToString[Pointer[U8]](anon0: NullablePointer[Xmlxpathobject])
+//  xmlXPathCastToString[Pointer[U8]](anon0: NullablePointer[XmlXPathObject])
   fun ref castToString(): String =>
     LibXML2.xmlXPathCastToString(ptr')
 

@@ -1,5 +1,7 @@
+use "structs/"
+
 class Xml2xpathcontext
-  var ptr': NullablePointer[Xmlxpathcontext]
+  var ptr': NullablePointer[XmlXPathContext]
   var allocated: Bool
 
   new create(xmldoc: Xml2Doc)? =>
@@ -12,7 +14,7 @@ class Xml2xpathcontext
 
   fun ref xpathEval(str: String): Xml2pathobject? =>
     if (allocated) then
-      let xptr: NullablePointer[Xmlxpathobject] = LibXML2.xmlXPathEval(str, ptr')
+      let xptr: NullablePointer[XmlXPathObject] = LibXML2.xmlXPathEval(str, ptr')
       Xml2pathobject.fromPTR(xptr)?
     else
       error

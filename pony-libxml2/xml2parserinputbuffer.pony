@@ -1,6 +1,8 @@
+use "structs/"
+
 class Xml2parserinputbuffer
-  var ptr': NullablePointer[Xmlparserinputbuffer]
-  var ptr: Xmlparserinputbuffer
+  var ptr': NullablePointer[XmlParserInputBuffer]
+  var ptr: XmlParserInputBuffer
   var buffersize: I32
 
   new createMem(str: String) ? =>
@@ -22,5 +24,5 @@ class Xml2parserinputbuffer
     end
 
   fun ref newTextReader(pURI: String): Xml2textreader ? =>
-    let ptrx: NullablePointer[Xmltextreader] = LibXML2.xmlNewTextReader(ptr', pURI)
+    let ptrx: NullablePointer[XmlTextReader] = LibXML2.xmlNewTextReader(ptr', pURI)
     Xml2textreader.fromPTR(ptrx)?

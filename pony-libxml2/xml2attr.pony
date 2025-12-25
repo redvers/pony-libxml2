@@ -1,8 +1,10 @@
-class Xml2attr
-  var ptr': NullablePointer[Xmlattr]
-  var ptr: Xmlattr
+use "structs/"
 
-  new fromPTR(ptrx: NullablePointer[Xmlattr])? =>
+class Xml2attr
+  var ptr': NullablePointer[XmlAttr]
+  var ptr: XmlAttr
+
+  new fromPTR(ptrx: NullablePointer[XmlAttr])? =>
     if (ptrx.is_none()) then
       error
     else
