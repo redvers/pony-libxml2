@@ -35,7 +35,7 @@ unit-tests: $(tests_binary)
 
 $(tests_binary): $(GEN_FILES) $(SOURCE_FILES) | $(BUILD_DIR)
 	$(GET_DEPENDENCIES_WITH)
-	$(PONYC) -o $(BUILD_DIR) $(SRC_DIR)/_tests -b pony-libxml2
+	$(PONYC) -o $(BUILD_DIR) $(SRC_DIR)
 
 build-examples: $(EXAMPLES_BINARIES)
 

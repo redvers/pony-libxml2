@@ -69,8 +69,11 @@ class Xml2node
     end
     rv
 
-
-
+//   fun xmlNodeDump(pbuf: NullablePointer[XmlBuffer], pdoc: NullablePointer[XmlDoc], pcur: NullablePointer[XmlNode], plevel: I32, pformat: I32): I32 =>
+  fun ref nodeDump(plevel: I32, pformat: I32): String val =>
+    var buf: NullablePointer[XmlBuffer] = LibXML2.xmlBufferCreate()
+    LibXML2.xmlNodeDump(buf, ptr.pdoc, ptr', plevel, pformat)
+    LibXML2.xmlBufferContent(buf)
 
 //   fun htmlAutoCloseTag(pdoc: NullablePointer[XmlDoc], pname: String, pelem: NullablePointer[XmlNode]): I32 =>
 //   fun htmlIsAutoClosed(pdoc: NullablePointer[XmlDoc], pelem: NullablePointer[XmlNode]): I32 =>
@@ -150,7 +153,6 @@ class Xml2node
 //   fun xmlNodeAddContent(pcur: NullablePointer[XmlNode], pcontent: String): None =>
 //   fun xmlNodeBufGetContent(pbuffer: NullablePointer[XmlBuffer], pcur: NullablePointer[XmlNode]): I32 =>
 //   fun xmlNodeDumpOutput(pbuf: NullablePointer[XmlOutputBuffer], pdoc: NullablePointer[XmlDoc], pcur: NullablePointer[XmlNode], plevel: I32, pformat: I32, pencoding: String): None =>
-//   fun xmlNodeDump(pbuf: NullablePointer[XmlBuffer], pdoc: NullablePointer[XmlDoc], pcur: NullablePointer[XmlNode], plevel: I32, pformat: I32): I32 =>
 //   fun xmlNodeGetBase(pdoc: NullablePointer[XmlDoc], pcur: NullablePointer[XmlNode]): String =>
 //   fun xmlNodeGetContent(pcur: NullablePointer[XmlNode]): String =>
 //   fun xmlNodeGetLang(pcur: NullablePointer[XmlNode]): String =>
