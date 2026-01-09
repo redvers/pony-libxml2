@@ -7,8 +7,8 @@
     "description": "Pony binding to libxml2",
     "homepage": "https://github.com/redvers/pony-libxml2",
     "license": "",
-    "documentation_url": "",
-    "version": "",
+    "documentation_url": "https://redvers.github.io/pony-libxml2/",
+    "version": "1.0.3",
     "name": ""
   }
 }
