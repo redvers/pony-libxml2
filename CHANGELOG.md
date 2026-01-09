@@ -9,6 +9,7 @@ All notable changes to this project will be documented in this file. This projec
 
 ### Added
 
+- Added Xml2node.nodeDump(): String val ([PR #5](https://github.com/redvers/pony-libxml2/pull/5))
 
 ### Changed
 
