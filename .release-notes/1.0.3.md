@@ -1,0 +1,5 @@
+## Added Xml2node.nodeDump(): String val
+
+This function allows you to dump a textual representation of the current
+node and all their children into pony String.
+
